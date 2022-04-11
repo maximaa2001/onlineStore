@@ -5,7 +5,7 @@ export default class ApiService{
    
 
     static registration = async (email, password, repeatPassword, phoneNumber) => {
-        const response =  axios.post(Const.BACKEND + "/api/users/registration",
+        const response =  axios.post(Const.AUTH_SERVER + "/api/users/registration",
         {
             "email": email,
             "password": password,
@@ -16,7 +16,7 @@ export default class ApiService{
     }
 
     static login = async (email, password) => {
-        const response =  axios.post(Const.BACKEND + "/api/users/login",
+        const response =  axios.post(Const.AUTH_SERVER + "/api/users/login",
         {
             "email": email,
             "password": password,
@@ -25,12 +25,17 @@ export default class ApiService{
     }
 
     static googleLogin = async (accessToken) => {
-        console.log(Const.BACKEND)
-        const response =  axios.post(Const.BACKEND + "/api/users/login/google",
+        const response =  axios.post(Const.AUTH_SERVER + "/api/users/login/google",   
         {
             "access_token": accessToken,
         })
         return response;
     }
+
+    static getCategories = async (accessToken) => {
+        const response =  axios.get(Const.BACKEND + "/api/categories/all")
+        return response;
+    }
+
     
 }

@@ -1,0 +1,16 @@
+.navigation_group{
+    width: 18%;
+
+
+}
+
+.navigation_item{
+    height: 30px;
+    font-size: 14px;
+    padding: 0;
+    text-align: center;
+}
+
+.navigation_link{
+    text-decoration: none;
+}

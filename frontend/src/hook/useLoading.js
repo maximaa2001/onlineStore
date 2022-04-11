@@ -9,7 +9,7 @@ const useLoading = (callback) => {
         if(error){
             setTimeout(() => setError(''), 10000)
         }
-    })
+    },[error])
 
     const loadData = async () => {
         try {

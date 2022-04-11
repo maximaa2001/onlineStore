@@ -1,5 +1,6 @@
 export default class Const{
-    static BACKEND = "http://localhost:8100";
+    static AUTH_SERVER = "http://localhost:8100";
+    static BACKEND = "http://localhost:3001";
     static TOKEN = "token";
 
     
