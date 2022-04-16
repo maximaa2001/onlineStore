@@ -1,17 +1,20 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Input from "../UI/Input/Input";
-import ApiService from "../../API/ApiService";
+import ApiService from "../../service/ApiService";
 import useLoading from "../../hook/useLoading";
 import SendButton from "../UI/Button/SendButton";
 import GoogleLogin from 'react-google-login';
 import Loader from "../UI/Loader/Loader";
 import Const from "../../const/Const";
 import style from './RegForm.module.css'
+import jwt_decode from "jwt-decode";
+import {Context} from "../../index";
 
 const LoginForm = () =>{
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const {user} = useContext(Context)
 
 
     const tryLogin = useLoading(async () => {
@@ -19,7 +22,10 @@ const LoginForm = () =>{
          .then(resp =>{
              const result = resp.data.jwt;
              if(result){
+                var decoded = jwt_decode(result);
+                console.log(decoded)
                 localStorage.setItem(Const.TOKEN, result)
+                user.setRole(decoded.role)
              }
          })
     });
@@ -33,7 +39,6 @@ const LoginForm = () =>{
                 localStorage.setItem(Const.TOKEN, result)
 
             }
-    
         }
         )
     }

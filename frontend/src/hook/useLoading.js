@@ -23,7 +23,7 @@ const useLoading = (callback) => {
     
     }
 
-    return{
+    return {
         loadData,
         isLoading,
         error

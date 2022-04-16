@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {Navbar, Container, Row, Col, Form, Button } from "react-bootstrap";
 import Modal from "./UI/Modal/Modal";
 import logo from '../img/logo.ico';
@@ -6,12 +6,18 @@ import useShowModal from "../hook/useShowModal";
 import ModalButton from "./UI/Button/ModalButton";
 import RegForm from "./Form/RegForm";
 import LoginForm from "./Form/LoginForm";
+import {Context} from "../index"
+import Const from "../const/Const"
+import UserMenu from "./UI/Menu/UserMenu";
+import { observer } from "mobx-react-lite";
 
-const Header = () =>{
+const Header = observer(() =>{
 
  const regModal = useShowModal(false);
 
  const authModal = useShowModal(false);
+
+ const {user} = useContext(Context)
  
 
   
@@ -40,11 +46,25 @@ const Header = () =>{
   </Form>
   </Col>
   <Col lg= {5}>
-  <div className="mt-2 d-flex justify-content-end">
-  <ModalButton onClick={() => regModal.show(true)}>Зарегистрироваться</ModalButton>
-  <ModalButton clazz="ms-3" onClick={() => authModal.show(true)}>Войти</ModalButton>
+  
+  {
+    user.role === Const.USER_ROLE
+    ? 
+      <div className="mt-2 ms-1 d-flex justify-content-end">
+      <UserMenu/>
+      </div>
+    : user.role === Const.ADMIN_ROLE
+    ?  <div className="mt-2 d-flex justify-content-end">
+      <button>ADMIN</button>
+      </div>
+    : <div className="mt-2 d-flex justify-content-end">
+      <ModalButton onClick={() => regModal.show(true)}>Зарегистрироваться</ModalButton>
+      <ModalButton clazz="ms-3" onClick={() => authModal.show(true)}>Войти</ModalButton>
+      </div>
+  }
+  
 
-  </div>
+
   </Col>
   </Row>
       </Container>
@@ -56,7 +76,7 @@ const Header = () =>{
     <LoginForm></LoginForm></Modal>
     </div>
   )
-}
+})
 
 export default Header;
 

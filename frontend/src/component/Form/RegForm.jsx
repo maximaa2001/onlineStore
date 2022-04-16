@@ -5,7 +5,7 @@ import SendButton from "../UI/Button/SendButton";
 import PhoneInput from "react-phone-input-2";
 import SuccessAlert from "../UI/Alert/SuccessAlert";
 import ErrorAlert from "../UI/Alert/ErrorAlert";
-import ApiService from "../../API/ApiService";
+import ApiService from "../../service/ApiService";
 import useLoading from "../../hook/useLoading";
 import Loader from "../UI/Loader/Loader";
 

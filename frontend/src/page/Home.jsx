@@ -1,26 +1,21 @@
 
-import { useEffect, useState } from "react"
+import { observer } from "mobx-react-lite"
 import Header from "../component/Header"
 import Navigation from "../component/UI/Navigaion/Navigation"
-import ApiService from "../API/ApiService"
+import {Context} from "../index"
+import { useContext } from "react"
 
-const Home = () => {
+const Home = observer(() => {
 
-    const [categories, setCategories] = useState([])
 
-    useEffect(async () => {
-        await ApiService.getCategories()
-         .then(resp =>{
-           setCategories(resp.data)
-         })
-
-    }, [])
+  const {user} = useContext(Context)
 
     return<div>
-    <Header/>
-    <Navigation listItems={categories}/>
 
+    <Header/>
+    <Navigation />
+    {user.role}
     </div>
-}
+})
 
 export default Home;

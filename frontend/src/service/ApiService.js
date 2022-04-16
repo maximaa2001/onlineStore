@@ -1,5 +1,6 @@
 import axios from "axios";
 import Const from "../const/Const";
+import configToken from "../utill/config"
 
 export default class ApiService{
    
@@ -36,6 +37,17 @@ export default class ApiService{
         const response =  axios.get(Const.BACKEND + "/api/categories/all")
         return response;
     }
+
+    static authToken = async () => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response = axios.get(Const.AUTH_SERVER + "/api/users/auth", configToken(jwt))
+            return response;
+        }
+        return null;
+    }
+
+   
 
     
 }
