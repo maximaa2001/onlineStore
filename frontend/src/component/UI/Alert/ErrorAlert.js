@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./Alert.module.css"
 
-const ErrorAlert = ({...props}) =>{
+const ErrorAlert = ({children, ...props}) =>{
   
 return <div  className={[style.alert, "alert", "alert-danger"].join(' ')} role="alert" {...props}>
-Ошибка при обращении к серверу
+{children}
 </div>
 }
 

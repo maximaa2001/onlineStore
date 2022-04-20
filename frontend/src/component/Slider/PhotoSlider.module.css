@@ -1,0 +1,10 @@
+.main{
+    height: 200px;
+    border: 1px solid silver;
+    background-color: grey;
+}
+
+.img{
+    height: 200px;
+    max-width: 100%;
+}

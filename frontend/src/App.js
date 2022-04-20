@@ -10,6 +10,9 @@ import ApiService from "./service/ApiService";
 import jwt_decode from "jwt-decode";
 import useLoading from "./hook/useLoading";
 import Loader from "./component/UI/Loader/Loader";
+import MyProducts from "./page/MyProducts";
+import { publicRoutes, userRoutes } from "./utill/rightForRoutes";
+import Const from "./const/Const";
 
 const App = observer(() => {
 
@@ -36,7 +39,15 @@ const App = observer(() => {
     
 <Router>
     <Routes>
-    <Route exact path="/" element={<Home/>}/>
+    {
+      publicRoutes.map(({path, Component}) => <Route exact path={path} element={Component}/>)
+    }
+
+    {
+      user.role === Const.USER_ROLE && userRoutes.map(({path, Component}) => <Route exact path={path} element={Component}/>)
+    }
+    {/* <Route exact path="/" element={<Home/>}/>
+    <Route exact path="/myProducts" element={<MyProducts/>}/> */}
     <Route path="*" element={<Error/>}></Route>
     </Routes>
     </Router>

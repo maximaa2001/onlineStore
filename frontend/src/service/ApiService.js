@@ -33,8 +33,14 @@ export default class ApiService{
         return response;
     }
 
-    static getCategories = async (accessToken) => {
+    static getCategories = async () => {
         const response =  axios.get(Const.BACKEND + "/api/categories/all")
+        return response;
+    }
+
+    static getCities = async () => {
+        const response =  axios.get(Const.BACKEND + "/api/cities/all")
+        console.log(response)
         return response;
     }
 

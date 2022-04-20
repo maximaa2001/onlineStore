@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react";
+import React,{ useState} from "react";
 import style from './RegForm.module.css'
 import Input from "../UI/Input/Input";
 import SendButton from "../UI/Button/SendButton";
@@ -8,6 +8,7 @@ import ErrorAlert from "../UI/Alert/ErrorAlert";
 import ApiService from "../../service/ApiService";
 import useLoading from "../../hook/useLoading";
 import Loader from "../UI/Loader/Loader";
+import useAlert from "../../hook/useAlert";
 
 const RegForm = () =>{
 
@@ -16,22 +17,14 @@ const RegForm = () =>{
     const [repeatPassword, setRepeatPassword] = useState('')
     const [phoneNumber, seetPhoneNumber] = useState('')
 
-    const [successAlert, setSuccessAlert] = useState(false)
-
-    useEffect(() => {
-        if(successAlert){
-            setTimeout(() => {
-                setSuccessAlert(false)
-            }, 10000)
-        }
-    }, [successAlert])
+    const successAlert = useAlert(10000);
 
     const tryRegistration = useLoading(async () => {
         await ApiService.registration(email, password, repeatPassword, phoneNumber)
          .then(resp =>{
              const result = resp.data.isSuccess;
              if(result){
-                 setSuccessAlert(true)
+                successAlert.setShow(true)
              }
          })
     });
@@ -66,13 +59,13 @@ return (
           : ""
       }
       {
-    successAlert 
-    ? <SuccessAlert style={{marginTop:"20px"}}></SuccessAlert>
+    successAlert.show
+    ? <SuccessAlert style={{marginTop:"20px"}}>Ошибка при обращении к серверу</SuccessAlert>
     : ""
         }
         {
     tryRegistration.error 
-    ? <ErrorAlert style={{marginTop:"20px"}}></ErrorAlert>
+    ? <ErrorAlert style={{marginTop:"20px"}}>Ошибка при обращении к серверу</ErrorAlert>
     : ""
         }
       </div>

@@ -1,16 +1,20 @@
 import React from "react";
 import { NavDropdown } from "react-bootstrap";
+import style from "./UserMenu.module.css"
+import { Link } from "react-router-dom";
+import Const from "../../../const/Const"
+
 
 const UserMenu = () =>{
    
-
 return (
-    <NavDropdown title="Dropdown" id="nav-dropdown">
-        <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
-        <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
+    <NavDropdown title="Меню" id="nav-dropdown" className={style.userMenu}>
+        <NavDropdown.Item eventKey="4.1"><Link to="/myProducts">Мои объявления</Link></NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.2">Мои сообщения</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.3">Избранное</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.3">Настройки</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.4">Выход</NavDropdown.Item>
       </NavDropdown>
 )
 }

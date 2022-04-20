@@ -1,7 +1,7 @@
 
 import { observer } from "mobx-react-lite"
 import Header from "../component/Header"
-import Navigation from "../component/UI/Navigaion/Navigation"
+import Navigation from "../component/UI/Navigaion/CategoryNavigation"
 import {Context} from "../index"
 import { useContext } from "react"
 

@@ -45,7 +45,7 @@ const LoginForm = () =>{
 
     return(<div>
      <form autoComplete="off">
-     <blockquote className={[style.label, "blockquote"].join(' ')}>
+     <blockquote className={[style.label, "font-weight-lighter"].join(' ')}>
 
 
 Авторизация
