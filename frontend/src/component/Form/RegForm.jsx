@@ -37,7 +37,6 @@ const validationSchema=Yup.object().shape({
     email: Yup.string().email('Введите корректный email').required('Обязательно'),
     password: Yup.string().min(7, "Не менее 7 символов").required('Обязательно'),
     repeatPassword: Yup.string().oneOf([Yup.ref('password')], "Пароли не совпадают").required('Обязательно'),
-    phoneNumber: Yup.string().min(7,"мин").required('Обязательно')
   })
   
 return (
@@ -53,8 +52,12 @@ return (
       }}
     
       onSubmit={async values => {
-        await new Promise(r => setTimeout(r, 500));
-        alert(JSON.stringify(values, null, 2));
+        setEmail(values.email)
+        setPassword(values.password)
+        setRepeatPassword(values.repeatPassword)
+
+
+        tryRegistration.loadData()
       }}
       validationSchema={validationSchema}>
 
@@ -83,10 +86,7 @@ return (
     countryCodeEditable={false}
     specialLabel={""}
     onChange={e => seetPhoneNumber(e)}
-    onBlur={handleBlur}
-    name="phoneNumber"
 />
-{errors.phoneNumber && <div style={{color:"red",marginTop:"1px", fontSize:"12px", marginBottom: "-15px"}}>{errors.phoneNumber}</div> }
 
 
 <SendButton sendDataCallback={handleSubmit} type="submit">Зарегистрироваться</SendButton>
