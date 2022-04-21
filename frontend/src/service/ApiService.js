@@ -1,6 +1,7 @@
 import axios from "axios";
 import Const from "../const/Const";
 import configToken from "../utill/config"
+import configTokenAndImage from "../utill/config";
 
 export default class ApiService{
    
@@ -52,6 +53,32 @@ export default class ApiService{
         }
         return null;
     }
+
+    static uploadImages = async () => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response = axios.post(Const.AUTH_SERVER + "/api/users/auth", configTokenAndImage(jwt))
+            return response;
+        }
+        return null;
+    }
+
+    static createProduct = async (name, desc, category, city, price) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response = axios.post(Const.AUTH_SERVER + "/api/product/create",
+            {
+                "productName": name,
+                "description": desc,
+                "city": city,
+                "category": category,
+                "price": price,
+            }, configToken(jwt))
+            return response;
+        }
+        return null;
+    }
+
 
    
 

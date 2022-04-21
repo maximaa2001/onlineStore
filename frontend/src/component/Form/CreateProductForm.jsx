@@ -15,8 +15,11 @@ const CreateProductForm = observer(() => {
     const [images, setImages] = useState([])
     const [slideImage, setSlideImage] = useState([])
 
-
-   
+    const [name, setName] = useState('')
+    const [description, setDescription] = useState('')
+    const [category, setCategory] = useState('')
+    const [city, setCity] = useState('')
+    const [price, setPrice] = useState('')
 
     useEffect(() => {
         ApiService.getCategories()
@@ -39,7 +42,6 @@ const CreateProductForm = observer(() => {
        let slide = []
 
 
-     console.log(e.target.files.length)
 
         for(let i = 0; i < e.target.files.length; i++){
   
@@ -51,33 +53,30 @@ const CreateProductForm = observer(() => {
         const arr = []
 
         for(let i = 0; i < e.target.files.length; i++){
-          console.log("+")
           arr.push(e.target.files[i])
         }
         setImages(arr)
-
-  
       }
     }
 
-    useEffect(() => {
-      console.log(images.length)
-    }, [images])
-
     const send = () => {
-      console.log(images.length)
       const data = new FormData() 
       for(let i = 0; i < images.length; i++){
         data.append('file' + i, images[i])
       }
      
-      axios.post("http://localhost:8100/api/upload",data,  {
-        headers: {
-            "Content-type": "multipart/form-data; boundary=----------287032381131322"
-        },                    
-    }).then(res => {
-      console.log(res.data)
-    })
+      // axios.post("http://localhost:8100/api/upload",data,  {
+      //   headers: {
+      //       "Content-type": "multipart/form-data; boundary=----------287032381131322"
+      //   },                    
+      // }).then(res => {
+      // console.log(res.data)
+      // })
+
+      ApiService.createProduct(name, description, category, city, price)
+      .then(resp => {
+        console.log(resp.data.productId)
+      })
     }
 
     const errorCountFiles = useAlert(5000)
@@ -92,27 +91,27 @@ const CreateProductForm = observer(() => {
 </blockquote>
     <Form className={style.formElement} >
   <Form.Group className="mb-3">
-    <Form.Control placeholder="Название" />
+    <Form.Control placeholder="Название" onChange={e => setName(e.target.value)}/>
   </Form.Group>
 
   <FloatingLabel label="Описание" className="mb-3">
-    <Form.Control as="textarea" className={style.description}/>
+    <Form.Control as="textarea" className={style.description} onChange={e => setDescription(e.target.value)}/>
   </FloatingLabel>
 
   <FloatingLabel controlId="floatingSelect" label="Выберите категорию" className="mb-3">
-  <Form.Select>
+  <Form.Select onChange={e => setCategory(e.target.value)}>
   {categories.map((item) => <option key={item.category_id}>{item.category_name}</option>)}
   </Form.Select>
 </FloatingLabel>
 
 <FloatingLabel controlId="floatingSelect" label="Выберите город" className="mb-3">
-  <Form.Select>
+  <Form.Select onChange={e => setCity(e.target.value)}>
   {cities.map((item) => <option key={item.city_id}>{item.city_name}</option>)}
   </Form.Select>
 </FloatingLabel>
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Control  placeholder="Цена" />
+    <Form.Control  placeholder="Цена" onChange={e => setPrice(e.target.value)}/>
   </Form.Group>
 
   <PhotoSlider images={slideImage}/>

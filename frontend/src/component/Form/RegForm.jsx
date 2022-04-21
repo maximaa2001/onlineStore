@@ -9,6 +9,8 @@ import ApiService from "../../service/ApiService";
 import useLoading from "../../hook/useLoading";
 import Loader from "../UI/Loader/Loader";
 import useAlert from "../../hook/useAlert";
+import { Formik } from "formik";
+import * as Yup from 'yup';
 
 const RegForm = () =>{
 
@@ -16,6 +18,7 @@ const RegForm = () =>{
     const [password, setPassword] = useState('')
     const [repeatPassword, setRepeatPassword] = useState('')
     const [phoneNumber, seetPhoneNumber] = useState('')
+
 
     const successAlert = useAlert(10000);
 
@@ -29,29 +32,64 @@ const RegForm = () =>{
          })
     });
 
-
+    
+const validationSchema=Yup.object().shape({
+    email: Yup.string().email('Введите корректный email').required('Обязательно'),
+    password: Yup.string().min(7, "Не менее 7 символов").required('Обязательно'),
+    repeatPassword: Yup.string().oneOf([Yup.ref('password')], "Пароли не совпадают").required('Обязательно'),
+    phoneNumber: Yup.string().min(7,"мин").required('Обязательно')
+  })
   
 return (
  <div>
- 
-    <form autoComplete="off">
-<blockquote className={[style.label, "blockquote"].join(' ')}>
 
+ 
+
+<Formik initialValues={{
+        email: '',
+        password: '',
+        repeatPassword: '',
+        phoneNumber: '',
+      }}
+    
+      onSubmit={async values => {
+        await new Promise(r => setTimeout(r, 500));
+        alert(JSON.stringify(values, null, 2));
+      }}
+      validationSchema={validationSchema}>
+
+      {({values, errors, touched, handleChange, handleBlur, isValid, handleSubmit, dirty}) => (
+        <div>
+      <form autoComplete="off">
+<blockquote className={[style.label, "blockquote"].join(' ')}>
 
 Регистрация
 </blockquote>
-      <Input placeholder="email" callback = {setEmail} type="email"/>
-      <Input placeholder="password" callback = {setPassword} type="password"/>
-      <Input placeholder="repeat password" callback = {setRepeatPassword} type="password"/>
 
-      <PhoneInput
-      country={"by"}
-      countryCodeEditable={false}
-      specialLabel={""}
-      onChange={e => seetPhoneNumber(e)}
-      />
-      <SendButton sendDataCallback={() => tryRegistration.loadData()}>Зарегистрироваться</SendButton>
-    
+<Input placeholder="email" callback = {setEmail} type="email" onChange={handleChange} onBlur={handleBlur} name="email"/>
+{errors.email && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px"}}>{errors.email}</div> }
+
+
+<Input placeholder="password" callback = {setPassword} type="password" onChange={handleChange} onBlur={handleBlur} name="password"/>
+{errors.password && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px"}}>{errors.password}</div> }
+
+
+<Input placeholder="repeat password" callback = {setRepeatPassword} type="password" onChange={handleChange} onBlur={handleBlur} name="repeatPassword"/>
+{errors.repeatPassword && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px"}}>{errors.repeatPassword}</div> }
+
+
+ <PhoneInput
+    country={"by"}
+    countryCodeEditable={false}
+    specialLabel={""}
+    onChange={e => seetPhoneNumber(e)}
+    onBlur={handleBlur}
+    name="phoneNumber"
+/>
+{errors.phoneNumber && <div style={{color:"red",marginTop:"1px", fontSize:"12px", marginBottom: "-15px"}}>{errors.phoneNumber}</div> }
+
+
+<SendButton sendDataCallback={handleSubmit} type="submit">Зарегистрироваться</SendButton>
       </form>
       {
           tryRegistration.isLoading 
@@ -68,6 +106,15 @@ return (
     ? <ErrorAlert style={{marginTop:"20px"}}>Ошибка при обращении к серверу</ErrorAlert>
     : ""
         }
+
+
+      </div>
+      )}
+    
+    
+</Formik>
+
+    
       </div>
 
 )
