@@ -31,7 +31,6 @@ public class RefDaoImpl implements RefDao {
     private final CategoryRepo categoryRepo;
 
 
-
     public RefDaoImpl(UserStatusRepo userStatusRepo, UserRoleRepo userRoleRepo,
                       RatingRepo ratingRepo, ProductStatusRepo productStatusRepo,
                       ProductLevelRepo productLevelRepo, MessageStatusRepo messageStatusRepo,
@@ -77,6 +76,55 @@ public class RefDaoImpl implements RefDao {
     }
 
     @Override
+    public ProductStatus findWaitingToApproveStatus() {
+        return productStatusRepo.findByProductStatusName(ProductStatusRef.WAITING_FOR_APPROVE.getName())
+                .orElseThrow(() -> new RuntimeException("Cannot find WAITING_FOR_APPROVE product status"));
+    }
+
+    @Override
+    public ProductStatus findApprovedStatus() {
+        return productStatusRepo.findByProductStatusName(ProductStatusRef.APPROVED.getName())
+                .orElseThrow(() -> new RuntimeException("Cannot find APPROVED product status"));
+    }
+
+    @Override
+    public ProductStatus findNonApprovedStatus() {
+        return productStatusRepo.findByProductStatusName(ProductStatusRef.NON_APPROVED.getName())
+                .orElseThrow(() -> new RuntimeException("Cannot find NON_APPROVED product status"));
+    }
+
+    @Override
+    public ProductStatus findDeletedStatus() {
+        return productStatusRepo.findByProductStatusName(ProductStatusRef.DELETED.getName())
+                .orElseThrow(() -> new RuntimeException("Cannot find DELETED product status"));
+    }
+
+    @Override
+    public ProductLevel findLowPriorityLevel() {
+        return productLevelRepo.findByProductLevelName(ProductLevelRef.LOW_PRIORITY.getName())
+                .orElseThrow(() -> new RuntimeException("Cannot find LOW_PRIORITY product level"));
+    }
+
+    @Override
+    public ProductLevel findHighPriorityLevel() {
+        return productLevelRepo.findByProductLevelName(ProductLevelRef.HIGH_PRIORITY.getName())
+                .orElseThrow(() -> new RuntimeException("Cannot find HIGH_PRIORITY product level"));
+    }
+
+    @Override
+    public City findCityByName(String cityName) {
+        return cityRepo.findByCityName(cityName)
+                .orElseThrow(() -> new RuntimeException("Cannot find city with name " + cityName));
+    }
+
+    @Override
+    public Category findCategoryByName(String categoryName) {
+        return categoryRepo.findByCategoryName(categoryName)
+                .orElseThrow(() -> new RuntimeException("Cannot find category with name " + categoryName));
+
+    }
+
+    @Override
     public void synchronizeDefine() {
         List<UserStatus> userStatuses = UserStatusRef.getAll();
         List<UserRole> userRoles = UserRoleRef.getAll();
@@ -97,12 +145,12 @@ public class RefDaoImpl implements RefDao {
         categoryRepo.saveAll(categories);
     }
 
-    private List<City> saveCities(){
+    private List<City> saveCities() {
         File file = new File(getClass().getClassLoader().getResource("cities.json").getFile());
-        if(file.exists()){
+        if (file.exists()) {
             CountryJson countryJson = JsonParser.simpleParser(file, CountryJson.class);
 
-            if(countryJson != null){
+            if (countryJson != null) {
                 List<CityJson> cityJsons = Arrays.stream(countryJson.getRegionJsons())
                         .flatMap(region -> Arrays.stream(region.getCities()))
                         .collect(Collectors.toList());
@@ -111,7 +159,7 @@ public class RefDaoImpl implements RefDao {
                 for (int i = 1; i <= cityJsons.size(); i++) {
                     cities.add(City.builder()
                             .cityId(i)
-                            .cityName(cityJsons.get(i-1).getName())
+                            .cityName(cityJsons.get(i - 1).getName())
                             .build());
                 }
                 return cities;
@@ -120,11 +168,11 @@ public class RefDaoImpl implements RefDao {
         return new ArrayList<>();
     }
 
-    private List<Category> saveCategories(){
+    private List<Category> saveCategories() {
         File file = new File(getClass().getClassLoader().getResource("categories.json").getFile());
-        if(file.exists()){
+        if (file.exists()) {
             CategoryJson categoryJson = JsonParser.simpleParser(file, CategoryJson.class);
-            if(categoryJson != null){
+            if (categoryJson != null) {
                 return categoryJson.getCategories();
             }
         }

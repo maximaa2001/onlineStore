@@ -20,6 +20,7 @@
         <java-jwt>0.11.2</java-jwt>
         <crypto.version>5.6.1</crypto.version>
         <okhttp.version>4.9.3</okhttp.version>
+        <cloudinary.version>1.32.0</cloudinary.version>
     </properties>
 
     <dependencies>
@@ -102,6 +103,14 @@
             <artifactId>okhttp</artifactId>
             <version>${okhttp.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.cloudinary/cloudinary-http44 -->
+        <dependency>
+            <groupId>com.cloudinary</groupId>
+            <artifactId>cloudinary-http44</artifactId>
+            <version>${cloudinary.version}</version>
+        </dependency>
+
 
     </dependencies>
 

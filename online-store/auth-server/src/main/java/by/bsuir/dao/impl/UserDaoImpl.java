@@ -31,8 +31,8 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public Optional<User> findById(Integer id) {
-       return userRepo.findById(id);
+    public User findById(Integer id) {
+       return userRepo.findById(id).orElseThrow(() -> new RuntimeException("CANNOT FIND USER WITH ID " + id));
     }
 
     @Override

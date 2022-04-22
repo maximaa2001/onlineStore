@@ -9,6 +9,6 @@ import java.util.Optional;
 public interface UserDao {
     Optional<User> findByEmail(String email);
     Optional<User> findByEmailAndStatus(String email, UserStatus userStatus);
-    Optional<User> findById(Integer id);
+    User findById(Integer id);
     Optional<User> save(User user);
 }

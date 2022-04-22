@@ -1,7 +1,6 @@
 package by.bsuir.dao;
 
-import by.bsuir.entity.domain.UserRole;
-import by.bsuir.entity.domain.UserStatus;
+import by.bsuir.entity.domain.*;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -12,6 +11,17 @@ public interface RefDao {
     UserStatus findGoogleActiveStatus();
     UserRole findUserRole();
     UserRole findAdminUserRole();
+
+    ProductStatus findWaitingToApproveStatus();
+    ProductStatus findApprovedStatus();
+    ProductStatus findNonApprovedStatus();
+    ProductStatus findDeletedStatus();
+
+    ProductLevel findLowPriorityLevel();
+    ProductLevel findHighPriorityLevel();
+
+    City findCityByName(String cityName);
+    Category findCategoryByName(String categoryName);
 
     void synchronizeDefine();
 }

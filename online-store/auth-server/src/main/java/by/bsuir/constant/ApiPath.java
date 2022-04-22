@@ -10,6 +10,10 @@ public class ApiPath {
     public static final String AUTH = "/auth";
     public static final String REGISTRATION = "/registration";
     public static final String ACTIVATION = "/activation/{key}";
+    public static final String UPLOAD = "/upload";
+    public static final String PRODUCT = "/product";
+    public static final String CREATE = "/create";
+
 
 
     public static final String USER_LOGIN = API + USERS + LOGIN;
@@ -18,4 +22,8 @@ public class ApiPath {
     public static final String USER_AUTH = API + USERS + AUTH;
     public static final String USER_REGISTRATION = API + USERS + REGISTRATION;
     public static final String EMAIL_ACTIVATION = API + USERS + ACTIVATION;
+
+    public static final String UPLOAD_IMAGE = API + UPLOAD;
+
+    public static final String CREATE_PRODUCT = API + PRODUCT + CREATE;
 }

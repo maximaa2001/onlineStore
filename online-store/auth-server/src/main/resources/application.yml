@@ -1,6 +1,9 @@
 server:
   port: 8100
 spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
   datasource:
     url: jdbc:mysql://localhost:3306/online_store_dev
     username: root
@@ -25,4 +28,9 @@ api:
   google:
     checkToken: https://www.googleapis.com/oauth2/v1/tokeninfo
 needSynch: true
+
+cloudinary:
+  cloud-name: maksim
+  api-key: 144789595384786
+  api-secret: HsH0z_k-HBvKxMGAuXWU_f9H7Jg
 

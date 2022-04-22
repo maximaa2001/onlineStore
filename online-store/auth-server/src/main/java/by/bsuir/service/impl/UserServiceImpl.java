@@ -80,19 +80,20 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public JwtDto auth(String token) {
-        Optional<User> user = userDao.findById(authService.getUserIdByToken(token));
+        log.info("Request for auth endpoint");
+        User user = userDao.findById(authService.getUserIdByToken(token));
         return JwtDto.builder()
-                .jwt(authService.generateJwt(user.get()))
+                .jwt(authService.generateJwt(user))
                 .build();
     }
 
     @Override
     public void logout(String token) {
-        Optional<User> user = userDao.findById(authService.getUserIdByToken(token));
-        user.ifPresent(value -> tokenDao.addTokenToBlackList(Token.builder()
+        User user = userDao.findById(authService.getUserIdByToken(token));
+        tokenDao.addTokenToBlackList(Token.builder()
                 .token(token)
                 .endDate(authService.getExpirationTimeByToken(token))
-                .user(value).build()));
+                .user(user).build());
     }
 
     @Transactional
