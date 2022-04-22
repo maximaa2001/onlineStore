@@ -35,7 +35,7 @@ const RegForm = () =>{
     
 const validationSchema=Yup.object().shape({
     email: Yup.string().email('Введите корректный email').required('Обязательно'),
-    password: Yup.string().min(7, "Не менее 7 символов").required('Обязательно'),
+    password: Yup.string().min(9, "Не менее 9 символов").required('Обязательно'),
     repeatPassword: Yup.string().oneOf([Yup.ref('password')], "Пароли не совпадают").required('Обязательно'),
   })
   

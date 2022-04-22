@@ -54,15 +54,6 @@ export default class ApiService{
         return null;
     }
 
-    static uploadImages = async () => {
-        const jwt = localStorage.getItem(Const.TOKEN);
-        if(jwt){
-            const response = axios.post(Const.AUTH_SERVER + "/api/users/auth", configTokenAndImage(jwt))
-            return response;
-        }
-        return null;
-    }
-
     static createProduct = async (name, desc, category, city, price) => {
         const jwt = localStorage.getItem(Const.TOKEN);
         if(jwt){
@@ -79,8 +70,18 @@ export default class ApiService{
         return null;
     }
 
-
-   
-
+    static uploadPhotos = async (data) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response =  axios.post("http://localhost:8100/api/upload",data,  {
+                headers: {
+                    "AUTHORIZATION": jwt,
+                    "Content-type": "application/json"
+                },                    
+              })
+              return response;
+        }
+       
+    }
     
 }

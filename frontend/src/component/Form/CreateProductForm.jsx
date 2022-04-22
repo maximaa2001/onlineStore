@@ -6,7 +6,12 @@ import PhotoSlider from "../Slider/PhotoSlider";
 import ErrorAlert from "../UI/Alert/ErrorAlert";
 import useAlert from "../../hook/useAlert";
 import { observer } from "mobx-react-lite";
+import { Formik } from "formik";
+import * as Yup from 'yup';
 import axios from "axios";
+import useLoading from "../../hook/useLoading";
+import Loader from "../UI/Loader/Loader";
+import SuccessAlert from "../UI/Alert/SuccessAlert";
 
 const CreateProductForm = observer(() => {
 
@@ -20,6 +25,12 @@ const CreateProductForm = observer(() => {
     const [category, setCategory] = useState('')
     const [city, setCity] = useState('')
     const [price, setPrice] = useState('')
+
+    const [createdProductId, setCreatedProductId] = useState()
+
+    const successAlert = useAlert(5000);
+
+    const data = new FormData() 
 
     useEffect(() => {
         ApiService.getCategories()
@@ -41,8 +52,6 @@ const CreateProductForm = observer(() => {
 
        let slide = []
 
-
-
         for(let i = 0; i < e.target.files.length; i++){
   
           slide.push(URL.createObjectURL(e.target.files[i]));
@@ -59,60 +68,114 @@ const CreateProductForm = observer(() => {
       }
     }
 
-    const send = () => {
-      const data = new FormData() 
+     const trySendPhotos = useLoading(async () => {
+       await ApiService.uploadPhotos(data)
+       .then(resp => {
+         if(resp.status == '200'){
+          successAlert.setShow(true)
+          setName("aaa")
+          setDescription('')
+          setPrice('')
+          setImages([])
+         }
+       })
+     })
+
+     useEffect(() => {
+      if(createdProductId){
+        sendImages();
+      }
+    }, [createdProductId])
+
+    const sendImages = () => {
+      
       for(let i = 0; i < images.length; i++){
         data.append('file' + i, images[i])
       }
-     
-      // axios.post("http://localhost:8100/api/upload",data,  {
-      //   headers: {
-      //       "Content-type": "multipart/form-data; boundary=----------287032381131322"
-      //   },                    
-      // }).then(res => {
-      // console.log(res.data)
-      // })
 
-      ApiService.createProduct(name, description, category, city, price)
-      .then(resp => {
-        console.log(resp.data.productId)
-      })
+      data.append('productId', createdProductId)
+     
+      trySendPhotos.loadData()
+
     }
 
     const errorCountFiles = useAlert(5000)
 
+    const validationSchema=Yup.object().shape({
+      name: Yup.string().required('Обязательно'),
+      price: Yup.number().typeError('Должна быть цифра').max(9999999999, "Слишком большое число"),
+      category: Yup.string().required('Обязательно'),
+      city: Yup.string().required('Обязательно')
+    })
+
+  
 
     return(
-      
-<div className={style.container}>
+
+      <div>
+
+      <Formik initialValues={{
+        name: '',
+        description: '',
+        category: categories[0],
+        city: cities[0],
+        price: '',
+      }}
+    
+      onSubmit={async values => {
+        setName(values.name)
+        setDescription(values.description)
+        setCategory(values.category)
+        setCity(values.city)
+        setPrice(values.price)
+
+
+        ApiService.createProduct(values.name, values.description, values.category, values.city, values.price)
+        .then(resp => {
+        setCreatedProductId(resp.data.productId)
+        })
+
+       
+      }}
+      validationSchema={validationSchema}>
+
+      {({values, errors, touched, handleChange, handleBlur, isValid, handleSubmit, dirty}) => (
+
+        <div className={style.container}>
 
 <blockquote className={[style.label, "font-weight-lighter"].join(' ')}>
 Создать объявление
 </blockquote>
     <Form className={style.formElement} >
   <Form.Group className="mb-3">
-    <Form.Control placeholder="Название" onChange={e => setName(e.target.value)}/>
+    <Form.Control placeholder="Название" onChange={(e) => {handleChange(e); setName(e.target.value)}} onBlur={handleBlur} name="name" value={name}/>
   </Form.Group>
+  {errors.name && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px"}}>{errors.name}</div> }
 
   <FloatingLabel label="Описание" className="mb-3">
-    <Form.Control as="textarea" className={style.description} onChange={e => setDescription(e.target.value)}/>
+    <Form.Control as="textarea" className={style.description} onChange={(e) => {handleChange(e); setDescription(e.target.value)}} 
+    onBlur={handleBlur} name="description" value={description}/>
   </FloatingLabel>
+  {errors.description && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px"}}>{errors.description}</div> }
 
   <FloatingLabel controlId="floatingSelect" label="Выберите категорию" className="mb-3">
-  <Form.Select onChange={e => setCategory(e.target.value)}>
+  <Form.Select onChange={(e) => {handleChange(e); setCategory(e.target.value)}} onBlur={handleBlur} name="category" value={category}>
   {categories.map((item) => <option key={item.category_id}>{item.category_name}</option>)}
   </Form.Select>
 </FloatingLabel>
+ {errors.category && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px"}}>{errors.category}</div> }
 
 <FloatingLabel controlId="floatingSelect" label="Выберите город" className="mb-3">
-  <Form.Select onChange={e => setCity(e.target.value)}>
+  <Form.Select onChange={(e) => {handleChange(e); setCity(e.target.value)}} onBlur={handleBlur} name="city" value={city}>
   {cities.map((item) => <option key={item.city_id}>{item.city_name}</option>)}
   </Form.Select>
 </FloatingLabel>
+{errors.city && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px"}}>{errors.city}</div> }
 
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Control  placeholder="Цена" onChange={e => setPrice(e.target.value)}/>
+  <Form.Group className="mb-3" controlId="formBasicPassword" >
+    <Form.Control  placeholder="Цена" onChange={(e) => {handleChange(e); setPrice(e.target.value)}} onBlur={handleBlur} name="price" value={price}/>
   </Form.Group>
+  {errors.price && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px"}}>{errors.price}</div> }
 
   <PhotoSlider images={slideImage}/>
   {
@@ -125,12 +188,34 @@ const CreateProductForm = observer(() => {
     <Form.Control type="file" onChange={choosePhoto} multiple/>
   </Form.Group>
 
+  {
+          trySendPhotos.isLoading 
+          ? <Loader  style={{position:"absolute", left:"48%", top:"30%"}}></Loader>
+          : ""
+    }
 
-  <Button variant="primary" onClick={send} >
+    {
+    successAlert.show
+    ? <SuccessAlert style={{ position: "absolute", bottom: "2px"}}>Заказ создан</SuccessAlert>
+    : ""
+        }
+
+
+  <Button variant="primary" onClick={handleSubmit} type="submit">
     Submit
   </Button>
+
+
+  
 </Form>
 </div>
+      )}
+
+   </Formik>
+
+      </div>
+      
+
     )
 })
 
