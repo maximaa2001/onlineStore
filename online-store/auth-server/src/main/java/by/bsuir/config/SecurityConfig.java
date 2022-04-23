@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers(USER_LOGIN, USER_LOGIN_GOOGLE, USER_REGISTRATION, EMAIL_ACTIVATION, "/api/upload").permitAll()
+                .antMatchers(USER_LOGIN, USER_LOGIN_GOOGLE, USER_REGISTRATION, EMAIL_ACTIVATION).permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);

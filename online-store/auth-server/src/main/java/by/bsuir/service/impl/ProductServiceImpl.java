@@ -8,14 +8,19 @@ import by.bsuir.entity.domain.City;
 import by.bsuir.entity.domain.Product;
 import by.bsuir.entity.domain.User;
 import by.bsuir.entity.dto.product.CreateProductDto;
+import by.bsuir.entity.dto.product.ProductDto;
 import by.bsuir.entity.dto.product.ProductIdDto;
+import by.bsuir.entity.dto.product.ProductListDto;
 import by.bsuir.service.ProductService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
+@Slf4j
 public class ProductServiceImpl implements ProductService {
     private ProductDao productDao;
     private UserDao userDao;
@@ -39,6 +44,14 @@ public class ProductServiceImpl implements ProductService {
         defaultProduct.setCategory(category);
         Product savedProduct = productDao.save(defaultProduct);
         return ProductIdDto.of(savedProduct.getProductId());
+    }
+
+    @Override
+    public ProductListDto getAllProducts(Integer userId) {
+        log.info("Request for getAllProducts endpoint");
+        User user = userDao.findById(userId);
+        List<Product> products = productDao.findAllProducts(user);
+        return ProductListDto.of(products);
     }
 
     private Product createDefaultProduct(CreateProductDto createProductDto){

@@ -8,8 +8,8 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @Builder
-@ToString
-@EqualsAndHashCode
+@ToString(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,6 +24,7 @@ public class ProductImage {
     private Integer productImageId;
 
     @NotNull
+    @ToString.Include
     @Column(name = "image_url")
     private String imageUrl;
 

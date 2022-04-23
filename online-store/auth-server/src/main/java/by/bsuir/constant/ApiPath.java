@@ -13,7 +13,7 @@ public class ApiPath {
     public static final String UPLOAD = "/upload";
     public static final String PRODUCT = "/product";
     public static final String CREATE = "/create";
-
+    public static final String MY_PRODUCTS = "/myProducts";
 
 
     public static final String USER_LOGIN = API + USERS + LOGIN;
@@ -26,4 +26,5 @@ public class ApiPath {
     public static final String UPLOAD_IMAGE = API + UPLOAD;
 
     public static final String CREATE_PRODUCT = API + PRODUCT + CREATE;
+    public static final String GET_MY_PRODUCTS = API + PRODUCT + MY_PRODUCTS;
 }

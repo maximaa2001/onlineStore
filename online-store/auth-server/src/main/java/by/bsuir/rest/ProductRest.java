@@ -2,15 +2,13 @@ package by.bsuir.rest;
 
 import by.bsuir.entity.dto.product.CreateProductDto;
 import by.bsuir.entity.dto.product.ProductIdDto;
+import by.bsuir.entity.dto.product.ProductListDto;
 import by.bsuir.repo.ProductRepo;
 import by.bsuir.service.AuthService;
 import by.bsuir.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static by.bsuir.constant.ApiPath.*;
 
@@ -30,5 +28,10 @@ public class ProductRest {
     public ProductIdDto createProduct(@RequestHeader(name = AUTHORIZATION) String token,
                                           @RequestBody CreateProductDto productDto){
         return productService.createProduct(authService.getUserIdByToken(token), productDto);
+    }
+
+    @GetMapping(GET_MY_PRODUCTS)
+    public ProductListDto getMyProducts(@RequestHeader(name = AUTHORIZATION) String token){
+        return productService.getAllProducts(authService.getUserIdByToken(token));
     }
 }
