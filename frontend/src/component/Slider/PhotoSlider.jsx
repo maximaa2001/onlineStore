@@ -5,12 +5,12 @@ import style from "./PhotoSlider.module.css"
 const PhotoSlider = (props) => {
 
 
-    return <div className="mb-3">
-    <Carousel className={style.main} interval={null}>
+    return <div className={[props.clazzContainer, "mb-3"].join(' ')}>
+    <Carousel className={props.clazzMain} interval={null}>
     {props.images.map((item) => 
     
     <Carousel.Item key={item}><img
-      className={["d-block", "w-100", style.img].join(' ')}
+      className={props.clazzItem}
       src={item}
       alt="Не выбрана"
     /></Carousel.Item>)}

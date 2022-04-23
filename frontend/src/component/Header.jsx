@@ -93,7 +93,7 @@ const Header = (props) =>{
     <RegForm/>
       </Modal>
     <Modal visible={authModal.isVisible} setVisible={() => authModal.show(false)}>
-    <LoginForm></LoginForm></Modal>
+    <LoginForm setVisible={() => authModal.show(false)}></LoginForm></Modal>
     </div>
   )
 }

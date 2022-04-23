@@ -13,15 +13,15 @@ import useLoading from "../hook/useLoading"
 import ApiService from "../service/ApiService"
 import Loader from "../component/UI/Loader/Loader"
 import ProductContainer from "../component/Product/ProductContainer"
+import AboutMyProduct from "./AboutMyProduct"
 
 const MyProducts =() => {
 
   const [productList, setProductList] = useState()
 
 
-
-
   const trySendRequest = useLoading(async () => {
+    debugger
     switch(window.location.pathname){
       case Const.MY_PRODUCTS:
         await ApiService.getAllMyProducts()
@@ -75,7 +75,6 @@ const MyProducts =() => {
     <ProductStatusNav/>
     <Link to={Const.CTEATE_PRODUCT}><SendButton>Создать объявление</SendButton></Link>
     <ProductContainer productList={productList}/>
-
     </div>
 }
 

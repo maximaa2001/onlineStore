@@ -10,7 +10,7 @@ import style from './RegForm.module.css'
 import jwt_decode from "jwt-decode";
 import {Context} from "../../index";
 
-const LoginForm = () =>{
+const LoginForm = ({setVisible}) =>{
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -23,11 +23,13 @@ const LoginForm = () =>{
              const result = resp.data.jwt;
              if(result){
                 var decoded = jwt_decode(result);
-                console.log(decoded)
+
                 localStorage.setItem(Const.TOKEN, result)
                 user.setRole(decoded.role)
              }
          })
+
+         setVisible(false)
     });
 
     const responseGoogle = (response) => {

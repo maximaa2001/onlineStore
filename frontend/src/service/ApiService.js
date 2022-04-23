@@ -114,5 +114,20 @@ export default class ApiService{
         }
        
     }
+
+    static getInfoAboutMyProduct = async (id) => {
+
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response =  axios.get(`http://localhost:8100/api/product/myProducts/about/${id}`,  {
+                headers: {
+                    "AUTHORIZATION": jwt,
+                    "Content-type": "application/json"
+                },                 
+              })
+              return response;
+        }
+       
+    }
     
 }

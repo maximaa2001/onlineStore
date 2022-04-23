@@ -12,6 +12,7 @@ import axios from "axios";
 import useLoading from "../../hook/useLoading";
 import Loader from "../UI/Loader/Loader";
 import SuccessAlert from "../UI/Alert/SuccessAlert";
+import sliderStyle from "../Slider/PhotoSlider.module.css"
 
 const CreateProductForm = observer(() => {
 
@@ -174,7 +175,7 @@ const CreateProductForm = observer(() => {
   </Form.Group>
   {errors.price && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px"}}>{errors.price}</div> }
 
-  <PhotoSlider images={slideImage}/>
+  <PhotoSlider images={slideImage} clazzContainer={sliderStyle.containerCreate} clazzMain={sliderStyle.mainCreate} clazzItem={[sliderStyle.imgCreate, "d-block", "w-100"].join(' ')}/>
   {
     errorCountFiles.show
   ? <ErrorAlert style={{marginTop:"20px"}}>Нельзя загружать больше 5 фотографий</ErrorAlert>

@@ -15,5 +15,6 @@ export default class Const {
     static MODERATION_PRODUCTS =  Const.MY_PRODUCTS + "/moderation"
     static REJECTED_PRODUCTS =  Const.MY_PRODUCTS + "/rejected"
     static DELETED_PRODUCTS =  Const.MY_PRODUCTS + "/deleted"
+    static ABOUT_MY_PRODUCT = Const.MY_PRODUCTS + "/about/:id"   //${id}
     
 }
