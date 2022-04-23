@@ -14,30 +14,53 @@ import ApiService from "../service/ApiService"
 import Loader from "../component/UI/Loader/Loader"
 import ProductContainer from "../component/Product/ProductContainer"
 
-const MyProducts = observer(() => {
+const MyProducts =() => {
 
   const [productList, setProductList] = useState()
 
 
+
+
   const trySendRequest = useLoading(async () => {
-    const path = window.location.pathname;
-    switch(path){
-      case '/myProducts':
+    switch(window.location.pathname){
+      case Const.MY_PRODUCTS:
         await ApiService.getAllMyProducts()
         .then(resp =>{
-         //  console.log(resp.data)
-         console.log(resp.data)
          setProductList(resp.data)
         })
         break
+      case Const.ACTIVE_PRODUCTS:
+        await ApiService.getMyProductsByStatus("APPROVED")
+        .then(resp =>{
+         setProductList(resp.data)
+        })
+        break
+      case Const.MODERATION_PRODUCTS:
+          await ApiService.getMyProductsByStatus("WAITING_FOR_APPROVE")
+          .then(resp =>{
+           setProductList(resp.data)
+          })
+          break
+      case Const.REJECTED_PRODUCTS:
+          await ApiService.getMyProductsByStatus("NON_APPROVED")
+          .then(resp =>{
+           setProductList(resp.data)
+          })
+          break
+      case Const.DELETED_PRODUCTS:
+          await ApiService.getMyProductsByStatus("DELETED")
+          .then(resp =>{
+           setProductList(resp.data)
+          })
+          break
+
     }
 
 });
 
   useEffect(() => {
    trySendRequest.loadData()
-  },[])
-
+  },[window.location.pathname])
 
   const {user} = useContext(Context)
 
@@ -54,6 +77,6 @@ const MyProducts = observer(() => {
     <ProductContainer productList={productList}/>
 
     </div>
-})
+}
 
 export default MyProducts;

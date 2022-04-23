@@ -16,7 +16,19 @@ export const userRoutes = [
         Component: <MyProducts/>
     },
     {
-        path: Const.MY_PRODUCTS + "/active",
+        path: Const.ACTIVE_PRODUCTS,
+        Component: <MyProducts/>
+    },
+    {
+        path: Const.MODERATION_PRODUCTS,
+        Component: <MyProducts/>
+    },
+    {
+        path: Const.REJECTED_PRODUCTS,
+        Component: <MyProducts/>
+    },
+    {
+        path: Const.DELETED_PRODUCTS,
         Component: <MyProducts/>
     },
     {

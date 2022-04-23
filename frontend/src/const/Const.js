@@ -11,5 +11,9 @@ export default class Const {
     static HOME = "/"
     static MY_PRODUCTS = "/myProducts"
     static CTEATE_PRODUCT =  Const.MY_PRODUCTS + "/create"
+    static ACTIVE_PRODUCTS =  Const.MY_PRODUCTS + "/active"
+    static MODERATION_PRODUCTS =  Const.MY_PRODUCTS + "/moderation"
+    static REJECTED_PRODUCTS =  Const.MY_PRODUCTS + "/rejected"
+    static DELETED_PRODUCTS =  Const.MY_PRODUCTS + "/deleted"
     
 }

@@ -16,7 +16,12 @@ const ProductItem = ({product}) =>{
     {product.name}
     </div>
     <div className={style.price}>
-    {product.price}
+    {
+        product.price
+        ? product.price
+        : "Договорная"
+
+    }
     </div>
 
     </div>

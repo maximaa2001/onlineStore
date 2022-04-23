@@ -14,3 +14,6 @@
 .navigation_link{
     text-decoration: none;
 }
+.navigation_link:focus{
+    color: #800080;
+}
