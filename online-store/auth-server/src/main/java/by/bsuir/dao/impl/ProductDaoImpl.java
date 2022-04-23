@@ -2,6 +2,7 @@ package by.bsuir.dao.impl;
 
 import by.bsuir.dao.ProductDao;
 import by.bsuir.entity.domain.Product;
+import by.bsuir.entity.domain.ProductStatus;
 import by.bsuir.entity.domain.User;
 import by.bsuir.repo.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,12 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public List<Product> findAllProducts(User user) {
+    public List<Product> findAllProductsByUser(User user) {
         return productRepo.findByUser(user);
+    }
+
+    @Override
+    public List<Product> findProductsByUserAndStatus(User user, ProductStatus productStatus) {
+        return productRepo.findByUserAndProductStatus(user, productStatus);
     }
 }

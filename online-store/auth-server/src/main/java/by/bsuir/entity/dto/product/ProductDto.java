@@ -18,7 +18,6 @@ import java.util.stream.Collectors;
 public class ProductDto {
     private Integer id;
     private String name;
-    private String description;
     private BigDecimal price;
     private String imageUri;
 
@@ -26,7 +25,6 @@ public class ProductDto {
         return ProductDto.builder()
                 .id(product.getProductId())
                 .name(product.getProductName())
-                .description(product.getDescription())
                 .price(product.getPrice())
                 .imageUri(new ArrayList<>(product.getImages()).get(0).getImageUrl())
                 .build();

@@ -125,6 +125,12 @@ public class RefDaoImpl implements RefDao {
     }
 
     @Override
+    public ProductStatus findProductStatusByName(String productName) {
+        return productStatusRepo.findByProductStatusName(productName)
+                .orElseThrow(() -> new RuntimeException("Cannot find product status with name " + productName));
+    }
+
+    @Override
     public void synchronizeDefine() {
         List<UserStatus> userStatuses = UserStatusRef.getAll();
         List<UserRole> userRoles = UserRoleRef.getAll();

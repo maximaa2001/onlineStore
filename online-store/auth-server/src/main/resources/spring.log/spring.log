@@ -1127,3 +1127,750 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 2022-04-23 20:06:05 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-04-23 20:06:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2022-04-23 20:06:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-04-23 20:14:34 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 11716 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-04-23 20:14:34 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-04-23 20:14:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-23 20:14:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 12 JPA repository interfaces.
+2022-04-23 20:14:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-04-23 20:14:35 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-04-23 20:14:35 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-23 20:14:35 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-04-23 20:14:35 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1080 ms
+2022-04-23 20:14:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-04-23 20:14:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-04-23 20:14:35 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-23 20:14:35 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-04-23 20:14:35 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-23 20:14:35 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-23 20:14:36 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-23 20:14:36 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 20:14:37 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-23 20:14:37 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1eda12b3, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a61f634, org.springframework.security.web.header.HeaderWriterFilter@29811d4d, org.springframework.web.filter.CorsFilter@5006a697, org.springframework.security.web.authentication.logout.LogoutFilter@85b9f9c, by.bsuir.security.JwtFilter@71d78cac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@609edb55, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@319ea996, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@193792e6, org.springframework.security.web.session.SessionManagementFilter@3e7fc07e, org.springframework.security.web.access.ExceptionTranslationFilter@5b27d03d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61d4155b]
+2022-04-23 20:14:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-04-23 20:14:37 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 3.775 seconds (JVM running for 4.837)
+2022-04-23 20:14:51 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-23 20:14:51 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-04-23 20:14:51 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-04-23 20:14:51 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:15:30 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:15:37 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:15:39 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:15:41 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:16:34 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:17:11 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:17:21 [http-nio-8100-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-04-23 20:17:25 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:17:25 [http-nio-8100-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-04-23 20:18:22 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:18:22 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:18:57 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:20:17 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:20:24 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:20:29 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:20:34 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:20:38 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:20:40 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:20:42 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:20:45 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:20:45 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:21:06 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:21:07 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:22:20 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:22:20 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:22:20 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:22:23 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:22:23 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:22:24 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:22:25 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:22:26 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:22:26 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:22:28 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:22:28 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:22:30 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:22:30 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:22:30 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:22:30 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:22:31 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:22:31 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:22:32 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:22:32 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:22:34 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:22:34 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:32:10 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@557da009 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:32:10 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@523bcb31 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:32:10 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6a7e4497 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:32:10 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@fe00cf4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:32:10 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2beb6e92 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:32:10 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@27855a9d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:32:10 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3fc7e806 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:32:10 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@304fd4a6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:32:10 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4020a3c3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:32:10 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4dfc48e8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:32:11 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:32:14 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:32:17 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:32:19 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:33:25 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:33:30 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:33:56 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:33:57 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:33:59 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:34:03 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:35:19 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:35:22 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:35:27 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:35:34 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:36:10 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:36:13 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:36:15 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:36:25 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:36:35 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:36:38 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:36:48 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:37:05 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:37:25 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:37:29 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:37:30 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:37:44 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:53:10 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1b58ca50 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:53:10 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1f2f6562 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:53:10 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74dfee7f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:53:10 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2908b0fe (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:53:10 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@e09c9c4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:53:10 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@dadcdb1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:53:10 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4daa7229 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:53:10 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6a2c63a7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:53:10 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7b02ffea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:53:10 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1821657e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 20:53:10 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:53:15 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:53:42 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:53:42 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:53:46 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:53:51 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:53:55 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:53:56 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:53:56 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:53:57 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:53:57 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 20:54:05 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:54:05 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:54:10 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:54:12 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:54:29 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:54:30 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:54:36 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:54:43 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:55:10 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:55:28 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:55:47 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:55:48 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:56:03 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:56:06 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:56:07 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:56:13 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:56:14 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:56:40 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:56:42 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:57:16 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:57:20 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:57:34 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:57:34 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:57:40 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:57:41 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:59:22 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:59:33 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 20:59:58 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:00:28 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:00:30 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:00:43 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:00:46 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:01:28 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:01:55 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:01:57 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:02:31 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:02:38 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:02:58 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:03:06 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:03:33 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:03:40 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:04:17 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:04:18 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:04:21 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:04:45 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:04:45 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:05:02 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:05:49 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:05:50 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:05:59 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:05:59 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:06:00 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:06:00 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:06:18 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:06:18 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:06:24 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:06:24 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:06:28 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:06:28 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:06:33 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:06:33 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:06:56 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:06:56 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:07:26 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:07:26 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:07:52 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:07:52 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:08:57 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:09:02 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:09:08 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:09:11 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:10:40 [http-nio-8100-exec-6] WARN  o.apache.catalina.connector.Request - Creating the temporary upload location [C:\Users\maxim\AppData\Local\Temp\tomcat.8100.16987083872469596996\work\Tomcat\localhost\ROOT] as it is required by the servlet [dispatcherServlet]
+2022-04-23 21:10:40 [http-nio-8100-exec-6] INFO  by.bsuir.rest.FileRest - request to upload file endpoint, count of files: 1
+2022-04-23 21:10:40 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.FileServiceImpl - size 1
+2022-04-23 21:11:06 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:11:45 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:11:45 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:11:52 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:15:41 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c36ac5d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:15:41 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5e447349 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:15:41 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@32475101 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:15:41 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5b7a5750 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:15:41 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ab23dbd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:15:41 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@791d799 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:15:41 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@fd65133 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:15:41 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@61f474e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:15:41 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6dabcde5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:15:41 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@648fe2d6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:15:41 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:15:57 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:20:34 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@42ff3a2c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:20:34 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2d3fd93b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:20:34 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3d0f75b1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:20:34 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@69a0666 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:20:34 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ab47052 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:20:34 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2911983e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:20:34 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6ff5d250 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:20:34 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@390a50fe (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:20:34 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6065916d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:20:34 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@45903537 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:20:35 [http-nio-8100-exec-6] INFO  by.bsuir.rest.FileRest - request to upload file endpoint, count of files: 1
+2022-04-23 21:20:35 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.FileServiceImpl - size 1
+2022-04-23 21:20:42 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:24:16 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2f3b1872 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:24:16 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@71ec9e3e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:24:16 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@50a73a05 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:24:16 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@272840eb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:24:16 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@784ae558 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:24:16 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6dc28901 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:24:16 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4dce1ae (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:24:16 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6196d6c6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:24:16 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4e599f89 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:24:16 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@37aa8dc2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 21:24:16 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:24:16 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:24:41 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:24:41 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:24:42 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:24:42 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:25:52 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProducts endpoint
+2022-04-23 21:29:35 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 21:29:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-04-23 21:29:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-04-23 21:47:42 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 6296 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-04-23 21:47:42 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-04-23 21:47:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-23 21:47:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 12 JPA repository interfaces.
+2022-04-23 21:47:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-04-23 21:47:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-04-23 21:47:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-23 21:47:43 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-04-23 21:47:43 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1145 ms
+2022-04-23 21:47:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-04-23 21:47:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-04-23 21:47:43 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-23 21:47:43 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-04-23 21:47:44 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-23 21:47:44 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-23 21:47:44 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-23 21:47:44 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 21:47:45 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-23 21:47:45 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a3611b1, org.springframework.security.web.context.SecurityContextPersistenceFilter@3829306d, org.springframework.security.web.header.HeaderWriterFilter@27b84c9a, org.springframework.web.filter.CorsFilter@419ece7a, org.springframework.security.web.authentication.logout.LogoutFilter@e30a8ef, by.bsuir.security.JwtFilter@2336d3f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d1da00b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d5fea64, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@427c2c96, org.springframework.security.web.session.SessionManagementFilter@254210b1, org.springframework.security.web.access.ExceptionTranslationFilter@662b199, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@eef6e]
+2022-04-23 21:47:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-04-23 21:47:46 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 4.069 seconds (JVM running for 5.256)
+2022-04-23 21:47:56 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-23 21:47:56 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-04-23 21:47:56 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-04-23 21:47:56 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 21:48:00 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 21:49:27 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 21:49:48 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 21:50:59 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 21:50:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-04-23 21:50:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-04-23 21:54:59 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 14560 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-04-23 21:54:59 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-04-23 21:55:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-23 21:55:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 112 ms. Found 12 JPA repository interfaces.
+2022-04-23 21:55:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-04-23 21:55:01 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-04-23 21:55:01 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-23 21:55:01 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-04-23 21:55:01 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1167 ms
+2022-04-23 21:55:01 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-04-23 21:55:01 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-04-23 21:55:01 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-23 21:55:01 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-04-23 21:55:01 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-23 21:55:01 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-23 21:55:02 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-23 21:55:02 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 21:55:03 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-23 21:55:03 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@489c15e2, org.springframework.security.web.context.SecurityContextPersistenceFilter@759c53e5, org.springframework.security.web.header.HeaderWriterFilter@64a8851a, org.springframework.web.filter.CorsFilter@923bf67, org.springframework.security.web.authentication.logout.LogoutFilter@14764fdd, by.bsuir.security.JwtFilter@23dc70c1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c02cf78, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13d1653, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@938e54a, org.springframework.security.web.session.SessionManagementFilter@1b83fac3, org.springframework.security.web.access.ExceptionTranslationFilter@1d0acb8f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3284de45]
+2022-04-23 21:55:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-04-23 21:55:03 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 4.112 seconds (JVM running for 5.121)
+2022-04-23 21:55:03 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-23 21:55:03 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-04-23 21:55:03 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-04-23 21:55:04 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:55:06 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 21:55:06 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 21:55:12 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 21:55:12 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 21:55:51 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 21:55:51 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 21:56:48 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:56:48 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 21:56:48 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 21:58:09 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:58:09 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 21:58:09 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 21:59:26 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:59:26 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 21:59:26 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 21:59:32 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:59:32 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 21:59:32 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 21:59:42 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 21:59:42 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 21:59:42 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:00:14 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:00:14 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:00:28 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:00:28 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:00:36 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:00:36 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:00:51 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:00:51 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:01:05 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:01:05 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:01:15 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:01:15 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:01:17 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:01:17 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:01:19 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:01:19 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:01:38 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:01:38 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:02:22 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:02:22 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:02:25 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:02:25 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:02:25 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@471d1333 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:02:25 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@38731578 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:02:25 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@17d81dce (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:02:25 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1a4def33 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:02:25 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@32a737ec (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:02:25 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@12df2c15 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:02:25 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:02:26 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:02:33 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:02:33 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:02:33 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:02:33 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@718f754f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:02:33 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7d6bb1f7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:02:33 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@40436817 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:02:33 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:02:33 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:03:03 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:03:03 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:03:07 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:03:07 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:03:07 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:03:07 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:03:07 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:03:12 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:03:12 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:03:12 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:03:12 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:03:12 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:03:15 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:03:15 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:03:15 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:03:16 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:03:16 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:04:21 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:04:28 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:04:28 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:04:28 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:04:37 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:04:37 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:04:38 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:04:38 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:04:41 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:04:41 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:04:42 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:04:43 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:04:43 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:05:12 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:05:12 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:05:12 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:14:18 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@203b39ca (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:14:18 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6ffc2ad1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:14:18 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5871f2e3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:14:18 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@21fd654e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:14:18 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2f4a119f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:14:18 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@21ee1c05 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:14:18 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@437be05f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:14:18 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1224d201 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:14:18 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1c5432e8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:14:18 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@36f9f693 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:14:18 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:14:18 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:14:18 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:15:00 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:15:00 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:15:00 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:15:04 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:15:04 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:15:09 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:15:09 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:15:13 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:15:13 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:15:16 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:15:16 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:15:24 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:15:24 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:15:41 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:15:41 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:16:40 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:16:40 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:16:40 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:16:40 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:16:42 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:16:42 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:16:42 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:16:42 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:16:52 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:16:52 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:17:02 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:17:02 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:17:02 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:17:59 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:17:59 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:18:22 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:18:22 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:20:59 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:20:59 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:21:02 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:21:02 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:21:02 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:23:23 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:23:23 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:23:30 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:23:30 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:23:34 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:23:34 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:23:48 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:23:48 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:23:51 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:23:51 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:23:52 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:23:52 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:23:53 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:23:53 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:23:54 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:23:54 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:23:56 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:23:56 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:23:59 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:23:59 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:24:06 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:24:06 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:24:08 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:24:08 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:24:10 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:24:10 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:24:19 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:24:19 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:24:21 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:24:21 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:24:52 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:25:09 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:25:18 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:26:07 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:26:07 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:26:08 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:26:08 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:26:08 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:26:11 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:26:11 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:26:11 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:26:12 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:26:12 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:26:12 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:26:15 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:26:15 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:26:16 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:26:16 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:26:17 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:26:17 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:26:18 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:26:18 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:26:20 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:26:20 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:26:30 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:26:30 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:26:33 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:26:33 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:27:05 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:28:05 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:28:25 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:29:22 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:29:22 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:29:32 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:29:32 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:29:35 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:29:35 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:29:35 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:29:53 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:29:55 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:29:55 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:29:55 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:30:59 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:31:08 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:31:28 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:31:28 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:31:28 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:31:28 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:31:30 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:31:30 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:31:41 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:31:41 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:31:42 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:31:42 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:31:45 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:31:45 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:32:03 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:32:03 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:32:08 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:32:08 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:32:09 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:32:09 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:32:11 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:32:11 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:32:35 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:32:35 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:32:35 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:32:37 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:32:37 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:32:39 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:32:39 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:32:52 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:32:52 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:32:53 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:32:53 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:32:59 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:32:59 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:33:00 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:33:00 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:34:09 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:34:11 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:34:29 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@51914ae4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:34:29 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f930c9b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:34:29 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a4efb58 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:34:29 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c4f0f7c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:34:29 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:34:29 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:34:29 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2b73569d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:34:29 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@13d21d89 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:34:29 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@684d18ec (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:34:29 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@714aaa30 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:34:29 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@40bcdd3a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:34:29 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:34:32 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:36:12 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:36:14 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:36:23 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:36:23 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:36:25 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:36:25 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:36:27 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:36:27 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:36:29 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:36:29 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:36:43 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:36:43 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:36:46 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:36:46 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:36:49 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:36:49 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:36:57 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:36:57 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:37:28 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:37:31 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:37:31 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:37:34 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:37:34 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:37:36 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:37:36 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:37:53 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:37:53 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:38:25 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:38:25 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:38:27 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:38:27 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:38:33 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - NON_APPROVED
+2022-04-23 22:38:33 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:38:36 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - DELETED
+2022-04-23 22:38:36 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:38:40 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:38:40 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:45:35 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@61d79237 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:45:35 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3d9f77ba (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:45:35 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@681c09b2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:45:35 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@358768ac (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:45:35 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4aeaff3e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:45:35 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@c8e737e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:45:35 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@457bac4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:45:35 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@a1b60ea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:45:35 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@17157d98 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:45:35 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:45:35 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:45:35 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:45:46 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:45:46 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:45:46 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:45:58 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:45:58 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:47:32 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:47:32 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:47:32 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:47:43 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:47:43 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:47:43 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:47:54 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:47:54 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:47:54 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:00 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:48:00 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:48:00 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:02 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:48:02 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:02 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - NON_APPROVED
+2022-04-23 22:48:02 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:03 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - DELETED
+2022-04-23 22:48:03 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:12 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:48:12 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - DELETED
+2022-04-23 22:48:12 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:13 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:48:13 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:14 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:48:14 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:15 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:48:15 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:47 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:48:47 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:48 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - NON_APPROVED
+2022-04-23 22:48:48 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:49 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - DELETED
+2022-04-23 22:48:49 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:49 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:48:49 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:50 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:48:50 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:51 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - NON_APPROVED
+2022-04-23 22:48:51 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:52 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - DELETED
+2022-04-23 22:48:52 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:48:53 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:48:53 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:49:22 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:49:22 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:49:23 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:49:23 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:49:23 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - NON_APPROVED
+2022-04-23 22:49:23 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:49:24 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - DELETED
+2022-04-23 22:49:24 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:49:24 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:49:24 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:49:51 [http-nio-8100-exec-9] INFO  by.bsuir.rest.FileRest - request to upload file endpoint, count of files: 1
+2022-04-23 22:49:51 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.FileServiceImpl - size 1
+2022-04-23 22:49:58 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - null
+2022-04-23 22:49:58 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-04-23 22:50:01 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:50:01 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:02 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:50:02 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:03 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:50:03 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:03 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - NON_APPROVED
+2022-04-23 22:50:03 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:04 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - DELETED
+2022-04-23 22:50:04 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:04 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - NON_APPROVED
+2022-04-23 22:50:04 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:05 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:50:05 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:06 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:50:06 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:06 [http-nio-8100-exec-9] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:50:06 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:11 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:50:11 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:14 [http-nio-8100-exec-1] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:50:14 [http-nio-8100-exec-1] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:16 [http-nio-8100-exec-2] INFO  by.bsuir.rest.ProductRest - NON_APPROVED
+2022-04-23 22:50:16 [http-nio-8100-exec-2] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:17 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - DELETED
+2022-04-23 22:50:17 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:18 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:50:18 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:20 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:50:20 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:20 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:50:20 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:25 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:50:25 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:25 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:50:25 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:50:56 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:50:56 [http-nio-8100-exec-10] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:50:56 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:54:22 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@24f56e33 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:54:22 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@a50e519 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:54:22 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@228596f2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:54:22 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2d0ee067 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:54:22 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5781f40 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:54:22 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@80d4adb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:54:22 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6317f2e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:54:22 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c66aa57 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:54:22 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@19213c84 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:54:22 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7b18e6e9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-04-23 22:54:22 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-04-23 22:54:22 [http-nio-8100-exec-3] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:54:22 [http-nio-8100-exec-3] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:54:40 [http-nio-8100-exec-4] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:54:40 [http-nio-8100-exec-4] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:54:42 [http-nio-8100-exec-5] INFO  by.bsuir.rest.ProductRest - APPROVED
+2022-04-23 22:54:42 [http-nio-8100-exec-5] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:54:42 [http-nio-8100-exec-6] INFO  by.bsuir.rest.ProductRest - DELETED
+2022-04-23 22:54:42 [http-nio-8100-exec-6] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:54:43 [http-nio-8100-exec-7] INFO  by.bsuir.rest.ProductRest - NON_APPROVED
+2022-04-23 22:54:43 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:54:43 [http-nio-8100-exec-8] INFO  by.bsuir.rest.ProductRest - WAITING_FOR_APPROVE
+2022-04-23 22:54:43 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-04-23 22:55:38 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 22:55:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-04-23 22:55:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

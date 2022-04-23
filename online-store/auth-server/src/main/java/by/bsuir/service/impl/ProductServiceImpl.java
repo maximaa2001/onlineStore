@@ -3,12 +3,8 @@ package by.bsuir.service.impl;
 import by.bsuir.dao.ProductDao;
 import by.bsuir.dao.RefDao;
 import by.bsuir.dao.UserDao;
-import by.bsuir.entity.domain.Category;
-import by.bsuir.entity.domain.City;
-import by.bsuir.entity.domain.Product;
-import by.bsuir.entity.domain.User;
+import by.bsuir.entity.domain.*;
 import by.bsuir.entity.dto.product.CreateProductDto;
-import by.bsuir.entity.dto.product.ProductDto;
 import by.bsuir.entity.dto.product.ProductIdDto;
 import by.bsuir.entity.dto.product.ProductListDto;
 import by.bsuir.service.ProductService;
@@ -47,10 +43,19 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ProductListDto getAllProducts(Integer userId) {
-        log.info("Request for getAllProducts endpoint");
+    public ProductListDto getAllProductsByUser(Integer userId) {
+        log.info("Request for getAllProductsByUser endpoint");
         User user = userDao.findById(userId);
-        List<Product> products = productDao.findAllProducts(user);
+        List<Product> products = productDao.findAllProductsByUser(user);
+        return ProductListDto.of(products);
+    }
+
+    @Override
+    public ProductListDto getProductsByStatus(Integer userId, String statusName) {
+        log.info("Request for getProductsByStatus endpoint");
+        ProductStatus productStatus = refDao.findProductStatusByName(statusName.toUpperCase());
+        User user = userDao.findById(userId);
+        List<Product> products = productDao.findProductsByUserAndStatus(user, productStatus);
         return ProductListDto.of(products);
     }
 

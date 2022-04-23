@@ -22,6 +22,7 @@ public interface RefDao {
 
     City findCityByName(String cityName);
     Category findCategoryByName(String categoryName);
+    ProductStatus findProductStatusByName(String productName);
 
     void synchronizeDefine();
 }
