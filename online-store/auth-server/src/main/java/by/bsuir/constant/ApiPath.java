@@ -14,6 +14,8 @@ public class ApiPath {
     public static final String PRODUCT = "/product";
     public static final String CREATE = "/create";
     public static final String MY_PRODUCTS = "/myProducts";
+    public static final String ABOUT = "/about";
+
 
 
     public static final String USER_LOGIN = API + USERS + LOGIN;
@@ -27,4 +29,5 @@ public class ApiPath {
 
     public static final String CREATE_PRODUCT = API + PRODUCT + CREATE;
     public static final String GET_MY_PRODUCTS = API + PRODUCT + MY_PRODUCTS;
+    public static final String GET_INFO_ABOUT_MY_PRODUCT = API + PRODUCT + MY_PRODUCTS + ABOUT;
 }

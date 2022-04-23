@@ -4,16 +4,20 @@ import by.bsuir.dao.ProductDao;
 import by.bsuir.dao.RefDao;
 import by.bsuir.dao.UserDao;
 import by.bsuir.entity.domain.*;
+import by.bsuir.entity.dto.product.AboutMyProductDto;
 import by.bsuir.entity.dto.product.CreateProductDto;
 import by.bsuir.entity.dto.product.ProductIdDto;
 import by.bsuir.entity.dto.product.ProductListDto;
+import by.bsuir.exception.ProductIsNotLinkedException;
 import by.bsuir.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -59,6 +63,17 @@ public class ProductServiceImpl implements ProductService {
         return ProductListDto.of(products);
     }
 
+    @Override
+    public AboutMyProductDto getMyProductInfo(Integer userId, Optional<String> productId) {
+        log.info("Request for getMyProductInfo endpoint");
+        checkProductId(productId);
+        Product product = productDao.findById(Integer.parseInt(productId.get()));
+        if(!product.getUser().getUserId().equals(userId)){
+            throw new ProductIsNotLinkedException(HttpStatus.NOT_FOUND);
+        }
+        return AboutMyProductDto.of(product);
+    }
+
     private Product createDefaultProduct(CreateProductDto createProductDto){
         return Product.builder()
                 .productName(createProductDto.getProductName())
@@ -68,5 +83,17 @@ public class ProductServiceImpl implements ProductService {
                 .productStatus(refDao.findWaitingToApproveStatus())
                 .productLevel(refDao.findLowPriorityLevel())
                 .build();
+    }
+
+    private void checkProductId(Optional<String> productId){
+        if(productId.isEmpty()){
+            throw new ProductIsNotLinkedException(HttpStatus.NOT_FOUND);
+        }
+        String id = productId.get();
+        try {
+            Integer.parseInt(id);
+        }catch (NumberFormatException e){
+            throw new ProductIsNotLinkedException(HttpStatus.NOT_FOUND);
+        }
     }
 }

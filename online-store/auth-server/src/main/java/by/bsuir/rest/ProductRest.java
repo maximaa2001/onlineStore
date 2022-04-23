@@ -1,5 +1,6 @@
 package by.bsuir.rest;
 
+import by.bsuir.entity.dto.product.AboutMyProductDto;
 import by.bsuir.entity.dto.product.CreateProductDto;
 import by.bsuir.entity.dto.product.ProductIdDto;
 import by.bsuir.entity.dto.product.ProductListDto;
@@ -8,6 +9,8 @@ import by.bsuir.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 import static by.bsuir.constant.ApiPath.*;
 import static by.bsuir.constant.Request.*;
@@ -24,6 +27,7 @@ public class ProductRest {
         this.authService = authService;
     }
 
+
     @PostMapping(CREATE_PRODUCT)
     public ProductIdDto createProduct(@RequestHeader(name = AUTHORIZATION) String token,
                                       @RequestBody CreateProductDto productDto) {
@@ -33,8 +37,14 @@ public class ProductRest {
     @GetMapping(GET_MY_PRODUCTS)
     public ProductListDto getMyProducts(@RequestHeader(name = AUTHORIZATION) String token,
                                         @RequestParam(name = PRODUCT_STATUS_NAME, required = false) String productStatus) {
-        log.info(productStatus);
         return (productStatus == null) ? productService.getAllProductsByUser(authService.getUserIdByToken(token))
                 : productService.getProductsByStatus(authService.getUserIdByToken(token), productStatus);
+    }
+
+    @GetMapping(GET_INFO_ABOUT_MY_PRODUCT + "/{id}")
+    public AboutMyProductDto getMyProductInfo(@RequestHeader(name = AUTHORIZATION) String token,
+                                              @PathVariable(name = "id") String productId) {
+        log.info("aaa {}",productId);
+        return productService.getMyProductInfo(authService.getUserIdByToken(token), Optional.of(productId));
     }
 }
