@@ -10,6 +10,7 @@ import {Context} from "../index"
 import Const from "../const/Const"
 import UserMenu from "./UI/Menu/UserMenu";
 import { observer } from "mobx-react-lite";
+import { Link } from "react-router-dom";
 
 const Header = (props) =>{
 
@@ -43,8 +44,8 @@ const Header = (props) =>{
       <Navbar bg="dark" expand="dark" className="w-100">
       <Container className="d-flex justify-content-start w-100" fluid>
       <Row className="w-100">
-      <Col lg={2}>
-      <Navbar.Brand href="#home">
+      <Col lg={2}><Link to={Const.HOME}>
+      <Navbar.Brand>
       <img
         src={logo}
         width="100"
@@ -53,6 +54,8 @@ const Header = (props) =>{
         alt="React Bootstrap logo"
       />
     </Navbar.Brand>
+      </Link>
+      
     </Col>
     <Col lg={5}>
     <Form >

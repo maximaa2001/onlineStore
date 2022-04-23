@@ -16,6 +16,10 @@ export const userRoutes = [
         Component: <MyProducts/>
     },
     {
+        path: Const.MY_PRODUCTS + "/active",
+        Component: <MyProducts/>
+    },
+    {
         path: Const.CTEATE_PRODUCT,
         Component: <CreateProduct/>
     }
