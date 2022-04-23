@@ -73,17 +73,19 @@ const CreateProductForm = observer(() => {
        .then(resp => {
          if(resp.status == '200'){
           successAlert.setShow(true)
-          setName("aaa")
+          setName('')
           setDescription('')
           setPrice('')
           setImages([])
+          setSlideImage([])
          }
        })
      })
 
      useEffect(() => {
-      if(createdProductId){
+      if(createdProductId > 0){
         sendImages();
+        setCreatedProductId(0)
       }
     }, [createdProductId])
 
@@ -117,25 +119,20 @@ const CreateProductForm = observer(() => {
       <Formik initialValues={{
         name: '',
         description: '',
-        category: categories[0],
-        city: cities[0],
+        category: '',
+        city: '',
         price: '',
       }}
     
-      onSubmit={async values => {
-        setName(values.name)
-        setDescription(values.description)
-        setCategory(values.category)
-        setCity(values.city)
-        setPrice(values.price)
+      onSubmit={(values, {resetForm}) => {
 
-
-        ApiService.createProduct(values.name, values.description, values.category, values.city, values.price)
+        ApiService.createProduct(name, description, category, city, price)
         .then(resp => {
         setCreatedProductId(resp.data.productId)
         })
 
-       
+        resetForm()
+
       }}
       validationSchema={validationSchema}>
 

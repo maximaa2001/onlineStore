@@ -98,7 +98,7 @@ return (
       }
       {
     successAlert.show
-    ? <SuccessAlert style={{marginTop:"20px"}}>Ошибка при обращении к серверу</SuccessAlert>
+    ? <SuccessAlert style={{marginTop:"20px"}}>Проверьте почту</SuccessAlert>
     : ""
         }
         {

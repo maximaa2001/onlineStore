@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {Navbar, Container, Row, Col, Form, Button } from "react-bootstrap";
 import Modal from "./UI/Modal/Modal";
 import logo from '../img/logo.ico';
@@ -11,13 +11,30 @@ import Const from "../const/Const"
 import UserMenu from "./UI/Menu/UserMenu";
 import { observer } from "mobx-react-lite";
 
-const Header = observer(() =>{
+const Header = (props) =>{
 
  const regModal = useShowModal(false);
 
  const authModal = useShowModal(false);
 
  const {user} = useContext(Context)
+
+
+ useEffect(() => {
+   if(regModal.isVisible || authModal.isVisible){
+     if(props.setNavVisible){
+      props.setNavVisible(false)
+     }
+ 
+    
+   } else{
+
+    if(props.setNavVisible){
+      props.setNavVisible(true)
+     }
+   }
+
+ }, [regModal.isVisible, authModal.isVisible])
  
 
   
@@ -76,7 +93,7 @@ const Header = observer(() =>{
     <LoginForm></LoginForm></Modal>
     </div>
   )
-})
+}
 
 export default Header;
 
