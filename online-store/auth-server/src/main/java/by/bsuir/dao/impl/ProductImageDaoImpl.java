@@ -1,6 +1,7 @@
 package by.bsuir.dao.impl;
 
 import by.bsuir.dao.ProductImageDao;
+import by.bsuir.entity.domain.Product;
 import by.bsuir.entity.domain.ProductImage;
 import by.bsuir.repo.ProductImageRepo;
 import org.springframework.stereotype.Component;
@@ -18,5 +19,10 @@ public class ProductImageDaoImpl implements ProductImageDao {
     @Override
     public void saveAll(List<ProductImage> productImages) {
         productImageRepo.saveAll(productImages);
+    }
+
+    @Override
+    public void removeByProduct(Product product) {
+        productImageRepo.deleteByProduct(product);
     }
 }

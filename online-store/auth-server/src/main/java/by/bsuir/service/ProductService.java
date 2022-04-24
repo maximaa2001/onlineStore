@@ -1,10 +1,7 @@
 package by.bsuir.service;
 
 import by.bsuir.entity.domain.Product;
-import by.bsuir.entity.dto.product.AboutMyProductDto;
-import by.bsuir.entity.dto.product.CreateProductDto;
-import by.bsuir.entity.dto.product.ProductIdDto;
-import by.bsuir.entity.dto.product.ProductListDto;
+import by.bsuir.entity.dto.product.*;
 
 import java.util.Optional;
 
@@ -13,4 +10,5 @@ public interface ProductService {
     ProductListDto getAllProductsByUser(Integer userId);
     ProductListDto getProductsByStatus(Integer userId, String statusName);
     AboutMyProductDto getMyProductInfo(Integer userId, Optional<String> productId);
+    ProductIdDto editMyProduct(Integer userId, EditProductDto editProductDto);
 }

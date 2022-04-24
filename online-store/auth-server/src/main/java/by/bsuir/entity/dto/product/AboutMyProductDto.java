@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,6 +23,7 @@ public class AboutMyProductDto {
     private String name;
     private String description;
     private BigDecimal price;
+    private Long actualDate;
     private String category;
     private String city;
     private String productStatus;
@@ -33,6 +35,7 @@ public class AboutMyProductDto {
                 .name(product.getProductName())
                 .description(product.getDescription())
                 .price(product.getPrice())
+                .actualDate(Timestamp.valueOf(product.getActualDate()).getTime())
                 .category(product.getCategory().getCategoryName())
                 .city(product.getCity().getCityName())
                 .productStatus(product.getProductStatus().getProductStatusName())

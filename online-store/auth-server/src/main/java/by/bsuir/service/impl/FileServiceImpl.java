@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.PostConstruct;
@@ -58,10 +59,12 @@ public class FileServiceImpl implements FileService {
     }
 
 
+    @Transactional
     @Override
     public FileLinkListDto upload(List<MultipartFile> files, Integer productId) throws IOException {
         log.info("size {}", files.size());
         Product product = productDao.findById(productId);
+        productImageDao.removeByProduct(product);
         List<ProductImage> images = new ArrayList<>();
         for (int i = 0; i < files.size(); i++) {
             File file = new File(files.get(i).getName());

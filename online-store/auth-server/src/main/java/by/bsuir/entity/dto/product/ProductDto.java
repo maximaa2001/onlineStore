@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Data
@@ -26,7 +27,8 @@ public class ProductDto {
                 .id(product.getProductId())
                 .name(product.getProductName())
                 .price(product.getPrice())
-                .imageUri(new ArrayList<>(product.getImages()).get(0).getImageUrl())
+                .imageUri((product.getImages().isEmpty() ? ""
+                        : new ArrayList<>(product.getImages()).get(0).getImageUrl()))
                 .build();
     }
 }

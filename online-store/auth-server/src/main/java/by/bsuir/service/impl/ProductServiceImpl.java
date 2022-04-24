@@ -4,10 +4,7 @@ import by.bsuir.dao.ProductDao;
 import by.bsuir.dao.RefDao;
 import by.bsuir.dao.UserDao;
 import by.bsuir.entity.domain.*;
-import by.bsuir.entity.dto.product.AboutMyProductDto;
-import by.bsuir.entity.dto.product.CreateProductDto;
-import by.bsuir.entity.dto.product.ProductIdDto;
-import by.bsuir.entity.dto.product.ProductListDto;
+import by.bsuir.entity.dto.product.*;
 import by.bsuir.exception.ProductIsNotLinkedException;
 import by.bsuir.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
@@ -74,6 +71,17 @@ public class ProductServiceImpl implements ProductService {
         return AboutMyProductDto.of(product);
     }
 
+    @Override
+    public ProductIdDto editMyProduct(Integer userId, EditProductDto editProductDto) {
+        Product product = productDao.findById(editProductDto.getId());
+        if(!product.getUser().getUserId().equals(userId)){
+            throw new ProductIsNotLinkedException(HttpStatus.BAD_REQUEST);
+        }
+        Product updateProduct = editProduct(product, editProductDto);
+        productDao.save(updateProduct);
+        return ProductIdDto.of(updateProduct.getProductId());
+    }
+
     private Product createDefaultProduct(CreateProductDto createProductDto){
         return Product.builder()
                 .productName(createProductDto.getProductName())
@@ -83,6 +91,16 @@ public class ProductServiceImpl implements ProductService {
                 .productStatus(refDao.findWaitingToApproveStatus())
                 .productLevel(refDao.findLowPriorityLevel())
                 .build();
+    }
+
+    private Product editProduct(Product product, EditProductDto editProductDto){
+        product.setProductName(editProductDto.getProductName());
+        product.setDescription(editProductDto.getDescription());
+        product.setPrice(editProductDto.getPrice());
+        product.setProductStatus(refDao.findWaitingToApproveStatus());
+        product.setCategory(refDao.findCategoryByName(editProductDto.getCategory()));
+        product.setCity(refDao.findCityByName(editProductDto.getCity()));
+        return product;
     }
 
     private void checkProductId(Optional<String> productId){

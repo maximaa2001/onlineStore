@@ -1,9 +1,6 @@
 package by.bsuir.rest;
 
-import by.bsuir.entity.dto.product.AboutMyProductDto;
-import by.bsuir.entity.dto.product.CreateProductDto;
-import by.bsuir.entity.dto.product.ProductIdDto;
-import by.bsuir.entity.dto.product.ProductListDto;
+import by.bsuir.entity.dto.product.*;
 import by.bsuir.service.AuthService;
 import by.bsuir.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
@@ -44,7 +41,12 @@ public class ProductRest {
     @GetMapping(GET_INFO_ABOUT_MY_PRODUCT + "/{id}")
     public AboutMyProductDto getMyProductInfo(@RequestHeader(name = AUTHORIZATION) String token,
                                               @PathVariable(name = "id") String productId) {
-        log.info("aaa {}",productId);
         return productService.getMyProductInfo(authService.getUserIdByToken(token), Optional.of(productId));
+    }
+
+    @PostMapping(EDIT_MT_PRODUCT)
+    public ProductIdDto getMyProductInfo(@RequestHeader(name = AUTHORIZATION) String token,
+                                         @RequestBody EditProductDto editProductDto) {
+        return productService.editMyProduct(authService.getUserIdByToken(token), editProductDto);
     }
 }
