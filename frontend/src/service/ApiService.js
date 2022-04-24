@@ -129,5 +129,22 @@ export default class ApiService{
         }
        
     }
+
+    static editProduct = async (id, name, desc, category, city, price) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response = axios.post(Const.AUTH_SERVER + "/api/product/myProducts/edit",
+            {
+                "id": id,
+                "productName": name,
+                "description": desc,
+                "city": city,
+                "category": category,
+                "price": price,
+            }, configToken(jwt))
+            return response;
+        }
+        return null;
+    }
     
 }

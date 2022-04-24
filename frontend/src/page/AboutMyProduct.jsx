@@ -6,6 +6,9 @@ import ApiService from "../service/ApiService";
 import sliderStyle from "../component/Slider/PhotoSlider.module.css"
 import Header from "../component/Header";
 import style from "../style/AboutMyProductPage.module.css"
+import SendButton from "../component/UI/Button/SendButton";
+import Const from "../const/Const";
+import Loader from "../component/UI/Loader/Loader";
 
 
 const AboutMyProduct = (props) =>{
@@ -14,15 +17,20 @@ const AboutMyProduct = (props) =>{
     const pathVariable = useParams();
     const navigate = useNavigate ()
 
+    const [loading, setLoading] = useState(true)
+
+
     const trySendRequest = useLoading(async() => {
      await ApiService.getInfoAboutMyProduct(pathVariable.id)
            .then((res) => {
             setProduct(res.data)
             }).catch((err) => {
                 if(err.response.status === 500 || err.response.status === 404){
-                    console.log(err.response.status)
+            
                     navigate("/404")
                 }
+            }).finally(() => {
+                setLoading(false)
             })
        
        
@@ -34,30 +42,61 @@ const AboutMyProduct = (props) =>{
     }, [])
 
     useEffect(() => {
-        console.log(product)
+        switch(product.productStatus){
+            case "WAITING_FOR_APPROVE":
+                product.productStatus = "На модерации"
+                break;
+            case "APPROVED":
+                    product.productStatus = "Активный"
+                    break;
+             case "NON_APPROVED":
+                    product.productStatus = "Отклоненный"
+                     break;
+            case "DELETED":
+                     product.productStatus = "Неактивный"
+                     break;
+        }
+
     }, [product])
+
+    const editProduct = () => {
+        navigate(Const.MY_PRODUCTS + "/edit/" + product.id)
+    }
+
+    
+
+    if(loading){
+        return <Loader  style={{position:"absolute", left:"48%", top:"30%"}}></Loader>
+    }
 
 
     return(
         <div>
+        {
+            trySendRequest.isLoading 
+          ? <Loader  style={{position:"absolute", left:"48%", top:"30%"}}></Loader>
+          : ""
+        }
         <Header/>
         <div style={{width:"100%", display: "flex"}}>
         <PhotoSlider images={product.imageUris}  clazzContainer={sliderStyle.containerAbout}  clazzMain={sliderStyle.mainAbout} clazzItem={[sliderStyle.imgAbout, "d-block", "w-100"].join(' ')}/>
       
 
       <div className={style.textContainer}>
-      <div className={style.categoryText}>Категория</div>
-      <div className={style.nameText}>Цена</div>
-          <div className={style.nameText}>Название</div>
-          <div className={style.cityText}>Город</div>
-          <div className={style.dateText}>Дата</div>
-          <div className={style.nameText}>Статус товара</div>
-          <button>gjmft</button>
+      <div className={style.categoryText}>{product.category}</div>
+      <div className={style.nameText}>{product.price}</div>
+          <div className={style.nameText}>{product.name}</div>
+          <div className={style.cityText}>Город: {product.city}</div>
+          <div className={style.dateText}>Дата: {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(product.actualDate)}</div>
+          <div className={style.nameText}>Статус: {product.productStatus}</div>
+          <SendButton sendDataCallback={() => editProduct()}>Редактировать</SendButton>
+         
       </div>
         </div>
         <div>
         <div style={{textAlign:"center", fontSize:"40px"}}>Описание</div>
-       <div style={{paddingLeft:"10px", fontSize:"30px"}}>Описание</div>
+       <div style={{paddingLeft:"10px", fontSize:"30px"}}>{product.description}</div>
+
             
         </div>
   

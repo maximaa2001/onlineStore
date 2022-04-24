@@ -21,7 +21,6 @@ const MyProducts =() => {
 
 
   const trySendRequest = useLoading(async () => {
-    debugger
     switch(window.location.pathname){
       case Const.MY_PRODUCTS:
         await ApiService.getAllMyProducts()

@@ -1,6 +1,7 @@
 import Const from "../const/Const"
 import AboutMyProduct from "../page/AboutMyProduct"
 import CreateProduct from "../page/CreateProduct"
+import EditMyProduct from "../page/EditMyProduct"
 import Home from "../page/Home"
 import MyProducts from "../page/MyProducts"
 
@@ -39,5 +40,9 @@ export const userRoutes = [
     {
         path: Const.ABOUT_MY_PRODUCT,
         Component: <AboutMyProduct/>
+    },
+    {
+        path: Const.EDIT_MY_PRODUCT,
+        Component: <EditMyProduct/>
     }
 ]

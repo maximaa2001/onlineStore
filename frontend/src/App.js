@@ -25,7 +25,6 @@ const App = observer(() => {
       const jwt = resp.data.jwt
       if(jwt){
         const decoded = jwt_decode(jwt)
-        console.log(decoded)
         user.setRole(decoded.role)
       }
     }).finally(() => setLoading(false))
