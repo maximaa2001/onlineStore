@@ -16,6 +16,7 @@ public class ApiPath {
     public static final String MY_PRODUCTS = "/myProducts";
     public static final String ABOUT = "/about";
     public static final String EDIT = "/edit";
+    public static final String CATALOG = "/catalog";
 
 
 
@@ -32,4 +33,5 @@ public class ApiPath {
     public static final String GET_MY_PRODUCTS = API + PRODUCT + MY_PRODUCTS;
     public static final String GET_INFO_ABOUT_MY_PRODUCT = API + PRODUCT + MY_PRODUCTS + ABOUT;
     public static final String EDIT_MT_PRODUCT = API + PRODUCT + MY_PRODUCTS + EDIT;
+    public static final String GET_CATALOG = API + CATALOG;
 }

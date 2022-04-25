@@ -1,6 +1,11 @@
 package by.bsuir.rest;
 
 import by.bsuir.entity.dto.product.*;
+import by.bsuir.entity.dto.product.catalog.CatalogDto;
+import by.bsuir.entity.dto.product.catalog.CatalogListDto;
+import by.bsuir.entity.dto.product.edit.EditProductDto;
+import by.bsuir.entity.dto.product.my.AboutMyProductDto;
+import by.bsuir.entity.dto.product.my.ProductListDto;
 import by.bsuir.service.AuthService;
 import by.bsuir.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
@@ -48,5 +53,10 @@ public class ProductRest {
     public ProductIdDto getMyProductInfo(@RequestHeader(name = AUTHORIZATION) String token,
                                          @RequestBody EditProductDto editProductDto) {
         return productService.editMyProduct(authService.getUserIdByToken(token), editProductDto);
+    }
+
+    @GetMapping(GET_CATALOG)
+    public CatalogListDto getCatalogByPage(@RequestParam(name = "page") Integer page){
+        return productService.getProductByPage(page);
     }
 }

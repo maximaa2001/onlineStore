@@ -5,6 +5,10 @@ import by.bsuir.dao.RefDao;
 import by.bsuir.dao.UserDao;
 import by.bsuir.entity.domain.*;
 import by.bsuir.entity.dto.product.*;
+import by.bsuir.entity.dto.product.catalog.CatalogListDto;
+import by.bsuir.entity.dto.product.edit.EditProductDto;
+import by.bsuir.entity.dto.product.my.AboutMyProductDto;
+import by.bsuir.entity.dto.product.my.ProductListDto;
 import by.bsuir.exception.ProductIsNotLinkedException;
 import by.bsuir.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
@@ -80,6 +84,12 @@ public class ProductServiceImpl implements ProductService {
         Product updateProduct = editProduct(product, editProductDto);
         productDao.save(updateProduct);
         return ProductIdDto.of(updateProduct.getProductId());
+    }
+
+    @Override
+    public CatalogListDto getProductByPage(Integer page) {
+        List<Product> products = productDao.findByPage(page);
+        return CatalogListDto.of(products);
     }
 
     private Product createDefaultProduct(CreateProductDto createProductDto){

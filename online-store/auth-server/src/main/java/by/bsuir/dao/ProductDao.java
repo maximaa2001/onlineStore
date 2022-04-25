@@ -11,4 +11,5 @@ public interface ProductDao {
     Product findById(Integer productId);
     List<Product> findAllProductsByUser(User user);
     List<Product> findProductsByUserAndStatus(User user, ProductStatus productStatus);
+    List<Product> findByPage(Integer page);
 }

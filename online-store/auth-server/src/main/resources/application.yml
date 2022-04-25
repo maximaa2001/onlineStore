@@ -34,3 +34,7 @@ cloudinary:
   api-key: 144789595384786
   api-secret: HsH0z_k-HBvKxMGAuXWU_f9H7Jg
 
+product:
+  catalog:
+    size: 10
+
