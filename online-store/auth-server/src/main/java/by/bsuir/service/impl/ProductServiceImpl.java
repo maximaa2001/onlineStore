@@ -1,9 +1,12 @@
 package by.bsuir.service.impl;
 
+import by.bsuir.dao.BasketItemDao;
 import by.bsuir.dao.ProductDao;
 import by.bsuir.dao.RefDao;
 import by.bsuir.dao.UserDao;
 import by.bsuir.entity.domain.*;
+import by.bsuir.entity.domain.key.BasketId;
+import by.bsuir.entity.dto.basket.BasketBooleanDto;
 import by.bsuir.entity.dto.product.*;
 import by.bsuir.entity.dto.product.catalog.CatalogListDto;
 import by.bsuir.entity.dto.product.edit.EditProductDto;
@@ -26,12 +29,14 @@ public class ProductServiceImpl implements ProductService {
     private ProductDao productDao;
     private UserDao userDao;
     private RefDao refDao;
+    private BasketItemDao basketItemDao;
 
     @Autowired
-    public ProductServiceImpl(ProductDao productDao, UserDao userDao, RefDao refDao){
+    public ProductServiceImpl(ProductDao productDao, UserDao userDao, RefDao refDao, BasketItemDao basketItemDao){
         this.productDao = productDao;
         this.userDao = userDao;
         this.refDao = refDao;
+        this.basketItemDao = basketItemDao;
     }
 
     @Override
@@ -90,6 +95,32 @@ public class ProductServiceImpl implements ProductService {
     public CatalogListDto getProductByPage(Integer page) {
         List<Product> products = productDao.findByPage(page);
         return CatalogListDto.of(products);
+    }
+
+    @Override
+    public BasketBooleanDto changeBasket(Integer userId, ProductIdDto productIdDto) {
+        User user = userDao.findById(userId);
+        Product product = productDao.findById(productIdDto.getProductId());
+        BasketId hardId = new BasketId();
+
+        hardId.setUser(user.getUserId());
+        hardId.setProduct(product.getProductId());
+
+        Optional<BasketItem> basketItem = basketItemDao.findById(hardId);
+        if(basketItem.isPresent()){
+            basketItemDao.removeById(hardId);
+            return BasketBooleanDto.builder()
+                    .isAdded(false)
+                    .build();
+        }
+
+        basketItemDao.save(BasketItem.builder()
+                .basketId(hardId)
+                .build());
+
+        return BasketBooleanDto.builder()
+                .isAdded(true)
+                .build();
     }
 
     private Product createDefaultProduct(CreateProductDto createProductDto){

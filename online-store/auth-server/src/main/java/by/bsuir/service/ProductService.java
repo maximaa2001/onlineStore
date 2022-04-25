@@ -1,5 +1,6 @@
 package by.bsuir.service;
 
+import by.bsuir.entity.dto.basket.BasketBooleanDto;
 import by.bsuir.entity.dto.product.*;
 import by.bsuir.entity.dto.product.catalog.CatalogListDto;
 import by.bsuir.entity.dto.product.edit.EditProductDto;
@@ -15,4 +16,5 @@ public interface ProductService {
     AboutMyProductDto getMyProductInfo(Integer userId, Optional<String> productId);
     ProductIdDto editMyProduct(Integer userId, EditProductDto editProductDto);
     CatalogListDto getProductByPage(Integer page);
+    BasketBooleanDto changeBasket(Integer userId, ProductIdDto productIdDto);
 }
