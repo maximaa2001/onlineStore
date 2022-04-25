@@ -1,17 +1,34 @@
-
+import React from "react"
 import { observer } from "mobx-react-lite"
 import Header from "../component/Header"
 import Navigation from "../component/UI/Navigaion/CategoryNavigation"
 import {Context} from "../index"
 import { useContext, useEffect, useState } from "react"
+import useLoading from "../hook/useLoading"
+import ApiService from "../service/ApiService"
+import CatalogItem from "../component/Product/CatalogItem"
 
 const Home = observer(() => {
 
   const [navVisible, setNavVisible] = useState(true)
+  const [page, setPage] = useState(0)
+  const [products, setProducts] = useState([])
 
   const call = (value) => {
     setNavVisible(value)
   }
+
+  const trySendRequest = useLoading(() => {
+    ApiService.getCatalog(page)
+    .then((resp) => {
+      setProducts(resp.data.products)
+    })
+  })
+
+  useEffect(() => {
+    console.log("aaa")
+    trySendRequest.loadData()
+  }, [])
 
 
   const {user} = useContext(Context)
@@ -19,12 +36,14 @@ const Home = observer(() => {
     return<div>
 
     <Header setNavVisible={(value) => call(value)}/>
+    <div>
     {
       navVisible 
-      ?<Navigation />
+      ?<div style={{display: "flex"}}><Navigation /><div style={{display: "flex", flexDirection:"column", width:"100%"}}>
+       {products.map((item) => <CatalogItem key={item.id} product={item}></CatalogItem>)}</div> </div>
       : null
     }
-    
+    </div>
     {user.role}
     </div>
 })

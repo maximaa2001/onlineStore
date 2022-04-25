@@ -146,5 +146,17 @@ export default class ApiService{
         }
         return null;
     }
+
+    static getCatalog = async (page) => {
+            const response =  axios.get(`http://localhost:8100/api/catalog`,  {
+                headers: {
+                    "Content-type": "application/json"
+                },    
+                params: {
+                    page: page
+                }             
+              })
+              return response;
+    }
     
 }

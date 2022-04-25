@@ -1,19 +1,16 @@
 import React from "react"
 import { useState } from "react"
-import { observer } from "mobx-react-lite"
 import Header from "../component/Header"
 import {Context} from "../index"
 import { useContext, useEffect } from "react"
 import ProductStatusNav from "../component/UI/Navigaion/ProductStatusNav"
-import { Link, useResolvedPath } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SendButton from "../component/UI/Button/SendButton";
 import Const from "../const/Const"
-import ProductItem from "../component/Product/ProductItem"
 import useLoading from "../hook/useLoading"
 import ApiService from "../service/ApiService"
 import Loader from "../component/UI/Loader/Loader"
 import ProductContainer from "../component/Product/ProductContainer"
-import AboutMyProduct from "./AboutMyProduct"
 
 const MyProducts =() => {
 

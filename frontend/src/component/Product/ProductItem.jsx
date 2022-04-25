@@ -1,12 +1,13 @@
-import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import style from "./ProductItem.module.css"
+import Const from "../../const/Const";
+import React from "react"
 
 const ProductItem = ({product}) =>{
 
 
     return(
-    <div className={style.container}>
+    <Link  to={Const.MY_PRODUCTS + "/edit/" + product.id} className={style.container}>
     <img className={style.img}
      src={product.imageUri}>
   
@@ -26,7 +27,7 @@ const ProductItem = ({product}) =>{
 
     </div>
 
-    </div>
+    </Link>
 
     )
 

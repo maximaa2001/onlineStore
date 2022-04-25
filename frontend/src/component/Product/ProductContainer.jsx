@@ -1,7 +1,6 @@
-import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
 import ProductItem from "./ProductItem";
 import style from "./ProductItem.module.css"
+import React from "react"
 
 const ProductContainer = ({productList}) =>{
 
@@ -11,7 +10,7 @@ const ProductContainer = ({productList}) =>{
 
         {productList && productList.products
         ? <div className={style.test_container}>
-        {productList.products.map((item) => <ProductItem key={item.id} product={item}/>)}
+        {productList.products.map((item) =><ProductItem key={item.id} product={item}/>)}
         </div>
         : null
         }

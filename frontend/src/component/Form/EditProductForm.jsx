@@ -8,7 +8,6 @@ import useAlert from "../../hook/useAlert";
 import { observer } from "mobx-react-lite";
 import { Formik } from "formik";
 import * as Yup from 'yup';
-import axios from "axios";
 import useLoading from "../../hook/useLoading";
 import Loader from "../UI/Loader/Loader";
 import SuccessAlert from "../UI/Alert/SuccessAlert";
@@ -91,7 +90,7 @@ const EditProductForm = observer(() => {
      const trySendPhotos = useLoading(async () => {
        await ApiService.uploadPhotos(data)
        .then(resp => {
-         if(resp.status == '200'){
+         if(resp.status === '200'){
           successAlert.setShow(true)
          }
        })
@@ -136,11 +135,11 @@ const EditProductForm = observer(() => {
       <div>
   <Header/>
       <Formik initialValues={{
-        name: '',
-        description: '',
-        category: '',
-        city: '',
-        price: '',
+        name: name,
+        description: description,
+        category: category,
+        city: city,
+        price: price,
       }}
     
       onSubmit={(values) => {
