@@ -3,7 +3,7 @@ import { observer } from "mobx-react-lite"
 import Header from "../component/Header"
 import Navigation from "../component/UI/Navigaion/CategoryNavigation"
 import {Context} from "../index"
-import { useContext, useEffect, useState } from "react"
+import {useContext, useEffect, useState } from "react"
 import useLoading from "../hook/useLoading"
 import ApiService from "../service/ApiService"
 import CatalogItem from "../component/Product/CatalogItem"
@@ -18,9 +18,10 @@ const Home = observer(() => {
     setNavVisible(value)
   }
 
-  const trySendRequest = useLoading(() => {
-    ApiService.getCatalog(page)
+  const trySendRequest = useLoading(async() => {
+    await ApiService.getCatalog(page)
     .then((resp) => {
+      console.log(resp.data.products)
       setProducts(resp.data.products)
     })
   })

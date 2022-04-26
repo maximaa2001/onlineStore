@@ -53,6 +53,7 @@
    margin-right: 30px;
 }
 
-/* .heart:hover{
-   color: green;
- } */
+.heart:hover{
+    transform: translate(0, -5px);
+    transition: All 0.25s; 
+}

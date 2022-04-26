@@ -20,14 +20,19 @@ const App = observer(() => {
   const [loading, setLoading] = useState(true)
 
   useEffect(async () => {
-    await ApiService.authToken()
-    .then(resp => {
-      const jwt = resp.data.jwt
-      if(jwt){
-        const decoded = jwt_decode(jwt)
-        user.setRole(decoded.role)
-      }
-    }).finally(() => setLoading(false))
+    const jwt = localStorage.getItem("token")
+    if(jwt){
+      await ApiService.authToken()
+      .then(resp => {
+        const jwt = resp.data.jwt
+        if(jwt){
+          const decoded = jwt_decode(jwt)
+          user.setRole(decoded.role)
+        }
+      }).finally(() => setLoading(false))
+    }
+    setLoading(false)
+   
   }, [])
 
   if (loading) {

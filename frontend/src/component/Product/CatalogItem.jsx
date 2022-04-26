@@ -1,21 +1,45 @@
 import React from "react"
-import {useState} from "react"
+import {useState, useContext, useEffect} from "react"
 import { Link } from "react-router-dom";
 import style from "./CatalogItem.module.css"
 import 'font-awesome/css/font-awesome.min.css';
+import {Context} from "../../index"
+import Const from "../../const/Const";
+import ApiService from "../../service/ApiService";
 
 
 
 const CatalogItem = ({product}) =>{
 
-    const [heartStyle, setHeartStyles] = useState(["fa fa-heart-o", style.heart])
+    
 
-    const overHeart = () => {
-     setHeartStyles(["fa fa-heart", style.heart])
-    }
+    const [heartStyle, setHeartStyles] = useState([])
 
-    const leaveHeart = () => {
-        setHeartStyles(["fa fa-heart-o", style.heart])
+     const {user} = useContext(Context)
+
+     useEffect(() => {
+         if(product.isAdded){
+            setHeartStyles(["fa fa-heart", style.heart])
+         } else{
+            setHeartStyles(["fa fa-heart-o", style.heart])
+         }
+     },[])
+
+
+
+
+    const changeBasket = () => {
+        ApiService.changeBasket(product.id)
+        .then((resp) => {
+            console.log(resp.data.isAdded)
+            const isAdded = resp.data.isAdded;
+            if(isAdded){
+                setHeartStyles(["fa fa-heart", style.heart])
+            }
+            else{
+                setHeartStyles(["fa fa-heart-o", style.heart])
+            }
+        })
     }
 
 
@@ -52,9 +76,14 @@ const CatalogItem = ({product}) =>{
     {/* fa fa-heart */}
 
     </div>
-    <div  style={{width:"100%", display: "flex", justifyContent: "end"}}><i  style={{fontSize: "30px"}}
-      onMouseOver={() => overHeart()} onMouseLeave={(() =>  leaveHeart())}
-    className={heartStyle.join(' ')}></i></div>;
+    {
+        user.role === Const.USER_ROLE
+        ? <div  style={{width:"100%", display: "flex", justifyContent: "end"}}><i  style={{fontSize: "30px"}}
+            onClick={changeBasket}
+            className={heartStyle.join(' ')}></i></div>
+        : null
+    }
+    
   
 
     </Link>

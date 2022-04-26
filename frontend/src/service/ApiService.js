@@ -7,7 +7,7 @@ export default class ApiService{
    
 
     static registration = async (email, password, repeatPassword, phoneNumber) => {
-        const response =  axios.post(Const.AUTH_SERVER + "/api/users/registration",
+        const response = await  axios.post(Const.AUTH_SERVER + "/api/users/registration",
         {
             "email": email,
             "password": password,
@@ -18,7 +18,7 @@ export default class ApiService{
     }
 
     static login = async (email, password) => {
-        const response =  axios.post(Const.AUTH_SERVER + "/api/users/login",
+        const response = await  axios.post(Const.AUTH_SERVER + "/api/users/login",
         {
             "email": email,
             "password": password,
@@ -27,7 +27,7 @@ export default class ApiService{
     }
 
     static googleLogin = async (accessToken) => {
-        const response =  axios.post(Const.AUTH_SERVER + "/api/users/login/google",   
+        const response = await  axios.post(Const.AUTH_SERVER + "/api/users/login/google",   
         {
             "access_token": accessToken,
         })
@@ -35,12 +35,12 @@ export default class ApiService{
     }
 
     static getCategories = async () => {
-        const response =  axios.get(Const.BACKEND + "/api/categories/all")
+        const response = await  axios.get(Const.BACKEND + "/api/categories/all")
         return response;
     }
 
     static getCities = async () => {
-        const response =  axios.get(Const.BACKEND + "/api/cities/all")
+        const response = await  axios.get(Const.BACKEND + "/api/cities/all")
         console.log(response)
         return response;
     }
@@ -48,7 +48,7 @@ export default class ApiService{
     static authToken = async () => {
         const jwt = localStorage.getItem(Const.TOKEN);
         if(jwt){
-            const response = axios.get(Const.AUTH_SERVER + "/api/users/auth", configToken(jwt))
+            const response = await axios.get(Const.AUTH_SERVER + "/api/users/auth", configToken(jwt))
             return response;
         }
         return null;
@@ -57,7 +57,7 @@ export default class ApiService{
     static createProduct = async (name, desc, category, city, price) => {
         const jwt = localStorage.getItem(Const.TOKEN);
         if(jwt){
-            const response = axios.post(Const.AUTH_SERVER + "/api/product/create",
+            const response = await axios.post(Const.AUTH_SERVER + "/api/product/create",
             {
                 "productName": name,
                 "description": desc,
@@ -71,7 +71,7 @@ export default class ApiService{
     }
 
     static uploadPhotos = async (data) => {
-        const jwt = localStorage.getItem(Const.TOKEN);
+        const jwt = await localStorage.getItem(Const.TOKEN);
         if(jwt){
             const response =  axios.post("http://localhost:8100/api/upload",data,  {
                 headers: {
@@ -85,9 +85,9 @@ export default class ApiService{
     }
 
     static getAllMyProducts = async () => {
-        const jwt = localStorage.getItem(Const.TOKEN);
+        const jwt =  localStorage.getItem(Const.TOKEN);
         if(jwt){
-            const response =  axios.get("http://localhost:8100/api/product/myProducts",  {
+            const response = await  axios.get("http://localhost:8100/api/product/myProducts",  {
                 headers: {
                     "AUTHORIZATION": jwt,
                     "Content-type": "application/json"
@@ -101,7 +101,7 @@ export default class ApiService{
     static getMyProductsByStatus = async (status) => {
         const jwt = localStorage.getItem(Const.TOKEN);
         if(jwt){
-            const response =  axios.get("http://localhost:8100/api/product/myProducts",  {
+            const response = await  axios.get("http://localhost:8100/api/product/myProducts",  {
                 headers: {
                     "AUTHORIZATION": jwt,
                     "Content-type": "application/json"
@@ -119,7 +119,7 @@ export default class ApiService{
 
         const jwt = localStorage.getItem(Const.TOKEN);
         if(jwt){
-            const response =  axios.get(`http://localhost:8100/api/product/myProducts/about/${id}`,  {
+            const response = await  axios.get(`http://localhost:8100/api/product/myProducts/about/${id}`,  {
                 headers: {
                     "AUTHORIZATION": jwt,
                     "Content-type": "application/json"
@@ -131,7 +131,7 @@ export default class ApiService{
     }
 
     static editProduct = async (id, name, desc, category, city, price) => {
-        const jwt = localStorage.getItem(Const.TOKEN);
+        const jwt = await localStorage.getItem(Const.TOKEN);
         if(jwt){
             const response = axios.post(Const.AUTH_SERVER + "/api/product/myProducts/edit",
             {
@@ -148,8 +148,10 @@ export default class ApiService{
     }
 
     static getCatalog = async (page) => {
-            const response =  axios.get(`http://localhost:8100/api/catalog`,  {
+        const jwt = localStorage.getItem(Const.TOKEN)
+            const response = await  axios.get(Const.AUTH_SERVER + "/api/catalog",  {
                 headers: {
+                    "AUTHORIZATION": jwt,
                     "Content-type": "application/json"
                 },    
                 params: {
@@ -158,5 +160,16 @@ export default class ApiService{
               })
               return response;
     }
-    
+
+    static changeBasket = async (productId) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response = await axios.post(Const.AUTH_SERVER + "/api/basket/change",
+            {
+                "productId": productId
+            }, configToken(jwt))
+            return response;
+        }
+        return null;
+    }
 }
