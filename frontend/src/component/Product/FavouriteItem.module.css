@@ -1,0 +1,52 @@
+body{
+    background-color: #D3D3D3;
+}
+
+.test_container{
+    margin: 10px 5px 10px 5px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container{
+    padding: 5px;
+   width: 50%;
+   height: 100%;
+   display: flex;
+   border: 3px solid silver;
+   background-color: #DCDCDC;
+}
+
+.img{
+    width: 40%;
+    height: 100%;
+}
+
+.text_container{
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    color: black;
+
+}
+
+.name{
+    height: 40%;
+}
+
+.price{
+    height: 30%;
+}
+
+.heart{
+    color: red;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.heart:hover{
+    transform: translate(0, -5px);
+    transition: All 0.25s; 
+}

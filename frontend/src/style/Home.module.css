@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.containerNav{
+    width: 300px;
+    height: 100vh;
+    background-color: green;
+}

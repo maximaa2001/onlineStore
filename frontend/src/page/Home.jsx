@@ -7,6 +7,7 @@ import {useContext, useEffect, useState } from "react"
 import useLoading from "../hook/useLoading"
 import ApiService from "../service/ApiService"
 import CatalogItem from "../component/Product/CatalogItem"
+import style from "../style/Home.module.css"
 
 const Home = observer(() => {
 
@@ -37,15 +38,15 @@ const Home = observer(() => {
     return<div>
 
     <Header setNavVisible={(value) => call(value)}/>
-    <div>
+
     {
       navVisible 
-      ?<div style={{display: "flex"}}><Navigation /><div style={{display: "flex", flexDirection:"column", width:"100%"}}>
+      ?<div className={style.container}> <Navigation /><div style={{display: "flex", flexDirection:"column", width:"100%"}}>
        {products.map((item) => <CatalogItem key={item.id} product={item}></CatalogItem>)}</div> </div>
       : null
     }
-    </div>
-    {user.role}
+ 
+  
     </div>
 })
 

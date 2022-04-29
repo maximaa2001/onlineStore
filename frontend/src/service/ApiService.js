@@ -149,6 +149,7 @@ export default class ApiService{
 
     static getCatalog = async (page) => {
         const jwt = localStorage.getItem(Const.TOKEN)
+        if(jwt){
             const response = await  axios.get(Const.AUTH_SERVER + "/api/catalog",  {
                 headers: {
                     "AUTHORIZATION": jwt,
@@ -159,6 +160,18 @@ export default class ApiService{
                 }             
               })
               return response;
+        } else{
+            const response = await  axios.get(Const.AUTH_SERVER + "/api/catalog",  {
+                headers: {
+                    "Content-type": "application/json"
+                },    
+                params: {
+                    page: page
+                }             
+              })
+              return response;
+        }
+           
     }
 
     static changeBasket = async (productId) => {
@@ -168,6 +181,20 @@ export default class ApiService{
             {
                 "productId": productId
             }, configToken(jwt))
+            return response;
+        }
+        return null;
+    }
+
+    static getFavourite = async () => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response = await axios.get(Const.AUTH_SERVER + "/api/basket/favourite",
+            {
+                headers: {
+                    "AUTHORIZATION" : jwt
+                }
+            })
             return response;
         }
         return null;
