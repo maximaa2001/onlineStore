@@ -15,6 +15,7 @@ public interface ProductService {
     ProductListDto getProductsByStatus(Integer userId, String statusName);
     AboutMyProductDto getMyProductInfo(Integer userId, Optional<String> productId);
     ProductIdDto editMyProduct(Integer userId, EditProductDto editProductDto);
-    CatalogListDto getProductByPage(Integer page);
+    CatalogListDto getProductByPage(Integer userId, Integer page);
     BasketBooleanDto changeBasket(Integer userId, ProductIdDto productIdDto);
+    ProductListDto getProductsInCart(Integer userId);
 }

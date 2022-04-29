@@ -1,11 +1,9 @@
 package by.bsuir.service.impl;
 
-import by.bsuir.dao.BasketItemDao;
 import by.bsuir.dao.ProductDao;
 import by.bsuir.dao.RefDao;
 import by.bsuir.dao.UserDao;
 import by.bsuir.entity.domain.*;
-import by.bsuir.entity.domain.key.BasketId;
 import by.bsuir.entity.dto.basket.BasketBooleanDto;
 import by.bsuir.entity.dto.product.*;
 import by.bsuir.entity.dto.product.catalog.CatalogListDto;
@@ -22,6 +20,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -29,14 +28,12 @@ public class ProductServiceImpl implements ProductService {
     private ProductDao productDao;
     private UserDao userDao;
     private RefDao refDao;
-    private BasketItemDao basketItemDao;
 
     @Autowired
-    public ProductServiceImpl(ProductDao productDao, UserDao userDao, RefDao refDao, BasketItemDao basketItemDao){
+    public ProductServiceImpl(ProductDao productDao, UserDao userDao, RefDao refDao){
         this.productDao = productDao;
         this.userDao = userDao;
         this.refDao = refDao;
-        this.basketItemDao = basketItemDao;
     }
 
     @Override
@@ -92,35 +89,42 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public CatalogListDto getProductByPage(Integer page) {
-        List<Product> products = productDao.findByPage(page);
-        return CatalogListDto.of(products);
+    public CatalogListDto getProductByPage(Integer userId, Integer page) {
+        List<Product> productsForPage = productDao.findByPage(page);
+        if(userId != null){
+            User user = userDao.findById(userId);
+            List<Integer> userBasket = user.getFavourite().stream().map(Product::getProductId).collect(Collectors.toList());
+            return CatalogListDto.of(productsForPage, userBasket);
+        }
+        return CatalogListDto.of(productsForPage);
     }
 
     @Override
     public BasketBooleanDto changeBasket(Integer userId, ProductIdDto productIdDto) {
         User user = userDao.findById(userId);
         Product product = productDao.findById(productIdDto.getProductId());
-        BasketId hardId = new BasketId();
+        List<Integer> basket = user.getFavourite().stream().map(Product::getProductId).collect(Collectors.toList());
 
-        hardId.setUser(user.getUserId());
-        hardId.setProduct(product.getProductId());
-
-        Optional<BasketItem> basketItem = basketItemDao.findById(hardId);
-        if(basketItem.isPresent()){
-            basketItemDao.removeById(hardId);
+        if(basket.contains(product.getProductId())){
+            user.getFavourite().removeIf(product1 -> product1.getProductId().equals(product.getProductId()));
+            userDao.save(user);
             return BasketBooleanDto.builder()
                     .isAdded(false)
                     .build();
         }
 
-        basketItemDao.save(BasketItem.builder()
-                .basketId(hardId)
-                .build());
+        user.getFavourite().add(product);
+        userDao.save(user);
 
         return BasketBooleanDto.builder()
                 .isAdded(true)
                 .build();
+    }
+
+    @Override
+    public ProductListDto getProductsInCart(Integer userId) {
+        User user = userDao.findById(userId);
+        return ProductListDto.of(user.getFavourite());
     }
 
     private Product createDefaultProduct(CreateProductDto createProductDto){

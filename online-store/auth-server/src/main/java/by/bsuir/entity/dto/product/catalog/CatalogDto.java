@@ -20,6 +20,11 @@ public class CatalogDto {
     private String city;
     private BigDecimal price;
     private String imageUri;
+    private Boolean isAdded;
+
+    /**
+     *     Catalog for unknow user
+     */
 
     public static CatalogDto of(Product product){
         return CatalogDto.builder()
@@ -30,6 +35,24 @@ public class CatalogDto {
                 .price(product.getPrice())
                 .imageUri((product.getImages().isEmpty() ? ""
                         : new ArrayList<>(product.getImages()).get(0).getImageUrl()))
+                .isAdded(false)
+                .build();
+    }
+
+    /**
+     *      Catalog for authorized user
+     */
+
+    public static CatalogDto of(Product product, Boolean isAdded){
+        return CatalogDto.builder()
+                .id(product.getProductId())
+                .name(product.getProductName())
+                .category(product.getCategory().getCategoryName())
+                .city(product.getCity().getCityName())
+                .price(product.getPrice())
+                .imageUri((product.getImages().isEmpty() ? ""
+                        : new ArrayList<>(product.getImages()).get(0).getImageUrl()))
+                .isAdded(isAdded)
                 .build();
     }
 }

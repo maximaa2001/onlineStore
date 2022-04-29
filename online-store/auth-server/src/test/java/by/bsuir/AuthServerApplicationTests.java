@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.net.URL;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @SpringBootTest
 @Slf4j
@@ -32,9 +33,9 @@ class AuthServerApplicationTests {
     @Transactional
     void oneToMany() {
         User user = userRepo.findById(176).orElseThrow(() -> new RuntimeException());
-        List<Product> products = productRepo.findByUser(user);
-        log.info("product size: {}", products.size());
-        log.info("image: {}", products.get(0).getImages());
+//        List<Product> products = productRepo.findByUser(user);
+//        log.info("product size: {}", products.size());
+//        log.info("image: {}", products.get(0).getImages());
     }
 
 

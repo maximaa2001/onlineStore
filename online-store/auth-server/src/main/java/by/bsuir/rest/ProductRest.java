@@ -58,14 +58,19 @@ public class ProductRest {
     }
 
     @GetMapping(GET_CATALOG)
-    public CatalogListDto getCatalogByPage(@RequestParam(name = PAGE) Integer page){
-        return productService.getProductByPage(page);
+    public CatalogListDto getCatalogByPage(@RequestHeader(name = AUTHORIZATION, required = false) String token,
+                                           @RequestParam(name = PAGE) Integer page){
+        return productService.getProductByPage((token == null) ? null : authService.getUserIdByToken(token), page);
     }
 
     @PostMapping(CHANGE_BASKET)
     public BasketBooleanDto changeBasket(@RequestHeader(name = AUTHORIZATION) String token,
                                          @RequestBody ProductIdDto productIdDto){
-        log.info("aaa");
         return productService.changeBasket(authService.getUserIdByToken(token), productIdDto);
+    }
+
+    @GetMapping(GET_FAVOURITE)
+    public ProductListDto getFavouriteProducts(@RequestHeader(name = AUTHORIZATION) String token){
+        return productService.getProductsInCart(authService.getUserIdByToken(token));
     }
 }

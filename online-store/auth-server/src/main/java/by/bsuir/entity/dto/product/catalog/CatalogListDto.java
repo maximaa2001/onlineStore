@@ -18,9 +18,29 @@ import java.util.stream.Collectors;
 public class CatalogListDto {
     private List<CatalogDto> products;
 
-    public static CatalogListDto of(List<Product> products){
+    /**
+     *     Catalog for unknow user
+     */
+
+    public static CatalogListDto of(List<Product> productsForPage){
         return CatalogListDto.builder()
-                .products(products.stream().map(CatalogDto::of).collect(Collectors.toList()))
+                .products(productsForPage.stream().map(CatalogDto::of).collect(Collectors.toList()))
+                .build();
+    }
+
+    /**
+     *      Catalog for authorized user
+     */
+
+    public static CatalogListDto of(List<Product> productsForPage, List<Integer> userBasket){
+        List<CatalogDto> catalog = productsForPage.stream().map(product -> {
+            if (userBasket.contains(product.getProductId())) {
+                return CatalogDto.of(product, true);
+            }
+            return CatalogDto.of(product, false);
+        }).collect(Collectors.toList());
+        return CatalogListDto.builder()
+                .products(catalog)
                 .build();
     }
 }

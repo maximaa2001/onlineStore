@@ -19,6 +19,7 @@ public class ApiPath {
     public static final String CATALOG = "/catalog";
     public static final String BASKET = "/basket";
     public static final String CHANGE = "/change";
+    public static final String FAVOURITE = "/favourite";
 
 
 
@@ -38,4 +39,5 @@ public class ApiPath {
     public static final String EDIT_MT_PRODUCT = API + PRODUCT + MY_PRODUCTS + EDIT;
     public static final String GET_CATALOG = API + CATALOG;
     public static final String CHANGE_BASKET = API + BASKET + CHANGE;
+    public static final String GET_FAVOURITE = API + BASKET + FAVOURITE;
 }
