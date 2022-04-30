@@ -81,10 +81,6 @@ const EditProfile = (props) =>{
         }
     }, [phoneMenu])
 
-    useEffect(() => {
-        console.log(password)
-    }, [password])
-
 
    return(
 //style={{boxSizee: "borderBox"}}
@@ -170,7 +166,7 @@ const EditProfile = (props) =>{
     ? <div style={{width: "400px", marginLeft: "50%", transform: "translate(-50%, 0)", color: "green"}}>Пароль успешно иземен</div>
     : null}
 
-<SendButton sendDataCallback={handleSubmit} type="submit">Изменить пароль</SendButton>
+<SendButton sendDataCallback={handleSubmit} type="submit" style={{marginTop :"-5px"}}>Изменить пароль</SendButton>
 </div>
         )}
     

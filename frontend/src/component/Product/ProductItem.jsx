@@ -7,7 +7,7 @@ const ProductItem = ({product}) =>{
 
 
     return(
-    <Link  to={Const.MY_PRODUCTS + "/edit/" + product.id} className={style.container}>
+    <Link  to={Const.MY_PRODUCTS + "/about/" + product.id} className={style.container}>
     <img className={style.img}
      src={product.imageUri}>
   

@@ -8,6 +8,7 @@ import useLoading from "../hook/useLoading"
 import ApiService from "../service/ApiService"
 import CatalogItem from "../component/Product/CatalogItem"
 import style from "../style/Home.module.css"
+import AboutCatalogProduct from "./AboutCatalogProduct"
 
 const Home = observer(() => {
 

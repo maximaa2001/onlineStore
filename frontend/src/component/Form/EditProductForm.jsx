@@ -17,6 +17,8 @@ import Header from "../../component/Header";
 
 const EditProductForm = observer(() => {
 
+  const [compareImages, setCompareImages] = useState([])
+
     const [categories, setCategories] = useState([])
     const [cities, setCities] = useState([])
     const [images, setImages] = useState([])
@@ -58,6 +60,8 @@ const EditProductForm = observer(() => {
             setCategory(resp.data.category)
             setCity(resp.data.city)
             setSlideImage(resp.data.imageUris)
+            setCompareImages(resp.data.imageUris)
+            setImages(resp.data.imageUris)
         }).catch((err) => {
             navigate("/404")
         }).finally(() => setLoading(false))
@@ -104,14 +108,29 @@ const EditProductForm = observer(() => {
     }, [editProductId])
 
     const sendImages = () => {
+
+      console.log(compareImages.length)
+      console.log(images.length)
+
+      var is_same = (compareImages.length == images.length) && compareImages.every(function(element, index) {
+        return element === images[index]; 
+    });
+    console.log(is_same)
       
+    if(is_same){
+      console.log("одинаковые")
+    }
+    else{
       for(let i = 0; i < images.length; i++){
         data.append('file' + i, images[i])
       }
 
       data.append('productId', editProductId)
+      setCompareImages(images)
      
       trySendPhotos.loadData()
+    }
+     
 
     }
 
