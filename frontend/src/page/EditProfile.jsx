@@ -7,6 +7,8 @@ import ApiService from "../service/ApiService";
 import Input from "../component/UI/Input/Input";
 import SendButton from "../component/UI/Button/SendButton";
 import PhoneInput from "react-phone-input-2";
+import { Formik } from "formik";
+import * as Yup from 'yup';
 
 
 
@@ -19,6 +21,20 @@ const EditProfile = (props) =>{
 
     const [phoneError, setPhoneError] = useState(false)
     const [phoneSuccess, setPhoneSuccess] = useState(false)
+
+    const [passwordError, setPasswordError] = useState(false)
+    const [passwordSuccess, setPasswordSuccess] = useState(false)
+
+
+    const [password, setPassword] = useState('')
+    const [newPassword, setNewPassword] = useState('')
+    const [repeatNewPassword, setRepeatNewPassword] = useState('')
+
+    const validationSchema=Yup.object().shape({
+        password: Yup.string().min(9, "Не менее 9 символов").required('Обязательно'),
+        newPassword: Yup.string().min(9, "Не менее 9 символов").required('Обязательно'),
+        repeatNewPassword: Yup.string().oneOf([Yup.ref('newPassword')], "Пароли не совпадают").required('Обязательно'),
+      })
 
     const showMenu = (number) => {
         switch(number){
@@ -53,6 +69,8 @@ const EditProfile = (props) =>{
 
     useEffect(() => {
         if(phoneMenu){
+            setPasswordError(false)
+            setPasswordSuccess(false)
             ApiService.getPhone()
             .then(resp => {
                 console.log(resp.data)
@@ -62,6 +80,10 @@ const EditProfile = (props) =>{
             })
         }
     }, [phoneMenu])
+
+    useEffect(() => {
+        console.log(password)
+    }, [password])
 
 
    return(
@@ -95,8 +117,68 @@ const EditProfile = (props) =>{
            </div>
            :
             passwordMenu
-            ? <div>Пароль</div>
-            : null
+            ? <div>
+            <Formik initialValues={{
+
+        password: '',
+        newPassword: '',
+        repeatNewPassword: '',
+      }}
+    
+      onSubmit={async values => {
+    
+        setPassword(values.password)
+        setNewPassword(values.newPassword)
+        setRepeatNewPassword(values.repeatNewPassword)
+
+        ApiService.changePassword(password, newPassword, repeatNewPassword)
+        .then(resp => {
+            if(resp.data.isSuccess){
+                setPasswordError(false)
+                setPasswordSuccess(true)
+            }
+        }).catch(err => {
+            setPasswordSuccess(false)
+            setPasswordError(true)
+        })
+
+      }}
+      validationSchema={validationSchema}>
+
+      {({values, errors, touched, handleChange, handleBlur, isValid, handleSubmit, dirty}) => (
+          <div>
+
+        <Input type="password"  style={{width: "500px", marginLeft: "50%", transform: "translate(-50%, 0)", marginTop: "20px"}} placeholder="Введите пароль"
+            name="password"  callback={setPassword}  onChange={handleChange} onBlur={handleBlur}
+        />
+        {errors.password && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px",  marginLeft: "50%", transform: "translate(-40%, 0)"}}>{errors.password}</div> }
+
+        <Input type="password"  style={{width: "500px", marginLeft: "50%", transform: "translate(-50%, 0)", marginTop: "20px"}} placeholder="Введите новый пароль"
+            name="newPassword"  callback={setNewPassword}  onChange={handleChange} onBlur={handleBlur}
+        />
+        {errors.newPassword && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px",  marginLeft: "50%", transform: "translate(-40%, 0)"}}>{errors.newPassword}</div> }
+
+        <Input type="password"  style={{width: "500px", marginLeft: "50%", transform: "translate(-50%, 0)", marginTop: "20px"}} placeholder="Повторите новый пароль"
+            name="repeatNewPassword"  callback={setPassword}  onChange={handleChange} onBlur={handleBlur}
+        />
+        {errors.repeatNewPassword && <div style={{color:"red",marginTop:"-20px", fontSize:"12px", marginBottom: "5px", marginLeft: "50%", transform: "translate(-40%, 0)"}}>{errors.repeatNewPassword}</div> }
+
+        {passwordError
+    ? <div style={{width: "400px", marginLeft: "50%", transform: "translate(-50%, 0)", color: "red"}}>Невервый пароль</div>
+    : null}
+    {passwordSuccess
+    ? <div style={{width: "400px", marginLeft: "50%", transform: "translate(-50%, 0)", color: "green"}}>Пароль успешно иземен</div>
+    : null}
+
+<SendButton sendDataCallback={handleSubmit} type="submit">Изменить пароль</SendButton>
+</div>
+        )}
+    
+    </Formik>
+
+
+            </div>
+         : null
        }
    </div>
    </div>

@@ -224,4 +224,18 @@ export default class ApiService{
         }
         return null;
     }
+
+    static changePassword = async (password, newPassword, repeatPassword) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response = await axios.post(Const.AUTH_SERVER + "/api/password/change",
+            {
+                "password" : password,
+                "newPassword": newPassword,
+                "repeatNewPassword": repeatPassword
+            }, configToken(jwt))
+            return response;
+        }
+        return null;
+    }
 }
