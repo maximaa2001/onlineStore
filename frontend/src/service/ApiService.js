@@ -238,4 +238,8 @@ export default class ApiService{
         }
         return null;
     }
+
+    static getInfoAboutCatalogProduct = async (id) => {
+            return  await axios.get(`http://localhost:8100/api/catalog/product/${id}`)
+    }
 }

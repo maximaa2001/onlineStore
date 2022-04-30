@@ -1,5 +1,6 @@
 import React from "react"
 import Const from "../const/Const"
+import AboutCatalogProduct from "../page/AboutCatalogProduct"
 import AboutMyProduct from "../page/AboutMyProduct"
 import CreateProduct from "../page/CreateProduct"
 import EditMyProduct from "../page/EditMyProduct"
@@ -12,7 +13,11 @@ export const publicRoutes = [
    {
        path: Const.HOME,
        Component: <Home/>
-   }
+   },
+   {
+    path: Const.VIEW_PRODUCT,
+    Component: <AboutCatalogProduct/>
+    }
 ]
 
 export const userRoutes = [

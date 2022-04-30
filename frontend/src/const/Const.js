@@ -11,6 +11,7 @@ export default class Const {
     static HOME = "/"
     static MY_PRODUCTS = "/myProducts"
     static PROFILE = "/profile"
+    static PRODUCT = "/product"
     static CTEATE_PRODUCT =  Const.MY_PRODUCTS + "/create"
     static ACTIVE_PRODUCTS =  Const.MY_PRODUCTS + "/active"
     static MODERATION_PRODUCTS =  Const.MY_PRODUCTS + "/moderation"
@@ -20,5 +21,6 @@ export default class Const {
     static EDIT_MY_PRODUCT = Const.MY_PRODUCTS + "/edit/:id"   //${id}
     static FAVOURITE_PRODUCTS = Const.MY_PRODUCTS + "/favourite"
     static EDIT_PROFILE = Const.PROFILE + "/edit"
+    static VIEW_PRODUCT = Const.PRODUCT + "/:id"   //${id}
     
 }

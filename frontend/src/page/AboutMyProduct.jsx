@@ -33,8 +33,6 @@ const AboutMyProduct = (props) =>{
                 setLoading(false)
             })
        
-       
-       
     })
 
     useEffect(() => {

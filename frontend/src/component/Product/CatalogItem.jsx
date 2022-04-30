@@ -44,7 +44,7 @@ const CatalogItem = ({product}) =>{
 
 
     return(
-    <Link  to={""} className={style.container} style={{ textDecoration: 'none' }}>
+    <Link  to={Const.PRODUCT + `/${product.id}`} className={style.container} style={{ textDecoration: 'none' }}>
     <img className={style.img}
      src={product.imageUri}
      alt={"Нет фото"}>
