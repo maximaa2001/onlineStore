@@ -1,0 +1,28 @@
+.window{
+    width: 100vw;
+    height: 100vh;
+    background-color: #D3D3D3;
+}
+
+.mainContainer{
+    width: 20%;
+}
+
+.link{
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;          
+}
+
+.link:hover{
+    color: #7B68EE;
+}
+
+.input{
+    margin: 0 auto;
+}

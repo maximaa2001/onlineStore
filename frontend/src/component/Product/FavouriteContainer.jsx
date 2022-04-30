@@ -1,4 +1,3 @@
-import ProductItem from "./ProductItem";
 import style from "./ProductItem.module.css"
 import React from "react"
 import FavouriteItem from "./FavouriteItem";

@@ -1,6 +1,5 @@
 import React, { useState, useEffect }  from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from "./page/Home";
 import Error from "./page/Error";
 import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { observer } from "mobx-react-lite";
@@ -8,9 +7,7 @@ import { Context } from "./index";
 import { useContext } from "react";
 import ApiService from "./service/ApiService";
 import jwt_decode from "jwt-decode";
-import useLoading from "./hook/useLoading";
 import Loader from "./component/UI/Loader/Loader";
-import MyProducts from "./page/MyProducts";
 import { publicRoutes, userRoutes } from "./utill/rightForRoutes";
 import Const from "./const/Const";
 

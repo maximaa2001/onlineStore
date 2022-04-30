@@ -3,6 +3,7 @@ import Const from "../const/Const"
 import AboutMyProduct from "../page/AboutMyProduct"
 import CreateProduct from "../page/CreateProduct"
 import EditMyProduct from "../page/EditMyProduct"
+import EditProfile from "../page/EditProfile"
 import Favourites from "../page/Favorites"
 import Home from "../page/Home"
 import MyProducts from "../page/MyProducts"
@@ -50,6 +51,10 @@ export const userRoutes = [
     {
         path: Const.FAVOURITE_PRODUCTS,
         Component: <Favourites/>
+    },
+    {
+        path: Const.EDIT_PROFILE,
+        Component: <EditProfile/>
     }
 
 ]

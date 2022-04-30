@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./FavouriteItem.module.css"
-import Const from "../../const/Const";
 import 'font-awesome/css/font-awesome.min.css';
 import ApiService from "../../service/ApiService";
-import Loader from "../UI/Loader/Loader";
 
 const FavouriteItem = ({product}) =>{
 

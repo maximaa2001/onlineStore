@@ -10,6 +10,7 @@ export default class Const {
     //Pages
     static HOME = "/"
     static MY_PRODUCTS = "/myProducts"
+    static PROFILE = "/profile"
     static CTEATE_PRODUCT =  Const.MY_PRODUCTS + "/create"
     static ACTIVE_PRODUCTS =  Const.MY_PRODUCTS + "/active"
     static MODERATION_PRODUCTS =  Const.MY_PRODUCTS + "/moderation"
@@ -17,6 +18,7 @@ export default class Const {
     static DELETED_PRODUCTS =  Const.MY_PRODUCTS + "/deleted"
     static ABOUT_MY_PRODUCT = Const.MY_PRODUCTS + "/about/:id"   //${id}
     static EDIT_MY_PRODUCT = Const.MY_PRODUCTS + "/edit/:id"   //${id}
-    static FAVOURITE_PRODUCTS = Const.MY_PRODUCTS + "/favourite" 
+    static FAVOURITE_PRODUCTS = Const.MY_PRODUCTS + "/favourite"
+    static EDIT_PROFILE = Const.PROFILE + "/edit"
     
 }

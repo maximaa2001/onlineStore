@@ -20,6 +20,7 @@ const RegForm = () =>{
     const [phoneNumber, seetPhoneNumber] = useState('')
 
 
+    const [phoneError, setPhoneError] = useState(false)
     const successAlert = useAlert(10000);
 
     const tryRegistration = useLoading(async () => {
@@ -56,8 +57,16 @@ return (
         setPassword(values.password)
         setRepeatPassword(values.repeatPassword)
 
+        console.log(phoneNumber.length)
 
-        tryRegistration.loadData()
+        if(phoneNumber.length != 12){
+          console.log(phoneNumber)
+          setPhoneError(true)
+        } else{
+          tryRegistration.loadData()
+        }
+
+
       }}
       validationSchema={validationSchema}>
 
@@ -87,6 +96,10 @@ return (
     specialLabel={""}
     onChange={e => seetPhoneNumber(e)}
 />
+{phoneError 
+? <div style={{color:"red",marginTop:"-5px", fontSize:"12px", marginBottom: "5px"}}>Введите номер телефона</div>
+: null
+}
 
 
 <SendButton sendDataCallback={handleSubmit} type="submit">Зарегистрироваться</SendButton>

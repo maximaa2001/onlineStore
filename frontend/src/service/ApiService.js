@@ -1,7 +1,6 @@
 import axios from "axios";
 import Const from "../const/Const";
 import configToken from "../utill/config"
-import configTokenAndImage from "../utill/config";
 
 export default class ApiService{
    
@@ -195,6 +194,32 @@ export default class ApiService{
                     "AUTHORIZATION" : jwt
                 }
             })
+            return response;
+        }
+        return null;
+    }
+
+    static getPhone = async () => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response = await axios.get(Const.AUTH_SERVER + "/api/phone",
+            {
+                headers: {
+                    "AUTHORIZATION" : jwt
+                }
+            })
+            return response;
+        }
+        return null;
+    }
+
+    static changePhone = async (phoneNumber) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response = await axios.post(Const.AUTH_SERVER + "/api/phone/update",
+            {
+                "phoneNumber" : phoneNumber
+            }, configToken(jwt))
             return response;
         }
         return null;

@@ -1,6 +1,5 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel'
-import style from "./PhotoSlider.module.css"
 
 const PhotoSlider = (props) => {
 

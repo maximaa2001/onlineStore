@@ -8,7 +8,6 @@ import useAlert from "../../hook/useAlert";
 import { observer } from "mobx-react-lite";
 import { Formik } from "formik";
 import * as Yup from 'yup';
-import axios from "axios";
 import useLoading from "../../hook/useLoading";
 import Loader from "../UI/Loader/Loader";
 import SuccessAlert from "../UI/Alert/SuccessAlert";
