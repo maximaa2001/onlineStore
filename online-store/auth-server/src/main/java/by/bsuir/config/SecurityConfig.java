@@ -25,6 +25,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public SecurityConfig(SecurityUserService securityUserService, JwtFilter jwtFilter) {
         this.securityUserService = securityUserService;
         this.jwtFilter = jwtFilter;
+        System.out.println(VIEW_PRODUCT_BY_ID);
     }
 
     @Override
@@ -41,7 +42,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers(USER_LOGIN, USER_LOGIN_GOOGLE, USER_REGISTRATION, EMAIL_ACTIVATION, GET_CATALOG).permitAll()
+                .antMatchers(USER_LOGIN, USER_LOGIN_GOOGLE, USER_REGISTRATION,
+                        EMAIL_ACTIVATION, GET_CATALOG, VIEW_PRODUCT_BY_ID).permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);

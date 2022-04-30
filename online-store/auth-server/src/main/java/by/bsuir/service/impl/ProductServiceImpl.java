@@ -1,15 +1,18 @@
 package by.bsuir.service.impl;
 
+import by.bsuir.constant.ref.ProductStatusRef;
 import by.bsuir.dao.ProductDao;
 import by.bsuir.dao.RefDao;
 import by.bsuir.dao.UserDao;
 import by.bsuir.entity.domain.*;
 import by.bsuir.entity.dto.basket.BasketBooleanDto;
 import by.bsuir.entity.dto.product.*;
+import by.bsuir.entity.dto.product.catalog.AboutCatalogProductDto;
 import by.bsuir.entity.dto.product.catalog.CatalogListDto;
 import by.bsuir.entity.dto.product.edit.EditProductDto;
 import by.bsuir.entity.dto.product.my.AboutMyProductDto;
 import by.bsuir.entity.dto.product.my.ProductListDto;
+import by.bsuir.exception.ProductIsNotExistException;
 import by.bsuir.exception.ProductIsNotLinkedException;
 import by.bsuir.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
@@ -125,6 +128,15 @@ public class ProductServiceImpl implements ProductService {
     public ProductListDto getProductsInCart(Integer userId) {
         User user = userDao.findById(userId);
         return ProductListDto.of(user.getFavourite());
+    }
+
+    @Override
+    public AboutCatalogProductDto getProductFromCatalog(Integer productId) {
+        Product product = productDao.findById(productId);
+        if(!product.getProductStatus().equals(refDao.findProductStatusByName(ProductStatusRef.APPROVED.getName()))){
+            throw new ProductIsNotExistException(HttpStatus.NOT_FOUND);
+        }
+        return AboutCatalogProductDto.of(product);
     }
 
     private Product createDefaultProduct(CreateProductDto createProductDto){

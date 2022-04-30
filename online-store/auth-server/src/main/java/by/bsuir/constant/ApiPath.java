@@ -39,7 +39,7 @@ public class ApiPath {
 
     public static final String CREATE_PRODUCT = API + PRODUCT + CREATE;
     public static final String GET_MY_PRODUCTS = API + PRODUCT + MY_PRODUCTS;
-    public static final String GET_INFO_ABOUT_MY_PRODUCT = API + PRODUCT + MY_PRODUCTS + ABOUT;
+    public static final String GET_INFO_ABOUT_MY_PRODUCT = API + PRODUCT + MY_PRODUCTS + ABOUT  + "/{id}";
     public static final String EDIT_MT_PRODUCT = API + PRODUCT + MY_PRODUCTS + EDIT;
     public static final String GET_CATALOG = API + CATALOG;
     public static final String CHANGE_BASKET = API + BASKET + CHANGE;
@@ -47,4 +47,5 @@ public class ApiPath {
     public static final String GET_PHONE_NUMBER = API + PHONE;
     public static final String UPDATE_PHONE_NUMBER = API + PHONE + UPDATE;
     public static final String CHANGE_PASSWORD = API + PASSWORD + CHANGE;
+    public static final String VIEW_PRODUCT_BY_ID = API + CATALOG + PRODUCT + "/{id}";
 }

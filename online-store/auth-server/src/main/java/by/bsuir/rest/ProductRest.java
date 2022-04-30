@@ -1,9 +1,8 @@
 package by.bsuir.rest;
 
-import by.bsuir.constant.Request;
 import by.bsuir.entity.dto.basket.BasketBooleanDto;
 import by.bsuir.entity.dto.product.*;
-import by.bsuir.entity.dto.product.catalog.CatalogDto;
+import by.bsuir.entity.dto.product.catalog.AboutCatalogProductDto;
 import by.bsuir.entity.dto.product.catalog.CatalogListDto;
 import by.bsuir.entity.dto.product.edit.EditProductDto;
 import by.bsuir.entity.dto.product.my.AboutMyProductDto;
@@ -45,14 +44,14 @@ public class ProductRest {
                 : productService.getProductsByStatus(authService.getUserIdByToken(token), productStatus);
     }
 
-    @GetMapping(GET_INFO_ABOUT_MY_PRODUCT + "/{id}")
+    @GetMapping(GET_INFO_ABOUT_MY_PRODUCT)
     public AboutMyProductDto getMyProductInfo(@RequestHeader(name = AUTHORIZATION) String token,
                                               @PathVariable(name = "id") String productId) {
         return productService.getMyProductInfo(authService.getUserIdByToken(token), Optional.of(productId));
     }
 
     @PostMapping(EDIT_MT_PRODUCT)
-    public ProductIdDto getMyProductInfo(@RequestHeader(name = AUTHORIZATION) String token,
+    public ProductIdDto editProduct(@RequestHeader(name = AUTHORIZATION) String token,
                                          @RequestBody EditProductDto editProductDto) {
         return productService.editMyProduct(authService.getUserIdByToken(token), editProductDto);
     }
@@ -72,5 +71,10 @@ public class ProductRest {
     @GetMapping(GET_FAVOURITE)
     public ProductListDto getFavouriteProducts(@RequestHeader(name = AUTHORIZATION) String token){
         return productService.getProductsInCart(authService.getUserIdByToken(token));
+    }
+
+    @GetMapping(VIEW_PRODUCT_BY_ID)
+    public AboutCatalogProductDto getCatalogItem(@PathVariable(name = "id") Integer id){
+        return productService.getProductFromCatalog(id);
     }
 }
