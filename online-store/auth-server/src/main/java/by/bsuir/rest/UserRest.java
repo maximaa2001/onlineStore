@@ -1,6 +1,7 @@
 package by.bsuir.rest;
 
 import by.bsuir.entity.dto.*;
+import by.bsuir.service.AuthService;
 import by.bsuir.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.File;
 import java.io.IOException;
 
 import static by.bsuir.constant.ApiPath.*;
@@ -19,12 +19,14 @@ public class UserRest {
 
     private final UserService userService;
     private final AuthenticationManager authenticationManager;
+    private final AuthService authService;
 
     @Autowired
     public UserRest(UserService userService,
-                    AuthenticationManager authenticationManager) {
+                    AuthenticationManager authenticationManager, AuthService authService) {
         this.userService = userService;
         this.authenticationManager = authenticationManager;
+        this.authService = authService;
     }
 
     @PostMapping(USER_LOGIN)
@@ -49,12 +51,23 @@ public class UserRest {
     }
 
     @PostMapping(USER_REGISTRATION)
-    public RegResultDto registration(@RequestBody RegDto regDto) {
+    public ResultDto registration(@RequestBody RegDto regDto) {
         return userService.registration(regDto);
     }
 
     @GetMapping(EMAIL_ACTIVATION)
     public void activation(@PathVariable String key) {
         userService.activateEmail(key);
+    }
+
+    @GetMapping(GET_PHONE_NUMBER)
+    public PhoneDto getPhoneNumber(@RequestHeader(name = AUTHORIZATION) String token){
+        return userService.getPhone(authService.getUserIdByToken(token));
+    }
+
+    @PostMapping(UPDATE_PHONE_NUMBER)
+    public PhoneDto updatePhoneNumber(@RequestHeader(name = AUTHORIZATION) String token,
+                                       @RequestBody PhoneDto phoneDto){
+        return userService.updatePhoneNumber(authService.getUserIdByToken(token), phoneDto);
     }
 }

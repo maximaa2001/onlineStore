@@ -9,6 +9,8 @@ public interface UserService {
     JwtDto loginByGoogle(GoogleDto authDto) throws IOException;
     JwtDto auth(String token);
     void logout(String token);
-    RegResultDto registration(RegDto regDto);
+    ResultDto registration(RegDto regDto);
     void activateEmail(String key);
+    PhoneDto getPhone(Integer userId);
+    PhoneDto updatePhoneNumber(Integer userId, PhoneDto phoneDto);
 }

@@ -8,6 +8,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class RegResultDto {
+public class ResultDto {
     private Boolean isSuccess;
 }

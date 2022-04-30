@@ -19,7 +19,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -98,7 +97,7 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public RegResultDto registration(RegDto regDto) {
+    public ResultDto registration(RegDto regDto) {
         log.info("Request for registration endpoint");
         userDao.findByEmailAndStatus(regDto.getEmail(), refDao.findNonActiveUserStatus()).ifPresent((user) -> {
             throw new SuchEmailAlsoRegistredException(HttpStatus.CONFLICT);
@@ -118,9 +117,9 @@ public class UserServiceImpl implements UserService {
             String key = cryptoService.createActivationKey(user.get().getUserEmail());
             nonActiveEmails.put(key, user.get().getUserEmail());
             emailService.sendHtml(new ActivationMail(user.get().getUserEmail(), key));
-            return RegResultDto.builder().isSuccess(true).build();
+            return ResultDto.builder().isSuccess(true).build();
         }
-        return RegResultDto.builder().isSuccess(false).build();
+        return ResultDto.builder().isSuccess(false).build();
     }
 
     @Override
@@ -135,6 +134,20 @@ public class UserServiceImpl implements UserService {
             userDao.save(value);
             nonActiveEmails.remove(key);
         });
+    }
+
+    @Override
+    public PhoneDto getPhone(Integer userId) {
+        User user = userDao.findById(userId);
+        return PhoneDto.of(user.getUserPhone());
+    }
+
+    @Override
+    public PhoneDto updatePhoneNumber(Integer userId, PhoneDto phoneDto) {
+        User user = userDao.findById(userId);
+        user.setUserPhone(phoneDto.getPhoneNumber());
+        Optional<User> savedUser = userDao.save(user);
+        return PhoneDto.of(savedUser.get().getUserPhone());
     }
 
     private User createNonActiveUser(RegDto regDto){
