@@ -150,6 +150,27 @@ public class UserServiceImpl implements UserService {
         return PhoneDto.of(savedUser.get().getUserPhone());
     }
 
+    @Override
+    public ResultDto changePassword(Integer userId, PasswordDto passwordDto) {
+        log.info("Request for changePassword endpoint");
+        User user = userDao.findById(userId);
+        if(!cryptoService.checkPassword(passwordDto.getPassword(), user.getUserHashPass())){
+            throw new IncorrectPasswordException(HttpStatus.BAD_REQUEST);
+        }
+        if(!passwordDto.getNewPassword().equals(passwordDto.getRepeatNewPassword())){
+            throw new IncorrectPasswordException(HttpStatus.BAD_REQUEST);
+        }
+        String hash = cryptoService.encodePassword(passwordDto.getNewPassword());
+        user.setUserHashPass(hash);
+        Optional<User> saveUser = userDao.save(user);
+        if(saveUser.isPresent()){
+            return saveUser.get().getUserHashPass().equals(hash) ? ResultDto.builder().isSuccess(true).build()
+                    : ResultDto.builder().isSuccess(false).build();
+        }
+
+        return ResultDto.builder().isSuccess(false).build();
+    }
+
     private User createNonActiveUser(RegDto regDto){
         return User.builder()
                 .userEmail(regDto.getEmail())

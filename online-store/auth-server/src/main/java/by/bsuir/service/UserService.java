@@ -13,4 +13,5 @@ public interface UserService {
     void activateEmail(String key);
     PhoneDto getPhone(Integer userId);
     PhoneDto updatePhoneNumber(Integer userId, PhoneDto phoneDto);
+    ResultDto changePassword(Integer userId, PasswordDto passwordDto);
 }

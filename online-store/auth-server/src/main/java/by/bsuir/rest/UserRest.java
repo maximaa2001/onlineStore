@@ -70,4 +70,10 @@ public class UserRest {
                                        @RequestBody PhoneDto phoneDto){
         return userService.updatePhoneNumber(authService.getUserIdByToken(token), phoneDto);
     }
+
+    @PostMapping(CHANGE_PASSWORD)
+    public ResultDto changePassword(@RequestHeader(name = AUTHORIZATION) String token,
+                                      @RequestBody PasswordDto passwordDto){
+        return userService.changePassword(authService.getUserIdByToken(token), passwordDto);
+    }
 }

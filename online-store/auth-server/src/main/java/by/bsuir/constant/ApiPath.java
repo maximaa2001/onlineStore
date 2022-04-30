@@ -22,6 +22,7 @@ public class ApiPath {
     public static final String FAVOURITE = "/favourite";
     public static final String PHONE = "/phone";
     public static final String UPDATE = "/update";
+    public static final String PASSWORD = "/password";
 
 
 
@@ -45,4 +46,5 @@ public class ApiPath {
     public static final String GET_FAVOURITE = API + BASKET + FAVOURITE;
     public static final String GET_PHONE_NUMBER = API + PHONE;
     public static final String UPDATE_PHONE_NUMBER = API + PHONE + UPDATE;
+    public static final String CHANGE_PASSWORD = API + PASSWORD + CHANGE;
 }
