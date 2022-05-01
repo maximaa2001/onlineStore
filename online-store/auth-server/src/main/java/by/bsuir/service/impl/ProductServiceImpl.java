@@ -5,6 +5,7 @@ import by.bsuir.dao.ProductDao;
 import by.bsuir.dao.RefDao;
 import by.bsuir.dao.UserDao;
 import by.bsuir.entity.domain.*;
+import by.bsuir.entity.dto.PagesDto;
 import by.bsuir.entity.dto.basket.BasketBooleanDto;
 import by.bsuir.entity.dto.product.*;
 import by.bsuir.entity.dto.product.catalog.AboutCatalogProductDto;
@@ -137,6 +138,11 @@ public class ProductServiceImpl implements ProductService {
             throw new ProductIsNotExistException(HttpStatus.NOT_FOUND);
         }
         return AboutCatalogProductDto.of(product);
+    }
+
+    @Override
+    public PagesDto getPagesCount() {
+        return productDao.getCatalogPages();
     }
 
     private Product createDefaultProduct(CreateProductDto createProductDto){

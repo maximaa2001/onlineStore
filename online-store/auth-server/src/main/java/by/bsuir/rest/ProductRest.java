@@ -1,5 +1,6 @@
 package by.bsuir.rest;
 
+import by.bsuir.entity.dto.PagesDto;
 import by.bsuir.entity.dto.basket.BasketBooleanDto;
 import by.bsuir.entity.dto.product.*;
 import by.bsuir.entity.dto.product.catalog.AboutCatalogProductDto;
@@ -58,7 +59,7 @@ public class ProductRest {
 
     @GetMapping(GET_CATALOG)
     public CatalogListDto getCatalogByPage(@RequestHeader(name = AUTHORIZATION, required = false) String token,
-                                           @RequestParam(name = PAGE) Integer page){
+                                           @RequestParam(name = "page") Integer page){
         return productService.getProductByPage((token == null) ? null : authService.getUserIdByToken(token), page);
     }
 
@@ -76,5 +77,10 @@ public class ProductRest {
     @GetMapping(VIEW_PRODUCT_BY_ID)
     public AboutCatalogProductDto getCatalogItem(@PathVariable(name = "id") Integer id){
         return productService.getProductFromCatalog(id);
+    }
+
+    @GetMapping(GET_CATALOG_PAGES)
+    public PagesDto getPagesCount(){
+        return productService.getPagesCount();
     }
 }

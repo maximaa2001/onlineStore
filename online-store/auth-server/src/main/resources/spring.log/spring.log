@@ -60,3 +60,390 @@
 2022-05-01 00:28:23 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-05-01 00:28:23 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2022-05-01 00:28:23 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-01 01:35:53 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 11740 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-01 01:35:53 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-01 01:35:54 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-01 01:35:54 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 12 JPA repository interfaces.
+2022-05-01 01:35:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-01 01:35:55 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-01 01:35:55 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-01 01:35:55 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-01 01:35:55 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1322 ms
+2022-05-01 01:35:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-01 01:35:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-01 01:35:55 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-01 01:35:55 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-01 01:35:55 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-01 01:35:55 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-01 01:35:56 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-01 01:35:56 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-01 01:35:56 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-01 01:35:57 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76efa2b7, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f408960, org.springframework.security.web.header.HeaderWriterFilter@57859e2c, org.springframework.web.filter.CorsFilter@2027d56f, org.springframework.security.web.authentication.logout.LogoutFilter@62f3ad90, by.bsuir.security.JwtFilter@5dd227b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34766f4b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29088d3d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44c54463, org.springframework.security.web.session.SessionManagementFilter@604e8a6, org.springframework.security.web.access.ExceptionTranslationFilter@238d27ef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e1d813a]
+2022-05-01 01:35:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-01 01:35:57 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 4.154 seconds (JVM running for 5.245)
+2022-05-01 01:36:14 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-01 01:36:14 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-01 01:36:14 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-01 01:36:14 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 01:38:06 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 01:38:53 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 01:38:56 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 01:41:00 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 01:41:19 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 01:41:26 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 01:42:30 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 01:42:48 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 01:44:01 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-01 01:44:01 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-01 01:44:01 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-01 02:01:52 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 18932 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-01 02:01:52 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-01 02:01:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-01 02:01:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 174 ms. Found 12 JPA repository interfaces.
+2022-05-01 02:01:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-01 02:01:53 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-01 02:01:53 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-01 02:01:53 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-01 02:01:53 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1250 ms
+2022-05-01 02:01:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-01 02:01:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-01 02:01:53 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-01 02:01:53 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-01 02:01:54 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-01 02:01:54 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-01 02:01:54 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-01 02:01:54 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-01 02:01:55 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-01 02:01:55 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7925e772, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ced7cf, org.springframework.security.web.header.HeaderWriterFilter@238d27ef, org.springframework.web.filter.CorsFilter@365a4b9b, org.springframework.security.web.authentication.logout.LogoutFilter@2f2a5064, by.bsuir.security.JwtFilter@6cbb6c41, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@604e8a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44103266, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@240e61, org.springframework.security.web.session.SessionManagementFilter@3cdc5155, org.springframework.security.web.access.ExceptionTranslationFilter@8cd2bb5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2b569858]
+2022-05-01 02:01:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-01 02:01:55 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 4.001 seconds (JVM running for 5.074)
+2022-05-01 02:02:26 [http-nio-8100-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-01 02:02:26 [http-nio-8100-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-01 02:02:26 [http-nio-8100-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-01 02:05:33 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:05:40 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:05:43 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:06:04 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:06:14 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:06:20 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:06:34 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:06:42 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:06:46 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:07:04 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:07:06 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:07:13 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:07:20 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:07:23 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:07:40 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:07:43 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:07:47 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:07:50 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:08:03 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:08:06 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:08:10 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:08:18 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:08:28 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:08:39 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:08:44 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:09:03 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:09:04 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:09:07 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:09:10 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:09:16 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:09:21 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:09:22 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:09:24 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:09:30 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:10:36 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:19:48 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@e885b13 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:19:48 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@35044ec0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:19:48 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7998cbb0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:19:48 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@dd1cd20 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:19:48 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@68a0fffb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:19:48 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f45de61 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:19:48 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@403f5f72 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:19:48 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@43843298 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:19:48 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2c345234 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:19:48 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7dd33705 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:19:48 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:19:48 [http-nio-8100-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:19:56 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:19:56 [http-nio-8100-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:20:16 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:20:16 [http-nio-8100-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:20:24 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:20:24 [http-nio-8100-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:20:28 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:20:28 [http-nio-8100-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:21:10 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:21:10 [http-nio-8100-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:21:16 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:21:16 [http-nio-8100-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:21:22 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:21:22 [http-nio-8100-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:22:33 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:22:33 [http-nio-8100-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:22:35 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:22:35 [http-nio-8100-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:22:42 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:22:54 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:23:00 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:23:08 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:23:33 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:24:08 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:24:22 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:24:56 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:25:08 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:25:30 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:25:33 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:25:47 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:26:23 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:26:23 [http-nio-8100-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:26:24 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:26:24 [http-nio-8100-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:26:35 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:26:35 [http-nio-8100-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:26:53 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:26:53 [http-nio-8100-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:26:57 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:26:57 [http-nio-8100-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:27:06 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:27:06 [http-nio-8100-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:27:24 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:27:24 [http-nio-8100-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:27:26 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:27:26 [http-nio-8100-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:27:39 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:27:39 [http-nio-8100-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:27:46 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:27:46 [http-nio-8100-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:27:50 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:27:50 [http-nio-8100-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:27:55 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:27:55 [http-nio-8100-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:27:59 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:27:59 [http-nio-8100-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:28:01 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:28:01 [http-nio-8100-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-01 02:28:04 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:28:08 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:28:38 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:28:46 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:28:59 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:29:02 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:29:03 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:29:49 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:30:01 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:30:10 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:30:27 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:30:32 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:30:40 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:31:01 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:31:10 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:31:15 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:31:17 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:31:20 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:32:34 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:32:43 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:32:59 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:33:03 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:33:17 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:33:26 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:33:30 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:33:33 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:34:10 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:34:20 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:35:09 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:35:14 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:35:27 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:35:37 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:35:44 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:36:06 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:36:59 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:37:07 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:37:57 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:39:29 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:39:45 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:41:31 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:43:28 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:43:32 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:43:33 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:43:41 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:43:43 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:44:38 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:44:41 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:44:47 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:44:55 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:45:15 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:45:30 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:45:37 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:46:21 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:46:22 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:46:26 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:46:54 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:47:07 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:47:19 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:47:23 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:47:39 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:47:44 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:47:55 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:48:16 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:48:46 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:49:20 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:49:45 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@13997728 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:49:45 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@37c931c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:49:45 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:49:58 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:50:03 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:50:29 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:50:39 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:50:52 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:50:55 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:51:18 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:51:29 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:51:37 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:52:06 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:52:14 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:52:37 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:52:41 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:52:48 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:52:49 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:52:59 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:53:00 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:53:34 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:53:50 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:54:04 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:54:14 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:54:19 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:54:20 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:54:23 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:54:33 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:54:52 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:55:00 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:55:36 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:55:57 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:56:07 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:56:13 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:56:30 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:56:47 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:57:01 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:57:10 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:57:54 [http-nio-8100-exec-7] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-05-01 02:58:10 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 02:58:33 [http-nio-8100-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f87751d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:58:33 [http-nio-8100-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1daa95e1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:58:33 [http-nio-8100-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4f60f0d7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:58:37 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4f15a880 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:58:37 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1515ce49 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:58:37 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@470e33c1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:58:37 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@38347956 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:58:37 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5a079778 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 02:58:37 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@61db6df7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 03:00:04 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:00:24 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:01:13 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:01:30 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:04:34 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:04:36 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:04:51 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:04:55 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:05:27 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:05:45 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:05:51 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:06:02 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:06:25 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:06:44 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:09:50 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:10:09 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:10:19 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:10:26 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:10:31 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:10:48 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:11:25 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:11:52 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:11:54 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:11:56 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:12:08 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:12:31 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:12:41 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:12:42 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:12:44 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:12:46 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:12:51 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:12:52 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:13:04 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:13:05 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:13:07 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:15:46 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:16:08 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:16:23 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:16:27 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:16:30 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:16:32 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:16:33 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:17:42 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:17:45 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:17:48 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:17:49 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:17:50 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:17:52 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:17:53 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:18:17 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:18:42 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:18:44 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:18:50 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:19:16 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:20:09 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:20:12 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:20:21 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:20:23 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@15213c88 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 03:20:23 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@680251b9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 03:20:23 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1b150861 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 03:20:23 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7cca2f7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 03:20:23 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@29273fdf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 03:20:23 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53d23cdb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 03:20:23 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@60b770c0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 03:20:23 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@28ead3b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-01 03:20:55 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:21:11 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:21:12 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:21:13 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:21:25 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:21:41 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:21:54 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:21:55 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:21:57 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:22:02 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:22:03 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:22:13 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:22:16 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:22:17 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:22:28 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:22:34 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:23:07 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:23:11 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:23:18 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:23:30 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:24:12 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:24:44 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:25:05 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:25:10 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:25:51 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:25:58 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:26:03 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:26:46 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:26:51 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:26:52 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:27:16 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:27:32 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:27:55 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:28:08 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:28:18 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:28:23 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:28:39 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:28:41 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:29:23 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:29:30 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-01 03:29:43 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-01 03:29:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-01 03:29:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

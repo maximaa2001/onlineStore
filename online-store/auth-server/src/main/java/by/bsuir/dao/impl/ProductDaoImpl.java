@@ -6,6 +6,7 @@ import by.bsuir.dao.RefDao;
 import by.bsuir.entity.domain.Product;
 import by.bsuir.entity.domain.ProductStatus;
 import by.bsuir.entity.domain.User;
+import by.bsuir.entity.dto.PagesDto;
 import by.bsuir.repo.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -54,6 +55,13 @@ public class ProductDaoImpl implements ProductDao {
     public List<Product> findByPage(Integer page) {
         Pageable pageRequest = PageRequest.of(page, pageSize);
         return productRepo.findByProductStatus(refDao.findProductStatusByName(ProductStatusRef.APPROVED.getName()),
-                pageRequest);
+                pageRequest).getContent();
+    }
+
+    @Override
+    public PagesDto getCatalogPages() {
+        Pageable pageRequest = PageRequest.of(0, pageSize);
+        return PagesDto.of(productRepo.findByProductStatus(refDao.findProductStatusByName(ProductStatusRef.APPROVED.getName()),
+                pageRequest).getTotalPages());
     }
 }

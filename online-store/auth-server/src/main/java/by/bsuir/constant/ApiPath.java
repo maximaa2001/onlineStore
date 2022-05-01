@@ -23,6 +23,7 @@ public class ApiPath {
     public static final String PHONE = "/phone";
     public static final String UPDATE = "/update";
     public static final String PASSWORD = "/password";
+    public static final String PAGE = "/page";
 
 
 
@@ -48,4 +49,5 @@ public class ApiPath {
     public static final String UPDATE_PHONE_NUMBER = API + PHONE + UPDATE;
     public static final String CHANGE_PASSWORD = API + PASSWORD + CHANGE;
     public static final String VIEW_PRODUCT_BY_ID = API + CATALOG + PRODUCT + "/{id}";
+    public static final String GET_CATALOG_PAGES = API + CATALOG + PAGE;
 }
