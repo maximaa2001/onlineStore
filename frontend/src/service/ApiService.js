@@ -158,6 +158,7 @@ export default class ApiService{
                     page: page
                 }             
               })
+              console.log(response)
               return response;
         } else{
             const response = await  axios.get(Const.AUTH_SERVER + "/api/catalog",  {
@@ -168,6 +169,7 @@ export default class ApiService{
                     page: page
                 }             
               })
+              console.log(response)
               return response;
         }
            
@@ -242,4 +244,10 @@ export default class ApiService{
     static getInfoAboutCatalogProduct = async (id) => {
             return  await axios.get(`http://localhost:8100/api/catalog/product/${id}`)
     }
+
+    static getPagesCount = async () => {
+        let response =  await axios.get(Const.AUTH_SERVER + "/api/catalog/page")
+        console.log(response.data)
+        return response;
+}
 }

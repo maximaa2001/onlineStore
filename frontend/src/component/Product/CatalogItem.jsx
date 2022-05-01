@@ -28,7 +28,7 @@ const CatalogItem = ({product}) =>{
 
 
 
-    const changeBasket = () => {
+    const changeBasket = (event) => {
         ApiService.changeBasket(product.id)
         .then((resp) => {
             console.log(resp.data.isAdded)
@@ -78,8 +78,8 @@ const CatalogItem = ({product}) =>{
     </div>
     {
         user.role === Const.USER_ROLE
-        ? <div  style={{width:"100%", display: "flex", justifyContent: "end"}}><i  style={{fontSize: "30px"}}
-            onClick={changeBasket}
+        ? <div  style={{width:"100%", display: "flex", justifyContent: "end"}}><i  style={{fontSize: "30px"}} 
+            onClick={e => changeBasket(e)}
             className={heartStyle.join(' ')}></i></div>
         : null
     }

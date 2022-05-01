@@ -9,7 +9,6 @@ import LoginForm from "./Form/LoginForm";
 import {Context} from "../index"
 import Const from "../const/Const"
 import UserMenu from "./UI/Menu/UserMenu";
-import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 
 const Header = (props) =>{
