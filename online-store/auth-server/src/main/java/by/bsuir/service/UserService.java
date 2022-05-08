@@ -1,6 +1,7 @@
 package by.bsuir.service;
 
 import by.bsuir.entity.dto.*;
+import by.bsuir.entity.dto.user.UserInfoDto;
 
 import java.io.IOException;
 
@@ -14,4 +15,5 @@ public interface UserService {
     PhoneDto getPhone(Integer userId);
     PhoneDto updatePhoneNumber(Integer userId, PhoneDto phoneDto);
     ResultDto changePassword(Integer userId, PasswordDto passwordDto);
+    UserInfoDto getUserInfo(Integer userId, Integer aboutUserId);
 }

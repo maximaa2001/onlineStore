@@ -1,12 +1,10 @@
 package by.bsuir.service.impl;
 
-import by.bsuir.dao.RefDao;
-import by.bsuir.dao.TokenDao;
-import by.bsuir.dao.UserDao;
-import by.bsuir.entity.domain.Token;
-import by.bsuir.entity.domain.User;
+import by.bsuir.dao.*;
+import by.bsuir.entity.domain.*;
 import by.bsuir.entity.dto.*;
 import by.bsuir.entity.dto.api.UserGoogleResponse;
+import by.bsuir.entity.dto.user.UserInfoDto;
 import by.bsuir.exception.*;
 import by.bsuir.service.ApiService;
 import by.bsuir.service.AuthService;
@@ -21,8 +19,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -35,11 +35,15 @@ public class UserServiceImpl implements UserService {
     private final UserDao userDao;
     private final RefDao refDao;
     private final TokenDao tokenDao;
+    private final UserRatingDao userRatingDao;
+    private final RatingDao ratingDao;
+    private final ProductDao productDao;
     private final Map<String, String> nonActiveEmails;
 
     @Autowired
     public UserServiceImpl(AuthService authService, EmailService emailService, CryptoServiceImpl cryptoService,
-                           ApiService apiService, UserDao userDao, RefDao refDao, TokenDao tokenDao){
+                           ApiService apiService, UserDao userDao, RefDao refDao, TokenDao tokenDao,
+                           UserRatingDao userRatingDao, RatingDao ratingDao, ProductDao productDao){
         this.authService = authService;
         this.emailService = emailService;
         this.cryptoService = cryptoService;
@@ -47,6 +51,9 @@ public class UserServiceImpl implements UserService {
         this.userDao = userDao;
         this.refDao = refDao;
         this.tokenDao = tokenDao;
+        this.userRatingDao = userRatingDao;
+        this.ratingDao = ratingDao;
+        this.productDao = productDao;
         nonActiveEmails = new HashMap<>();
     }
 
@@ -169,6 +176,30 @@ public class UserServiceImpl implements UserService {
         }
 
         return ResultDto.builder().isSuccess(false).build();
+    }
+
+    @Override
+    public UserInfoDto getUserInfo(Integer userId, Integer aboutUserId) {
+        User aboutUser = userDao.findById(aboutUserId);
+        List<Integer> ratingForUser = userRatingDao.getRatingForUser(aboutUserId);
+        List<Product> productsByUserAndStatus = productDao.findProductsByUserAndStatus(aboutUser, refDao.findApprovedStatus());
+        return UserInfoDto.of(aboutUser.getUserEmail(),
+                calcRating(ratingDao.findMarksByIds(ratingForUser).stream()
+                        .map(Rating::getRatingNumber)
+                        .collect(Collectors.toList())),
+                productsByUserAndStatus
+                );
+    }
+
+    private Float calcRating(List<Integer> ratings){
+        if(ratings.size() == 0){
+            return 0f;
+        }
+        Float sum = 0f;
+        for (int i = 0; i < ratings.size(); i++) {
+            sum += ratings.get(i);
+        }
+        return sum / ratings.size();
     }
 
     private User createNonActiveUser(RegDto regDto){

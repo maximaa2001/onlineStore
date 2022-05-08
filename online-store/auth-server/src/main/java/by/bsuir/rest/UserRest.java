@@ -1,6 +1,7 @@
 package by.bsuir.rest;
 
 import by.bsuir.entity.dto.*;
+import by.bsuir.entity.dto.user.UserInfoDto;
 import by.bsuir.service.AuthService;
 import by.bsuir.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -75,5 +76,11 @@ public class UserRest {
     public ResultDto changePassword(@RequestHeader(name = AUTHORIZATION) String token,
                                       @RequestBody PasswordDto passwordDto){
         return userService.changePassword(authService.getUserIdByToken(token), passwordDto);
+    }
+
+    @GetMapping(GET_USER_INFO)
+    public UserInfoDto getUserInfo(@RequestHeader(name = AUTHORIZATION) String token,
+                                   @PathVariable(name = "id") Integer id){
+        return userService.getUserInfo(authService.getUserIdByToken(token), id);
     }
 }
