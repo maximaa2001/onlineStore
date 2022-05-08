@@ -28,7 +28,7 @@ const CatalogItem = ({product}) =>{
 
 
 
-    const changeBasket = (event) => {
+    const changeBasket = () => {
         ApiService.changeBasket(product.id)
         .then((resp) => {
             console.log(resp.data.isAdded)
@@ -44,16 +44,16 @@ const CatalogItem = ({product}) =>{
 
 
     return(
-    <Link  to={Const.PRODUCT + `/${product.id}`} className={style.container} style={{ textDecoration: 'none' }}>
+    <div  className={style.container} style={{ textDecoration: 'none' }}>
     <img className={style.img}
      src={product.imageUri}
      alt={"Нет фото"}>
   
     </img>
     <div className={style.text_container}>
-    <div className={style.name}>
+    <Link to={Const.PRODUCT + `/${product.id}`} className={style.name}>
     {product.name}
-    </div>
+    </Link>
     <div className={style.price}>
     {
         product.price
@@ -78,19 +78,18 @@ const CatalogItem = ({product}) =>{
     </div>
     {
         user.role === Const.USER_ROLE
-        ? <div  style={{width:"100%", display: "flex", justifyContent: "end"}}><i  style={{fontSize: "30px"}} 
-            onClick={e => changeBasket(e)}
+        ? <div  style={{width:"100%", display: "flex", justifyContent: "end"}}><i  style={{fontSize: "30px"}}
+            onClick={changeBasket}
             className={heartStyle.join(' ')}></i></div>
         : null
     }
     
   
 
-    </Link>
+    </div>
 
     )
 
 }
 
 export default CatalogItem;
-
