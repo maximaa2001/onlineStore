@@ -8,6 +8,7 @@ import EditProfile from "../page/EditProfile"
 import Favourites from "../page/Favorites"
 import Home from "../page/Home"
 import MyProducts from "../page/MyProducts"
+import UserPage from "../page/UserPage"
 
 export const publicRoutes = [
    {
@@ -60,6 +61,10 @@ export const userRoutes = [
     {
         path: Const.EDIT_PROFILE,
         Component: <EditProfile/>
+    },
+    {
+        path: Const.USER_INFO,
+        Component: <UserPage/>
     }
 
 ]

@@ -31,7 +31,6 @@ const CatalogItem = ({product}) =>{
     const changeBasket = () => {
         ApiService.changeBasket(product.id)
         .then((resp) => {
-            console.log(resp.data.isAdded)
             const isAdded = resp.data.isAdded;
             if(isAdded){
                 setHeartStyles(["fa fa-heart", style.heart])

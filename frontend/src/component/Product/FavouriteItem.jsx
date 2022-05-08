@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import style from "./FavouriteItem.module.css"
 import 'font-awesome/css/font-awesome.min.css';
 import ApiService from "../../service/ApiService";
+import Const from "../../const/Const";
 
 const FavouriteItem = ({product}) =>{
 
@@ -21,19 +22,21 @@ const FavouriteItem = ({product}) =>{
             }
         })
     }
+
+    console.log(Const.PRODUCT + `/${product.id}`)
  
 
 
     return(
-    <Link  to="" className={style.container} style={{ textDecoration: 'none' }}>
+    <div  className={style.container} style={{ textDecoration: 'none' }}>
     <img className={style.img}
      src={product.imageUri}>
   
     </img>
     <div className={style.text_container}>
-    <div className={style.name}>
+    <Link  to={Const.PRODUCT + `/${product.id}`} className={style.name}>
     {product.name}
-    </div>
+    </Link>
     <div className={style.price}>
     {
         product.price
@@ -49,7 +52,7 @@ const FavouriteItem = ({product}) =>{
     onClick={deleteFromFavourite}
             className={heartStyle.join(' ')}></i></div>
 
-    </Link>
+    </div>
 
     )
 

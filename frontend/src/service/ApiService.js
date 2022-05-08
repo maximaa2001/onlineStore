@@ -247,7 +247,29 @@ export default class ApiService{
 
     static getPagesCount = async () => {
         let response =  await axios.get(Const.AUTH_SERVER + "/api/catalog/page")
-        console.log(response.data)
         return response;
-}
+    }
+
+    static getUserInfo = async (id) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response = await axios.get(`http://localhost:8100/api/users/info/${id}`, configToken(jwt))
+            return response;
+        }
+        return null;
+    }
+
+    static createRating = async (getId, rating) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        console.log(jwt)
+        if(jwt){
+            const response = await axios.post(`http://localhost:8100/api/users/rating`, {
+                "getId": getId,
+                "rating": rating
+            }, configToken(jwt))
+            return response;
+        }
+        return null;
+    }
+    
 }

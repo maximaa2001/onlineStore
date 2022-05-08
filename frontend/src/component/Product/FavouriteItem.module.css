@@ -44,6 +44,7 @@ body{
     color: red;
     margin-top: 50px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .heart:hover{
