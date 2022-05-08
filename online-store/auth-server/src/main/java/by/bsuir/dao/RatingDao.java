@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface RatingDao {
     List<Rating> findMarksByIds(List<Integer> ids);
+    Rating findByNumber(Integer number);
 }

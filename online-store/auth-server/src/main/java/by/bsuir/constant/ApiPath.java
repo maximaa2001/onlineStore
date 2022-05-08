@@ -25,6 +25,8 @@ public class ApiPath {
     public static final String PASSWORD = "/password";
     public static final String PAGE = "/page";
     public static final String INFO = "/info";
+    public static final String RATING = "/rating";
+
 
 
 
@@ -52,4 +54,5 @@ public class ApiPath {
     public static final String VIEW_PRODUCT_BY_ID = API + CATALOG + PRODUCT + "/{id}";
     public static final String GET_CATALOG_PAGES = API + CATALOG + PAGE;
     public static final String GET_USER_INFO = API + USERS + INFO + "/{id}";
+    public static final String CREATE_USER_RATING = API + USERS + RATING;
 }

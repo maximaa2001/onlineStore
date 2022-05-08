@@ -16,13 +16,17 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserInfoDto {
+    private Integer id;
     private String email;
+    private Integer myMark;
     private Float commonRating;
     private List<ProductDto> products;
 
-    public static UserInfoDto of(String email, Float commonRating, List<Product> products){
+    public static UserInfoDto of(Integer id, String email, Integer myMark,  Float commonRating, List<Product> products){
         return UserInfoDto.builder()
+                .id(id)
                 .email(email)
+                .myMark(myMark)
                 .commonRating(commonRating)
                 .products(products.stream().map(ProductDto::of).collect(Collectors.toList()))
                 .build();

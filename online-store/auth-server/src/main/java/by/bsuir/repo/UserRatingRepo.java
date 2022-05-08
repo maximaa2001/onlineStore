@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface UserRatingRepo extends JpaRepository<UserRating, RatingKey> {
 
-    @Query(value = "select rating_number_id from user_rating where get_user_id1 = :userId", nativeQuery = true)
+    @Query(value = "select rating_number_id from user_rating where get_user_id = :userId", nativeQuery = true)
     List<Integer> getRatingForUser(@Param("userId") Integer userId);
 }

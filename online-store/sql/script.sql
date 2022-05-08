@@ -213,15 +213,15 @@ create index fk_users_user_status_ref_idx
 create table user_rating
 (
     set_user_id      int not null,
-    get_user_id1     int not null,
+    get_user_id     int not null,
     rating_number_id int not null,
-    primary key (set_user_id, get_user_id1),
+    primary key (set_user_id, get_user_id),
     constraint fk_user_rating_rating_ref1
         foreign key (rating_number_id) references rating_ref (rating_id),
     constraint fk_user_rating_user1
         foreign key (set_user_id) references user (user_id),
     constraint fk_user_rating_user2
-        foreign key (get_user_id1) references user (user_id)
+        foreign key (get_user_id) references user (user_id)
 );
 
 create index fk_user_rating_rating_ref1_idx

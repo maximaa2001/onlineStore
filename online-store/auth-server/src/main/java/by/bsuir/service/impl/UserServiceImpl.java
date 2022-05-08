@@ -2,8 +2,10 @@ package by.bsuir.service.impl;
 
 import by.bsuir.dao.*;
 import by.bsuir.entity.domain.*;
+import by.bsuir.entity.domain.key.RatingKey;
 import by.bsuir.entity.dto.*;
 import by.bsuir.entity.dto.api.UserGoogleResponse;
+import by.bsuir.entity.dto.user.CreateRatingDto;
 import by.bsuir.entity.dto.user.UserInfoDto;
 import by.bsuir.exception.*;
 import by.bsuir.service.ApiService;
@@ -14,6 +16,8 @@ import by.bsuir.service.mail.EmailService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -182,13 +186,36 @@ public class UserServiceImpl implements UserService {
     public UserInfoDto getUserInfo(Integer userId, Integer aboutUserId) {
         User aboutUser = userDao.findById(aboutUserId);
         List<Integer> ratingForUser = userRatingDao.getRatingForUser(aboutUserId);
+        Optional<UserRating> myMark = userRatingDao.findById(RatingKey.builder().setUserId(userId).getUserId(aboutUserId).build());
+        Integer mark = 0;
+        if(myMark.isPresent()){
+            mark = myMark.get().getRating().getRatingNumber();
+        }
         List<Product> productsByUserAndStatus = productDao.findProductsByUserAndStatus(aboutUser, refDao.findApprovedStatus());
-        return UserInfoDto.of(aboutUser.getUserEmail(),
-                calcRating(ratingDao.findMarksByIds(ratingForUser).stream()
+        return UserInfoDto.of(aboutUser.getUserId(), aboutUser.getUserEmail(),
+                mark, calcRating(ratingDao.findMarksByIds(ratingForUser).stream()
                         .map(Rating::getRatingNumber)
                         .collect(Collectors.toList())),
-                productsByUserAndStatus
-                );
+                productsByUserAndStatus);
+    }
+
+    @Override
+    public ResultDto createRating(Integer userId, CreateRatingDto ratingDto) {
+        Rating rating = ratingDao.findByNumber(ratingDto.getRating());
+        RatingKey key = RatingKey.builder()
+                .setUserId(userId)
+                .getUserId(ratingDto.getGetId())
+                .build();
+        Optional<UserRating> findRating = userRatingDao.findById(key);
+        if(findRating.isPresent()){
+            throw new RatingAlsoExistsException(HttpStatus.BAD_REQUEST);
+        }
+        UserRating savedUserRating = userRatingDao.save(UserRating.builder()
+                .key(key)
+                .rating(rating)
+                .build());
+        return savedUserRating == null ? ResultDto.builder().isSuccess(false).build()
+                : ResultDto.builder().isSuccess(true).build();
     }
 
     private Float calcRating(List<Integer> ratings){

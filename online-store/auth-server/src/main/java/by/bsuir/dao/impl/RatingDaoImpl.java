@@ -19,4 +19,10 @@ public class RatingDaoImpl implements RatingDao {
     public List<Rating> findMarksByIds(List<Integer> ids) {
         return ratingRepo.findAllById(ids);
     }
+
+    @Override
+    public Rating findByNumber(Integer number) {
+        return ratingRepo.findByRatingNumber(number)
+                .orElseThrow(() -> new RuntimeException("Cannot find rating with number " + number));
+    }
 }

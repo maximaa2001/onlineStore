@@ -20,6 +20,6 @@ public class UserRating {
     private RatingKey key;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinTable(name = "rating_number_id")
+    @JoinColumn(name = "rating_number_id")
     private Rating rating;
 }

@@ -1,6 +1,7 @@
 package by.bsuir.rest;
 
 import by.bsuir.entity.dto.*;
+import by.bsuir.entity.dto.user.CreateRatingDto;
 import by.bsuir.entity.dto.user.UserInfoDto;
 import by.bsuir.service.AuthService;
 import by.bsuir.service.UserService;
@@ -82,5 +83,11 @@ public class UserRest {
     public UserInfoDto getUserInfo(@RequestHeader(name = AUTHORIZATION) String token,
                                    @PathVariable(name = "id") Integer id){
         return userService.getUserInfo(authService.getUserIdByToken(token), id);
+    }
+
+    @PostMapping(CREATE_USER_RATING)
+    public ResultDto createRating(@RequestHeader(name = AUTHORIZATION) String token,
+                                    @RequestBody CreateRatingDto ratingDto){
+        return userService.createRating(authService.getUserIdByToken(token), ratingDto);
     }
 }
