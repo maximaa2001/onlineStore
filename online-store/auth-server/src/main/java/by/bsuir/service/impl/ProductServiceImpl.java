@@ -156,8 +156,19 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public CatalogListDto getByCategory(String category) {
-        return null;
+    public CatalogListDto searchProductsByPage(Integer userId, Integer page, String name) {
+        List<Product> productsForPage = null;
+        if(userId != null){
+            User user = userDao.findById(userId);
+            List<Integer> userBasket = user.getFavourite().stream().map(Product::getProductId).collect(Collectors.toList());
+            return CatalogListDto.of(productsForPage, userBasket);
+        }
+        return CatalogListDto.of(productDao.searchProductsByPage(page, name));
+    }
+
+    @Override
+    public PagesDto searchProductsPageCount(String name) {
+        return productDao.getSearchPages(name);
     }
 
     private Product createDefaultProduct(CreateProductDto createProductDto){

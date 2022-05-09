@@ -7575,3 +7575,662 @@ java.lang.RuntimeException: Cannot find category with name 'Авто и тран
 2022-05-09 14:01:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-05-09 14:01:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2022-05-09 14:01:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 14:02:11 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 25372 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 14:02:11 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 14:02:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 14:02:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 13 JPA repository interfaces.
+2022-05-09 14:02:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 14:02:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 14:02:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 14:02:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 14:02:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1090 ms
+2022-05-09 14:02:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 14:02:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 14:02:13 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 14:02:13 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 14:02:13 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 14:02:13 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 14:02:13 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 14:02:13 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 14:02:14 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 14:02:15 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40e7aea9, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e0dec27, org.springframework.security.web.header.HeaderWriterFilter@64dfa1a3, org.springframework.web.filter.CorsFilter@63ff861e, org.springframework.security.web.authentication.logout.LogoutFilter@7916568d, by.bsuir.security.JwtFilter@23e0c200, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@237824b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5cf39df6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46e38c28, org.springframework.security.web.session.SessionManagementFilter@12e13abd, org.springframework.security.web.access.ExceptionTranslationFilter@19b4dd60, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@755a4ef5]
+2022-05-09 14:02:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-09 14:02:15 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 3.726 seconds (JVM running for 4.814)
+2022-05-09 14:02:15 [http-nio-8100-exec-4] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-09 14:02:15 [http-nio-8100-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-09 14:02:15 [http-nio-8100-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-09 14:20:16 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m3s123ms516µs700ns).
+2022-05-09 14:20:33 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 14:20:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 14:20:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 15:16:55 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 22536 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 15:16:55 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 15:16:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 15:16:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 13 JPA repository interfaces.
+2022-05-09 15:16:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 15:16:56 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 15:16:56 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 15:16:56 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 15:16:56 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1241 ms
+2022-05-09 15:16:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 15:16:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 15:16:56 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 15:16:56 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 15:16:56 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 15:16:56 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 15:16:57 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 15:16:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:16:58 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 15:16:58 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(Integer, String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(String) mapped.
+2022-05-09 15:16:58 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:16:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 15:16:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 15:16:58 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2022-05-09 15:16:58 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-09 15:16:58 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(Integer, String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at by.bsuir.AuthServerApplication.main(AuthServerApplication.java:10)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(Integer, String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+2022-05-09 15:21:39 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 23880 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 15:21:39 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 15:21:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 15:21:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 13 JPA repository interfaces.
+2022-05-09 15:21:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 15:21:40 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 15:21:40 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 15:21:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 15:21:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1081 ms
+2022-05-09 15:21:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 15:21:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 15:21:40 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 15:21:40 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 15:21:40 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 15:21:40 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 15:21:41 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 15:21:41 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:21:41 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 15:21:42 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(Integer, String) mapped.
+2022-05-09 15:21:42 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:21:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 15:21:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 15:21:42 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2022-05-09 15:21:42 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-09 15:21:42 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(Integer, String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at by.bsuir.AuthServerApplication.main(AuthServerApplication.java:10)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(Integer, String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+2022-05-09 15:21:59 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 25276 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 15:21:59 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 15:21:59 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 15:21:59 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 92 ms. Found 13 JPA repository interfaces.
+2022-05-09 15:22:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 15:22:00 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 15:22:00 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 15:22:00 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 15:22:00 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1097 ms
+2022-05-09 15:22:00 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 15:22:00 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 15:22:00 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 15:22:00 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 15:22:00 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 15:22:00 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 15:22:01 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 15:22:01 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:22:02 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 15:22:02 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(Integer, String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(String) mapped.
+2022-05-09 15:22:02 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:22:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 15:22:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 15:22:02 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2022-05-09 15:22:02 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-09 15:22:02 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(Integer, String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at by.bsuir.AuthServerApplication.main(AuthServerApplication.java:10)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(Integer, String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+2022-05-09 15:23:00 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 17848 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 15:23:00 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 15:23:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 15:23:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96 ms. Found 13 JPA repository interfaces.
+2022-05-09 15:23:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 15:23:01 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 15:23:01 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 15:23:01 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 15:23:01 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1085 ms
+2022-05-09 15:23:01 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 15:23:01 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 15:23:01 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 15:23:01 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 15:23:01 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 15:23:01 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 15:23:02 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 15:23:02 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:23:03 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 15:23:03 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(Integer, String) mapped.
+2022-05-09 15:23:03 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:23:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 15:23:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 15:23:03 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2022-05-09 15:23:03 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-09 15:23:03 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(Integer, String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at by.bsuir.AuthServerApplication.main(AuthServerApplication.java:10)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productRest' method 
+by.bsuir.rest.ProductRest#searchProducts(String)
+to {GET [/api/product/search]}: There is already 'productRest' bean method
+by.bsuir.rest.ProductRest#searchProducts(Integer, String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+2022-05-09 15:25:24 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 22144 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 15:25:24 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 15:25:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 15:25:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 119 ms. Found 13 JPA repository interfaces.
+2022-05-09 15:25:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 15:25:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 15:25:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 15:25:25 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 15:25:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1186 ms
+2022-05-09 15:25:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 15:25:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 15:25:25 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 15:25:25 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 15:25:25 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 15:25:25 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 15:25:26 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 15:25:26 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:25:26 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 15:25:27 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4257163f, org.springframework.security.web.context.SecurityContextPersistenceFilter@5694f6a0, org.springframework.security.web.header.HeaderWriterFilter@5bbf3869, org.springframework.web.filter.CorsFilter@40e7aea9, org.springframework.security.web.authentication.logout.LogoutFilter@456c53a, by.bsuir.security.JwtFilter@25d23478, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3857c5d5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b11d0d8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63ff861e, org.springframework.security.web.session.SessionManagementFilter@1188e08b, org.springframework.security.web.access.ExceptionTranslationFilter@363d29dd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3054cdd3]
+2022-05-09 15:25:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-09 15:25:27 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 3.927 seconds (JVM running for 4.954)
+2022-05-09 15:26:38 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-09 15:26:38 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-09 15:26:38 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2022-05-09 15:26:38 [http-nio-8100-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'page' for method parameter type Integer is not present]
+2022-05-09 15:27:06 [http-nio-8100-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'page' for method parameter type Integer is not present]
+2022-05-09 15:33:09 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5489008b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:33:09 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5957fbef (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:33:09 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1f84bd6b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:33:09 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5aac0913 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:33:09 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@18e45925 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:33:09 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7e0a4155 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:33:09 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@445fd41a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:33:09 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7e81b913 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:33:09 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4416fa97 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:33:09 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@68ba1ba9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:33:09 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:33:22 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:34:22 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:35:47 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:36:04 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:36:39 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:37:27 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:37:30 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:37:33 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:37:38 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:38:13 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:38:21 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:39:50 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:40:03 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:42:04 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:42:18 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:42:38 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:43:06 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:43:51 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:43:56 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:46:00 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:46:51 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:47:51 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:48:29 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:48:58 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:49:26 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:49:30 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:49:33 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:49:40 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:50:19 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:50:22 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:50:35 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:50:51 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:50:51 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 15:50:51 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 15:51:24 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 1824 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 15:51:24 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 15:51:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 15:51:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 13 JPA repository interfaces.
+2022-05-09 15:51:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 15:51:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 15:51:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 15:51:25 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 15:51:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1117 ms
+2022-05-09 15:51:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 15:51:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 15:51:26 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 15:51:26 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 15:51:26 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 15:51:26 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 15:51:26 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 15:51:26 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:51:27 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 15:51:28 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4981b83, org.springframework.security.web.context.SecurityContextPersistenceFilter@5345552f, org.springframework.security.web.header.HeaderWriterFilter@3c130cb2, org.springframework.web.filter.CorsFilter@4446a191, org.springframework.security.web.authentication.logout.LogoutFilter@8bb5c2a, by.bsuir.security.JwtFilter@c85486, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3705a85c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@511ad0dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ef812b, org.springframework.security.web.session.SessionManagementFilter@237824b0, org.springframework.security.web.access.ExceptionTranslationFilter@64dfa1a3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@31428f76]
+2022-05-09 15:51:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-09 15:51:28 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 3.72 seconds (JVM running for 4.712)
+2022-05-09 15:51:37 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-09 15:51:37 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-09 15:51:37 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2022-05-09 15:51:37 [http-nio-8100-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+2022-05-09 15:51:50 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:51:55 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:52:01 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:52:09 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:52:12 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:52:18 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:52:20 [http-nio-8100-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+2022-05-09 15:52:31 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:52:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 15:52:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 15:52:51 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 2868 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 15:52:51 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 15:52:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 15:52:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 13 JPA repository interfaces.
+2022-05-09 15:52:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 15:52:52 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 15:52:52 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 15:52:52 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 15:52:52 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1140 ms
+2022-05-09 15:52:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 15:52:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 15:52:52 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 15:52:52 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 15:52:52 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 15:52:53 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 15:52:53 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 15:52:53 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 15:52:54 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 15:52:54 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40ef385f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4cd7128, org.springframework.security.web.header.HeaderWriterFilter@5694f6a0, org.springframework.web.filter.CorsFilter@1a4c6e74, org.springframework.security.web.authentication.logout.LogoutFilter@39a1c200, by.bsuir.security.JwtFilter@7c79f2cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25af1dbf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d827673, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28d728f1, org.springframework.security.web.session.SessionManagementFilter@511ad0dd, org.springframework.security.web.access.ExceptionTranslationFilter@244c0fbe, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e0602ff]
+2022-05-09 15:52:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-09 15:52:54 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 3.774 seconds (JVM running for 4.786)
+2022-05-09 15:53:01 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-09 15:53:01 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-09 15:53:01 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2022-05-09 15:53:01 [http-nio-8100-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
+2022-05-09 15:53:23 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:53:42 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:53:54 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:53:57 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:54:03 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:58:07 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@54a672d5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:58:07 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@134c7e4c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:58:07 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2549e082 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:58:07 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@47be42e2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:58:07 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@567f256a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:58:07 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@26b18ff7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:58:07 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4c963653 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:58:07 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@798ac471 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:58:07 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5671fa5f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:58:07 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7c150951 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 15:58:07 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 15:59:34 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:00:08 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:00:14 [http-nio-8100-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Cannot find category with name qq] with root cause
+java.lang.RuntimeException: Cannot find category with name qq
+	at by.bsuir.dao.impl.RefDaoImpl.lambda$findCategoryByName$7(RefDaoImpl.java:123)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at by.bsuir.dao.impl.RefDaoImpl.findCategoryByName(RefDaoImpl.java:123)
+	at by.bsuir.dao.impl.RefDaoImpl$$FastClassBySpringCGLIB$$4af0ab39.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at by.bsuir.dao.impl.RefDaoImpl$$EnhancerBySpringCGLIB$$b1ce24b8.findCategoryByName(<generated>)
+	at by.bsuir.service.impl.ProductServiceImpl.getProductByPage(ProductServiceImpl.java:101)
+	at by.bsuir.rest.ProductRest.getCatalogByPage(ProductRest.java:65)
+	at jdk.internal.reflect.GeneratedMethodAccessor110.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at by.bsuir.security.JwtFilter.doFilter(JwtFilter.java:37)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at by.bsuir.security.JwtFilter.doFilter(JwtFilter.java:37)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-05-09 16:00:33 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:01:01 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:01:20 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:02:02 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:09:17 [http-nio-8100-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ed7a2c3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:09:17 [http-nio-8100-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ab5ed90 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:09:17 [http-nio-8100-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@41269f96 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:09:17 [http-nio-8100-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a4fccb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:09:17 [http-nio-8100-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2694e13e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:09:17 [http-nio-8100-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@43305c62 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:09:17 [http-nio-8100-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@422cc82b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:09:17 [http-nio-8100-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@130d69a6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:09:17 [http-nio-8100-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@48b7041e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:09:17 [http-nio-8100-exec-8] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@9258226 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:09:17 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:09:20 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:09:23 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:09:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 16:09:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 16:09:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 16:10:35 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 25580 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 16:10:35 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 16:10:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 16:10:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 13 JPA repository interfaces.
+2022-05-09 16:10:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 16:10:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 16:10:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 16:10:36 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 16:10:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1104 ms
+2022-05-09 16:10:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 16:10:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 16:10:36 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 16:10:36 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 16:10:36 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 16:10:36 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 16:10:37 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 16:10:37 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 16:10:37 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 16:10:38 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a4c6e74, org.springframework.security.web.context.SecurityContextPersistenceFilter@22b4ad0c, org.springframework.security.web.header.HeaderWriterFilter@6e0dec27, org.springframework.web.filter.CorsFilter@28d728f1, org.springframework.security.web.authentication.logout.LogoutFilter@603a34e5, by.bsuir.security.JwtFilter@49f41c2e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2cdcedef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d695f9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51d6c42d, org.springframework.security.web.session.SessionManagementFilter@634d56eb, org.springframework.security.web.access.ExceptionTranslationFilter@68aa1164, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a865ebf]
+2022-05-09 16:10:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-09 16:10:38 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 3.715 seconds (JVM running for 4.733)
+2022-05-09 16:10:43 [http-nio-8100-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-09 16:10:43 [http-nio-8100-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-09 16:10:43 [http-nio-8100-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-09 16:13:19 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:15:36 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:16:07 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:16:41 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:16:46 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:16:48 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:16:52 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:18:16 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:18:54 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:19:02 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:19:30 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:19:34 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:19:43 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:19:48 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:22:47 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:25:50 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:25:57 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:25:59 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:26:01 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:26:36 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:26:38 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:26:43 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:26:57 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:27:03 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:27:06 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:27:13 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:27:23 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:31:04 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@115e26f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:31:04 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6473c883 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:31:04 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@787dd2a1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:31:04 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6fceffb2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:31:04 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@25e751ed (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:31:04 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1c420880 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:31:04 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@abc3973 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:31:04 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@121764f9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:31:04 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@d60276f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:31:04 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@16a384b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 16:31:04 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:31:07 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:31:17 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:31:28 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:32:38 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:33:09 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:33:59 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:34:00 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:34:05 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:34:41 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:34:58 [http-nio-8100-exec-9] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-05-09 16:35:07 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:35:14 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:37:48 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:37:56 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:39:21 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:42:08 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 16:42:43 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 16:42:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 16:42:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -17,4 +17,6 @@ public interface ProductDao {
     PagesDto getCatalogPages();
     List<Product> findByPageAndCategory(Integer page, Category category);
     PagesDto getCatalogPagesByCategory(Category category);
+    List<Product> searchProductsByPage(Integer page, String name);
+    PagesDto getSearchPages(String name);
 }

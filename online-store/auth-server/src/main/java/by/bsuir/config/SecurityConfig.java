@@ -42,7 +42,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers(USER_LOGIN, USER_LOGIN_GOOGLE, USER_REGISTRATION,
-                        EMAIL_ACTIVATION, GET_CATALOG, VIEW_PRODUCT_BY_ID, GET_CATALOG_PAGES).permitAll()
+                        EMAIL_ACTIVATION, GET_CATALOG, VIEW_PRODUCT_BY_ID, GET_CATALOG_PAGES,
+                        GET_SEARCH_PRODUCTS, GET_SEARCH_PAGES).permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);

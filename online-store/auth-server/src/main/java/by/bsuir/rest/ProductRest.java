@@ -62,7 +62,6 @@ public class ProductRest {
     public CatalogListDto getCatalogByPage(@RequestHeader(name = AUTHORIZATION, required = false) String token,
                                            @RequestParam(name = "page") Integer page,
                                            @RequestParam(name = "category", required = false) String categoryName) {
-        System.out.println(page + "  " + categoryName);
         return productService.getProductByPage((token == null) ? null : authService.getUserIdByToken(token), page, categoryName);
     }
 
@@ -85,5 +84,17 @@ public class ProductRest {
     @GetMapping(GET_CATALOG_PAGES)
     public PagesDto getPagesCount(@RequestParam(name = "category", required = false) String category) {
         return productService.getPagesCount(category);
+    }
+
+    @GetMapping(GET_SEARCH_PRODUCTS)
+    public CatalogListDto searchProducts(@RequestHeader(name = AUTHORIZATION, required = false) String token,
+                                         @RequestParam(name = "page") Integer page,
+                                         @RequestParam(name = "name") String name) {
+        return productService.searchProductsByPage((token == null) ? null : authService.getUserIdByToken(token), page, name);
+    }
+
+    @GetMapping(GET_SEARCH_PAGES)
+    public PagesDto searchProducts(@RequestParam(name = "name") String name) {
+        return productService.searchProductsPageCount(name);
     }
 }
