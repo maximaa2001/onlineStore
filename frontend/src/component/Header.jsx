@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {Navbar, Container, Row, Col, Form, Button } from "react-bootstrap";
 import Modal from "./UI/Modal/Modal";
 import logo from '../img/logo.ico';
@@ -18,6 +18,8 @@ const Header = (props) =>{
  const authModal = useShowModal(false);
 
  const {user} = useContext(Context)
+
+ const [searchName, setSearchName] = useState('')
 
 
  useEffect(() => {
@@ -59,8 +61,8 @@ const Header = (props) =>{
     <Col lg={5}>
     <Form >
   <Form.Group className=" d-flex justify-content-start mt-2">
-    <Form.Control className="w-75" placeholder="Товар, услуга" />
-    <Button  className="w-25"variant="outline-success">Find</Button>
+    <Form.Control className="w-75" placeholder="Товар, услуга" onInput={e => setSearchName(e.target.value)}/>
+    <Button  className="w-25"variant="outline-success" onClick={e => props.searchProduct(searchName)}>Find</Button>
   </Form.Group>
   </Form>
   </Col>

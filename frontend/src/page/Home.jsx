@@ -18,9 +18,29 @@ const Home = observer(() => {
   const [products, setProducts] = useState([])
   const [currentCategory, setCurrentCategory] = useState()
 
+
   const [activePage, setActivePage] = useState(1)
 
   const [loading, setLoading] = useState(true)
+
+  const searchProduct = (name) => {
+    if(name){
+      ApiService.searchProductsPageCount(name)
+      .then(resp => {
+        let arr = []
+        for(let i = 1; i <= resp.data.count; i++){
+          arr.push(i)
+        }
+        setPages(arr)
+        setActivePage(1)
+      }).finally(() => setLoading(false))
+  
+       ApiService.searchProductsByPage(0, name)
+      .then((resp) => {
+        setProducts(resp.data.products)
+      })
+    }
+  }
 
 
   const call = (value) => {
@@ -28,20 +48,19 @@ const Home = observer(() => {
   }
 
   const trySendRequest = useLoading(async() => {
-    await ApiService.getCatalog(pages[pages.length - 1] - 1)
-    .then((resp) => {
-      console.log(resp.data)
-      setProducts(resp.data.products)
-    })
-
-    await ApiService.getPagesCount()
-    .then((resp) => {
-      let arr = []
-      for(let i = 1; i <= resp.data.count; i++){
-        arr.push(i)
-      }
-      setPages(arr)
-    }).finally(() => setLoading(false))
+      await ApiService.getCatalog(pages[pages.length - 1] - 1)
+      .then((resp) => {
+        setProducts(resp.data.products)
+      })
+  
+      await ApiService.getPagesCount()
+      .then((resp) => {
+        let arr = []
+        for(let i = 1; i <= resp.data.count; i++){
+          arr.push(i)
+        }
+        setPages(arr)
+      }).finally(() => setLoading(false))  
 
   })
 
@@ -58,9 +77,10 @@ const Home = observer(() => {
         arr.push(i)
       }
       setPages(arr)
+      setActivePage(1)
     }).finally(() => setLoading(false))
 
-    ApiService.getCatalog(activePage - 1, currentCategory)
+    ApiService.getCatalog(0, currentCategory)
     .then((resp) => {
       setProducts(resp.data.products)
     })
@@ -87,7 +107,7 @@ const Home = observer(() => {
 
     return<div>
 
-    <Header setNavVisible={(value) => call(value)}/>
+    <Header searchProduct={(name) => searchProduct(name)} setNavVisible={(value) => call(value)}/>
 
     {
       navVisible 

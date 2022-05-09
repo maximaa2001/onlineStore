@@ -320,5 +320,22 @@ export default class ApiService{
         return null;
     }
 
-    
+    static searchProductsByPage = async (page, name) => {
+            return await axios.get(`http://localhost:8100/api/product/search`,{
+                params:{
+                    page: page,
+                    name: name
+                }
+            })
+    }
+
+    static searchProductsPageCount = async (name) => {
+        return await axios.get(`http://localhost:8100/api/product/search/page`,{
+            params:{
+                name: name
+            }
+        })
+    }
+
+
 }
