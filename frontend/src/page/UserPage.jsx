@@ -11,13 +11,14 @@ import useLoading from "../hook/useLoading"
 import ApiService from "../service/ApiService"
 import Loader from "../component/UI/Loader/Loader"
 import ProductContainer from "../component/Product/ProductContainer"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import 'font-awesome/css/font-awesome.min.css';
 import style from "../style/UserPage.module.css"
 
 const UserPage =() => {
 
     const pathVariable = useParams();
+    const navigate = useNavigate ()
     const [myMark, setMyMark] = useState()
     const [user, setUser] = useState({
         "email": ""
@@ -163,7 +164,10 @@ const UserPage =() => {
                 setMyMark(res.data.myMark)
                 setCanUseEvent(false)
             }
-            }).finally(() => setLoading(false))
+            }).catch((err) => {
+                navigate("/404")
+            })
+            .finally(() => setLoading(false))
     }, [])
 
     useEffect(() => {
@@ -206,15 +210,20 @@ const UserPage =() => {
 
     return(
         <div>
-        <div>Почта: {user.email}</div>
-        <div style={{display: "flex", cursor:"pointer"}}>
+        <Header/>
+        <div style={{position: "absolute", left: "50%", marginLeft:"-125px"}}>
+        <div style={{marginTop: "10px"}}>Почта: {user.email}</div>
+        <div style={{marginTop: "10px"}}>Номер телефона: {user.phoneNumber}</div>
+        <div style={{display: "flex", cursor:"pointer", marginTop:"10px"}}>
         <i id="one" onMouseOver={hover} onMouseOut={out} onClick={click} aria-hidden="true" className={one.join(' ')}></i>
         <i id="two" onMouseOver={hover} onMouseOut={out} onClick={click}  aria-hidden="true" className={two.join(' ')}></i>
         <i id="three" onMouseOver={hover} onMouseOut={out} onClick={click}  aria-hidden="true" className={three.join(' ')}></i>
         <i id="four" onMouseOver={hover} onMouseOut={out} onClick={click}  aria-hidden="true" className={four.join(' ')}></i>
         <i id="five" onMouseOver={hover} onMouseOut={out} onClick={click}  aria-hidden="true" className={five.join(' ')}></i>
         </div>
+        <div style={{marginTop: "10px"}}>Общий рейтинг — {user.commonRating}</div>
         
+        </div>
         </div>
     )
   

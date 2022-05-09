@@ -261,12 +261,24 @@ export default class ApiService{
 
     static createRating = async (getId, rating) => {
         const jwt = localStorage.getItem(Const.TOKEN);
-        console.log(jwt)
         if(jwt){
             const response = await axios.post(`http://localhost:8100/api/users/rating`, {
                 "getId": getId,
                 "rating": rating
             }, configToken(jwt))
+            return response;
+        }
+        return null;
+    }
+
+    static logout = async () => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            const response = await axios.get(`http://localhost:8100/api/users/logout`, {
+                headers: {
+                    "AUTHORIZATION" : jwt
+                }
+            })
             return response;
         }
         return null;
