@@ -3,6 +3,7 @@ package by.bsuir.dao.impl;
 import by.bsuir.constant.ref.ProductStatusRef;
 import by.bsuir.dao.ProductDao;
 import by.bsuir.dao.RefDao;
+import by.bsuir.entity.domain.Category;
 import by.bsuir.entity.domain.Product;
 import by.bsuir.entity.domain.ProductStatus;
 import by.bsuir.entity.domain.User;
@@ -62,6 +63,19 @@ public class ProductDaoImpl implements ProductDao {
     public PagesDto getCatalogPages() {
         Pageable pageRequest = PageRequest.of(0, pageSize);
         return PagesDto.of(productRepo.findByProductStatus(refDao.findProductStatusByName(ProductStatusRef.APPROVED.getName()),
+                pageRequest).getTotalPages());
+    }
+
+    @Override
+    public List<Product> findByPageAndCategory(Integer page, Category category) {
+        Pageable pageRequest = PageRequest.of(page, pageSize);
+        return productRepo.findByProductStatusAndCategory(refDao.findApprovedStatus(), category, pageRequest).getContent();
+    }
+
+    @Override
+    public PagesDto getCatalogPagesByCategory(Category category) {
+        Pageable pageRequest = PageRequest.of(0, pageSize);
+        return PagesDto.of(productRepo.findByProductStatusAndCategory(refDao.findApprovedStatus(), category,
                 pageRequest).getTotalPages());
     }
 }

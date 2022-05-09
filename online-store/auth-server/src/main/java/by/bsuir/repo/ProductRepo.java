@@ -1,5 +1,6 @@
 package by.bsuir.repo;
 
+import by.bsuir.entity.domain.Category;
 import by.bsuir.entity.domain.Product;
 import by.bsuir.entity.domain.ProductStatus;
 import by.bsuir.entity.domain.User;
@@ -13,4 +14,5 @@ public interface ProductRepo extends JpaRepository<Product, Integer> {
     List<Product> findByUser(User user);
     List<Product> findByUserAndProductStatus(User user, ProductStatus productStatus);
     Page<Product> findByProductStatus(ProductStatus productStatus, Pageable pageable);
+    Page<Product> findByProductStatusAndCategory(ProductStatus productStatus, Category category, Pageable pageable);
 }

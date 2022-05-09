@@ -2,7 +2,8 @@ package by.bsuir.rest;
 
 import by.bsuir.entity.dto.PagesDto;
 import by.bsuir.entity.dto.basket.BasketBooleanDto;
-import by.bsuir.entity.dto.product.*;
+import by.bsuir.entity.dto.product.CreateProductDto;
+import by.bsuir.entity.dto.product.ProductIdDto;
 import by.bsuir.entity.dto.product.catalog.AboutCatalogProductDto;
 import by.bsuir.entity.dto.product.catalog.CatalogListDto;
 import by.bsuir.entity.dto.product.edit.EditProductDto;
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 import static by.bsuir.constant.ApiPath.*;
-import static by.bsuir.constant.Request.*;
+import static by.bsuir.constant.Request.PRODUCT_STATUS_NAME;
 
 @RestController
 @Slf4j
@@ -53,34 +54,36 @@ public class ProductRest {
 
     @PostMapping(EDIT_MT_PRODUCT)
     public ProductIdDto editProduct(@RequestHeader(name = AUTHORIZATION) String token,
-                                         @RequestBody EditProductDto editProductDto) {
+                                    @RequestBody EditProductDto editProductDto) {
         return productService.editMyProduct(authService.getUserIdByToken(token), editProductDto);
     }
 
     @GetMapping(GET_CATALOG)
     public CatalogListDto getCatalogByPage(@RequestHeader(name = AUTHORIZATION, required = false) String token,
-                                           @RequestParam(name = "page") Integer page){
-        return productService.getProductByPage((token == null) ? null : authService.getUserIdByToken(token), page);
+                                           @RequestParam(name = "page") Integer page,
+                                           @RequestParam(name = "category", required = false) String categoryName) {
+        System.out.println(page + "  " + categoryName);
+        return productService.getProductByPage((token == null) ? null : authService.getUserIdByToken(token), page, categoryName);
     }
 
     @PostMapping(CHANGE_BASKET)
     public BasketBooleanDto changeBasket(@RequestHeader(name = AUTHORIZATION) String token,
-                                         @RequestBody ProductIdDto productIdDto){
+                                         @RequestBody ProductIdDto productIdDto) {
         return productService.changeBasket(authService.getUserIdByToken(token), productIdDto);
     }
 
     @GetMapping(GET_FAVOURITE)
-    public ProductListDto getFavouriteProducts(@RequestHeader(name = AUTHORIZATION) String token){
+    public ProductListDto getFavouriteProducts(@RequestHeader(name = AUTHORIZATION) String token) {
         return productService.getProductsInCart(authService.getUserIdByToken(token));
     }
 
     @GetMapping(VIEW_PRODUCT_BY_ID)
-    public AboutCatalogProductDto getCatalogItem(@PathVariable(name = "id") Integer id){
+    public AboutCatalogProductDto getCatalogItem(@PathVariable(name = "id") Integer id) {
         return productService.getProductFromCatalog(id);
     }
 
     @GetMapping(GET_CATALOG_PAGES)
-    public PagesDto getPagesCount(){
-        return productService.getPagesCount();
+    public PagesDto getPagesCount(@RequestParam(name = "category", required = false) String category) {
+        return productService.getPagesCount(category);
     }
 }

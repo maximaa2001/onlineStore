@@ -93,8 +93,14 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public CatalogListDto getProductByPage(Integer userId, Integer page) {
-        List<Product> productsForPage = productDao.findByPage(page);
+    public CatalogListDto getProductByPage(Integer userId, Integer page, String categoryName) {
+        List<Product> productsForPage = null;
+        if(categoryName == null){
+            productsForPage = productDao.findByPage(page);
+        } else {
+            Category categoryByName = refDao.findCategoryByName(categoryName);
+            productsForPage = productDao.findByPageAndCategory(page, categoryByName);
+        }
         if(userId != null){
             User user = userDao.findById(userId);
             List<Integer> userBasket = user.getFavourite().stream().map(Product::getProductId).collect(Collectors.toList());
@@ -141,8 +147,17 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public PagesDto getPagesCount() {
-        return productDao.getCatalogPages();
+    public PagesDto getPagesCount(String categoryName) {
+        if(categoryName == null){
+            return productDao.getCatalogPages();
+        }
+        Category categoryByName = refDao.findCategoryByName(categoryName);
+        return productDao.getCatalogPagesByCategory(categoryByName);
+    }
+
+    @Override
+    public CatalogListDto getByCategory(String category) {
+        return null;
     }
 
     private Product createDefaultProduct(CreateProductDto createProductDto){

@@ -1,5 +1,6 @@
 package by.bsuir.dao;
 
+import by.bsuir.entity.domain.Category;
 import by.bsuir.entity.domain.Product;
 import by.bsuir.entity.domain.ProductStatus;
 import by.bsuir.entity.domain.User;
@@ -14,4 +15,6 @@ public interface ProductDao {
     List<Product> findProductsByUserAndStatus(User user, ProductStatus productStatus);
     List<Product> findByPage(Integer page);
     PagesDto getCatalogPages();
+    List<Product> findByPageAndCategory(Integer page, Category category);
+    PagesDto getCatalogPagesByCategory(Category category);
 }

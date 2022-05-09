@@ -7204,3 +7204,374 @@ java.lang.RuntimeException: CANNOT FIND USER WITH ID 300
 2022-05-09 11:44:54 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-05-09 11:44:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2022-05-09 11:44:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 11:46:02 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 11840 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 11:46:02 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 11:46:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 11:46:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 13 JPA repository interfaces.
+2022-05-09 11:46:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 11:46:04 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 11:46:04 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 11:46:04 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 11:46:04 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1599 ms
+2022-05-09 11:46:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 11:46:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 11:46:04 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 11:46:04 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 11:46:05 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 11:46:05 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 11:46:05 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 11:46:05 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 11:46:06 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 11:46:07 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33efa7d4, org.springframework.security.web.context.SecurityContextPersistenceFilter@62cf873a, org.springframework.security.web.header.HeaderWriterFilter@7202009e, org.springframework.web.filter.CorsFilter@fe337, org.springframework.security.web.authentication.logout.LogoutFilter@37f0fb02, by.bsuir.security.JwtFilter@7d07e04e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@294b045b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70fe33fa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@356cb230, org.springframework.security.web.session.SessionManagementFilter@4fe8e318, org.springframework.security.web.access.ExceptionTranslationFilter@54da736e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@fc6cac6]
+2022-05-09 11:46:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-09 11:46:07 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 5.199 seconds (JVM running for 6.51)
+2022-05-09 11:46:11 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-09 11:46:11 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-09 11:46:11 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-09 11:46:11 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:50:42 [http-nio-8100-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3bb2c3ae (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:50:42 [http-nio-8100-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6eda640b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:50:42 [http-nio-8100-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@43d865cd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:50:42 [http-nio-8100-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@32d426e2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:50:42 [http-nio-8100-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@47f534eb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:50:42 [http-nio-8100-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7a32fa22 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:50:42 [http-nio-8100-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7a440ea4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:50:42 [http-nio-8100-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6934c438 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:50:42 [http-nio-8100-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@788f799 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:50:42 [http-nio-8100-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6a86eea0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:50:45 [http-nio-8100-exec-8] INFO  b.b.service.impl.ProductServiceImpl - Request for getAllProductsByUser endpoint
+2022-05-09 11:50:45 [http-nio-8100-exec-10] INFO  b.b.service.impl.ProductServiceImpl - Request for getProductsByStatus endpoint
+2022-05-09 11:54:48 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@cd449f9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:54:48 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@62c2289 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:54:48 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@432ebc28 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:54:48 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6d1bbe35 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:54:48 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@72a73eab (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:54:48 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@135bbb24 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:54:48 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@58429d82 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:54:48 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@e7c6c14 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:54:48 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@274f1cc7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:54:48 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@69831191 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 11:54:48 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:55:04 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:55:42 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:55:59 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:56:29 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:56:34 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:56:38 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:56:41 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:57:14 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:57:31 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:57:40 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:57:56 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:58:04 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:58:19 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:58:21 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:58:24 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:58:31 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:58:51 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:59:01 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:59:04 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:59:26 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:59:41 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:59:51 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 11:59:58 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:00:29 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 12:00:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 12:00:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 12:31:53 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 10724 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 12:31:53 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 12:31:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 12:31:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 109 ms. Found 13 JPA repository interfaces.
+2022-05-09 12:31:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 12:31:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 12:31:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 12:31:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 12:31:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1147 ms
+2022-05-09 12:31:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 12:31:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 12:31:54 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 12:31:54 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 12:31:54 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 12:31:54 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 12:31:55 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 12:31:55 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 12:31:56 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 12:31:56 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3054cdd3, org.springframework.security.web.context.SecurityContextPersistenceFilter@213bd66a, org.springframework.security.web.header.HeaderWriterFilter@2b370ca9, org.springframework.web.filter.CorsFilter@755a4ef5, org.springframework.security.web.authentication.logout.LogoutFilter@d827673, by.bsuir.security.JwtFilter@4c0bfe9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77a1df4d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e0dec27, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6eff05e7, org.springframework.security.web.session.SessionManagementFilter@73502d5e, org.springframework.security.web.access.ExceptionTranslationFilter@1067bc4c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69e23e94]
+2022-05-09 12:31:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-09 12:31:56 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 3.933 seconds (JVM running for 4.984)
+2022-05-09 12:32:17 [http-nio-8100-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-09 12:32:17 [http-nio-8100-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-09 12:32:17 [http-nio-8100-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-09 12:32:17 [http-nio-8100-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'page' for method parameter type Integer is not present]
+2022-05-09 12:33:19 [http-nio-8100-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Cannot find category with name 'Авто и транспорт'] with root cause
+java.lang.RuntimeException: Cannot find category with name 'Авто и транспорт'
+	at by.bsuir.dao.impl.RefDaoImpl.lambda$findCategoryByName$7(RefDaoImpl.java:123)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at by.bsuir.dao.impl.RefDaoImpl.findCategoryByName(RefDaoImpl.java:123)
+	at by.bsuir.dao.impl.RefDaoImpl$$FastClassBySpringCGLIB$$4af0ab39.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at by.bsuir.dao.impl.RefDaoImpl$$EnhancerBySpringCGLIB$$9fd3bf5b.findCategoryByName(<generated>)
+	at by.bsuir.service.impl.ProductServiceImpl.getProductByPage(ProductServiceImpl.java:101)
+	at by.bsuir.rest.ProductRest.getCatalogByPage(ProductRest.java:65)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at by.bsuir.security.JwtFilter.doFilter(JwtFilter.java:37)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at by.bsuir.security.JwtFilter.doFilter(JwtFilter.java:37)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-05-09 12:43:59 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4c11b39c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:43:59 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@35bd85fb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:43:59 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74f14d83 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:43:59 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@934b148 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:43:59 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2e07f348 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:43:59 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@77cc392e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:43:59 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@9afff01 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:43:59 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@25bda18d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:43:59 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@34318bc1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:43:59 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2222c120 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:43:59 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:44:26 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:44:56 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:47:19 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:47:35 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:49:06 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:49:11 [http-nio-8100-exec-3] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:49:27 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:49:38 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2de52342 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:49:38 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4a5884d6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:49:38 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6d5ea583 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:49:38 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@69a56459 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:49:38 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5cb1e93e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:49:38 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@8ee4f9c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:49:46 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@72a7dae2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:49:46 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5cf782d1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:49:46 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@60803743 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 12:49:58 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:50:45 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:51:00 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:51:02 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:51:26 [http-nio-8100-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-09 12:51:29 [http-nio-8100-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-09 12:51:45 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:51:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 12:51:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 12:51:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 12:52:20 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 3708 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 12:52:20 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 12:52:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 12:52:21 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 101 ms. Found 13 JPA repository interfaces.
+2022-05-09 12:52:21 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 12:52:21 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 12:52:21 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 12:52:21 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 12:52:21 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1151 ms
+2022-05-09 12:52:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 12:52:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 12:52:21 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 12:52:21 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 12:52:21 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 12:52:21 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 12:52:22 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 12:52:22 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 12:52:23 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 12:52:23 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3054cdd3, org.springframework.security.web.context.SecurityContextPersistenceFilter@213bd66a, org.springframework.security.web.header.HeaderWriterFilter@2b370ca9, org.springframework.web.filter.CorsFilter@755a4ef5, org.springframework.security.web.authentication.logout.LogoutFilter@d827673, by.bsuir.security.JwtFilter@4c0bfe9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77a1df4d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e0dec27, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6eff05e7, org.springframework.security.web.session.SessionManagementFilter@73502d5e, org.springframework.security.web.access.ExceptionTranslationFilter@1067bc4c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69e23e94]
+2022-05-09 12:52:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-09 12:52:23 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 4.049 seconds (JVM running for 5.078)
+2022-05-09 12:52:24 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-09 12:52:24 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-09 12:52:24 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-09 12:52:24 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:52:52 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:53:26 [http-nio-8100-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2022-05-09 12:53:33 [http-nio-8100-exec-5] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 12:54:37 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 12:54:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 12:54:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 12:54:40 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 22356 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 12:54:40 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 12:54:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 12:54:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 103 ms. Found 13 JPA repository interfaces.
+2022-05-09 12:54:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 12:54:42 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 12:54:42 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 12:54:42 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 12:54:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1365 ms
+2022-05-09 12:54:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 12:54:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 12:54:42 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 12:54:42 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 12:54:42 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 12:54:42 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 12:54:43 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 12:54:43 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 12:54:43 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 12:54:44 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@643f8ebe, org.springframework.security.web.context.SecurityContextPersistenceFilter@16ca4532, org.springframework.security.web.header.HeaderWriterFilter@f461c9c, org.springframework.web.filter.CorsFilter@65013d71, org.springframework.security.web.authentication.logout.LogoutFilter@671c71e8, by.bsuir.security.JwtFilter@16732340, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75a5a912, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ea4290f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30a99b85, org.springframework.security.web.session.SessionManagementFilter@7715d43c, org.springframework.security.web.access.ExceptionTranslationFilter@70a3b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ed90b04]
+2022-05-09 12:54:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-09 12:54:44 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 4.35 seconds (JVM running for 5.531)
+2022-05-09 12:55:09 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-09 12:55:09 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-09 12:55:09 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-09 12:55:14 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 13:00:03 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m50s627ms650µs900ns).
+2022-05-09 13:00:03 [http-nio-8100-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@507c4cd1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:00:03 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@711455a3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:00:03 [http-nio-8100-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@21a2e8a0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:00:03 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@f54edd7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:00:03 [http-nio-8100-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@15a00ee3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:00:03 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@26482e78 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:00:03 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@46f2a262 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:00:03 [http-nio-8100-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4e151557 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:00:03 [http-nio-8100-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@58f41eb5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:00:03 [http-nio-8100-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@253b4c76 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:00:03 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 13:00:03 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 13:00:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 13:00:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-05-09 13:00:07 [main] INFO  by.bsuir.AuthServerApplication - Starting AuthServerApplication using Java 11 on DESKTOP-UILBNBG with PID 18148 (C:\Users\maxim\Repozinory\onlineStore\online-store\auth-server\target\classes started by maxim in C:\Users\maxim\Repozinory\onlineStore\online-store)
+2022-05-09 13:00:07 [main] INFO  by.bsuir.AuthServerApplication - No active profile set, falling back to default profiles: default
+2022-05-09 13:00:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-09 13:00:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 13 JPA repository interfaces.
+2022-05-09 13:00:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2022-05-09 13:00:08 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-09 13:00:08 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-09 13:00:08 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-09 13:00:08 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1130 ms
+2022-05-09 13:00:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-09 13:00:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-09 13:00:08 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-09 13:00:08 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-09 13:00:08 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-09 13:00:09 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-09 13:00:09 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-09 13:00:09 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 13:00:10 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-09 13:00:10 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15251cc2, org.springframework.security.web.context.SecurityContextPersistenceFilter@1146e32e, org.springframework.security.web.header.HeaderWriterFilter@68aa1164, org.springframework.web.filter.CorsFilter@7bdaf563, org.springframework.security.web.authentication.logout.LogoutFilter@30dd23e2, by.bsuir.security.JwtFilter@3450bd13, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@634d56eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19b33b0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53813f01, org.springframework.security.web.session.SessionManagementFilter@46ae897c, org.springframework.security.web.access.ExceptionTranslationFilter@5692863, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4110ffe5]
+2022-05-09 13:00:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2022-05-09 13:00:10 [main] INFO  by.bsuir.AuthServerApplication - Started AuthServerApplication in 3.79 seconds (JVM running for 4.852)
+2022-05-09 13:00:12 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-09 13:00:12 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-09 13:00:12 [http-nio-8100-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-09 13:00:42 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 13:02:31 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 13:02:34 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 13:04:05 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 13:05:35 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 13:05:38 [http-nio-8100-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@76a5f3a4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:05:40 [http-nio-8100-exec-6] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@11c6fb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:05:41 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4e2ed2a0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:05:41 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2007b66a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:05:41 [http-nio-8100-exec-9] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@41ac6756 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:05:44 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3041539b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:05:44 [http-nio-8100-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ba4eb4c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:05:45 [http-nio-8100-exec-4] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@8809e70 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:06:03 [http-nio-8100-exec-7] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@66c4297b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 13:06:23 [http-nio-8100-exec-6] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 13:06:42 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 13:06:57 [http-nio-8100-exec-8] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 13:08:02 [http-nio-8100-exec-7] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 13:56:14 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m5s552ms118µs900ns).
+2022-05-09 14:00:09 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74f637f7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 14:00:09 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@32caa009 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 14:00:09 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c2231a4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 14:00:09 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@17e3d323 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 14:00:09 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4a3a6ce (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 14:00:09 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@78994bea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 14:00:09 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@412f7022 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 14:00:09 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@52ce358d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 14:00:09 [http-nio-8100-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@30463bb9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 14:00:09 [http-nio-8100-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@35630d35 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-09 14:00:27 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 14:00:39 [http-nio-8100-exec-10] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 14:00:49 [http-nio-8100-exec-4] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 14:01:00 [http-nio-8100-exec-9] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 14:01:02 [http-nio-8100-exec-2] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 14:01:15 [http-nio-8100-exec-1] INFO  b.bsuir.service.impl.UserServiceImpl - Request for auth endpoint
+2022-05-09 14:01:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-09 14:01:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-09 14:01:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -26,6 +26,7 @@ public class ApiPath {
     public static final String PAGE = "/page";
     public static final String INFO = "/info";
     public static final String RATING = "/rating";
+    public static final String CATEGORY = "/category";
 
 
 

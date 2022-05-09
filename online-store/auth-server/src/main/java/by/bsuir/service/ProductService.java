@@ -1,5 +1,6 @@
 package by.bsuir.service;
 
+import by.bsuir.entity.domain.Category;
 import by.bsuir.entity.dto.PagesDto;
 import by.bsuir.entity.dto.basket.BasketBooleanDto;
 import by.bsuir.entity.dto.product.*;
@@ -17,9 +18,10 @@ public interface ProductService {
     ProductListDto getProductsByStatus(Integer userId, String statusName);
     AboutMyProductDto getMyProductInfo(Integer userId, Optional<String> productId);
     ProductIdDto editMyProduct(Integer userId, EditProductDto editProductDto);
-    CatalogListDto getProductByPage(Integer userId, Integer page);
+    CatalogListDto getProductByPage(Integer userId, Integer page, String categoryName);
     BasketBooleanDto changeBasket(Integer userId, ProductIdDto productIdDto);
     ProductListDto getProductsInCart(Integer userId);
     AboutCatalogProductDto getProductFromCatalog(Integer productId);
-    PagesDto getPagesCount();
+    PagesDto getPagesCount(String categoryName);
+    CatalogListDto getByCategory(String category);
 }
