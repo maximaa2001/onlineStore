@@ -98,12 +98,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void logout(String token) {
+    public ResultDto logout(String token) {
         User user = userDao.findById(authService.getUserIdByToken(token));
         tokenDao.addTokenToBlackList(Token.builder()
                 .token(token)
                 .endDate(authService.getExpirationTimeByToken(token))
                 .user(user).build());
+        return ResultDto.builder()
+                .isSuccess(true)
+                .build();
     }
 
     @Transactional
@@ -191,12 +194,10 @@ public class UserServiceImpl implements UserService {
         if(myMark.isPresent()){
             mark = myMark.get().getRating().getRatingNumber();
         }
-        List<Product> productsByUserAndStatus = productDao.findProductsByUserAndStatus(aboutUser, refDao.findApprovedStatus());
-        return UserInfoDto.of(aboutUser.getUserId(), aboutUser.getUserEmail(),
+        return UserInfoDto.of(aboutUser,
                 mark, calcRating(ratingDao.findMarksByIds(ratingForUser).stream()
                         .map(Rating::getRatingNumber)
-                        .collect(Collectors.toList())),
-                productsByUserAndStatus);
+                        .collect(Collectors.toList())));
     }
 
     @Override

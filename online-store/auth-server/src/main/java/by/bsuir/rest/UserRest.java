@@ -43,8 +43,8 @@ public class UserRest {
     }
 
     @GetMapping(USER_LOGOUT)
-    public void logout(@RequestHeader(name = AUTHORIZATION) String token) {
-        userService.logout(token);
+    public ResultDto logout(@RequestHeader(name = AUTHORIZATION) String token) {
+        return userService.logout(token);
     }
 
     @GetMapping(USER_AUTH)
