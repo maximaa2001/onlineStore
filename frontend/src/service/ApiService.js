@@ -146,32 +146,58 @@ export default class ApiService{
         return null;
     }
 
-    static getCatalog = async (page) => {
+    static getCatalog = async (page, category) => {
         const jwt = localStorage.getItem(Const.TOKEN)
+        let response = null;
         if(jwt){
-            const response = await  axios.get(Const.AUTH_SERVER + "/api/catalog",  {
-                headers: {
-                    "AUTHORIZATION": jwt,
-                    "Content-type": "application/json"
-                },    
-                params: {
-                    page: page
-                }             
-              })
-              console.log(response)
-              return response;
+            if(category){
+               return response = await  axios.get(Const.AUTH_SERVER + "/api/catalog",  {
+                    headers: {
+                        "AUTHORIZATION": jwt,
+                        "Content-type": "application/json"
+                    },    
+                    params: {
+                        page: page,
+                        category: category
+                    }             
+                  })
+            }
+            else{
+                return response = await  axios.get(Const.AUTH_SERVER + "/api/catalog",  {
+                    headers: {
+                        "AUTHORIZATION": jwt,
+                        "Content-type": "application/json"
+                    },    
+                    params: {
+                        page: page,
+                    }             
+                  })
+            }
+        
         } else{
-            const response = await  axios.get(Const.AUTH_SERVER + "/api/catalog",  {
-                headers: {
-                    "Content-type": "application/json"
-                },    
-                params: {
-                    page: page
-                }             
-              })
-              console.log(response)
-              return response;
+            if(category){
+                return response = await  axios.get(Const.AUTH_SERVER + "/api/catalog",  {
+                    headers: {
+                        "Content-type": "application/json"
+                    },    
+                    params: {
+                        page: page,
+                        category: category
+                    }             
+                  })
+            } else{
+                return response = await  axios.get(Const.AUTH_SERVER + "/api/catalog",  {
+                    headers: {
+                        "Content-type": "application/json"
+                    },    
+                    params: {
+                        page: page
+                    }             
+                  })
+            }
+           
         }
+
            
     }
 
@@ -245,9 +271,19 @@ export default class ApiService{
             return  await axios.get(`http://localhost:8100/api/catalog/product/${id}`)
     }
 
-    static getPagesCount = async () => {
-        let response =  await axios.get(Const.AUTH_SERVER + "/api/catalog/page")
-        return response;
+    static getPagesCount = async (category) => {
+        let response;
+        if(category){
+            return response =  await axios.get(Const.AUTH_SERVER + "/api/catalog/page",{
+                params: {
+                    category: category
+                }   
+            })
+
+        } else {
+            return  response =  await axios.get(Const.AUTH_SERVER + "/api/catalog/page")
+
+        }
     }
 
     static getUserInfo = async (id) => {
@@ -283,5 +319,6 @@ export default class ApiService{
         }
         return null;
     }
+
     
 }

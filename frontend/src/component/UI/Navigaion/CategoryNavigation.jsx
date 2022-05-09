@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react"
 import ApiService from "../../../service/ApiService";
 
-const Navigation = () =>{
+const Navigation = ({setCurrentCategory}) =>{
 
     const [categories, setCategories] = useState([])
 
@@ -20,7 +20,7 @@ const Navigation = () =>{
 
 return <ListGroup className={style.navigation_group}>
 {categories.map((item) => <ListGroup.Item key={item.category_id} className={style.navigation_item}>
-<Link to="/" className={style.navigation_link}> {item.category_name}</Link></ListGroup.Item>)}
+<Link to="/" onClick={ e => setCurrentCategory(item.category_name)} className={style.navigation_link}> {item.category_name}</Link></ListGroup.Item>)}
 </ListGroup>
 }
 

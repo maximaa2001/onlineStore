@@ -16,6 +16,7 @@ const Home = observer(() => {
   const [navVisible, setNavVisible] = useState(true)
   const [pages, setPages] = useState([1])
   const [products, setProducts] = useState([])
+  const [currentCategory, setCurrentCategory] = useState()
 
   const [activePage, setActivePage] = useState(1)
 
@@ -29,7 +30,7 @@ const Home = observer(() => {
   const trySendRequest = useLoading(async() => {
     await ApiService.getCatalog(pages[pages.length - 1] - 1)
     .then((resp) => {
-      console.log(resp.data.products)
+      console.log(resp.data)
       setProducts(resp.data.products)
     })
 
@@ -48,11 +49,30 @@ const Home = observer(() => {
     trySendRequest.loadData()
   }, [])
 
+  useEffect(() => {
+    if(currentCategory){
+     ApiService.getPagesCount(currentCategory)
+      .then((resp) => {
+      let arr = []
+      for(let i = 1; i <= resp.data.count; i++){
+        arr.push(i)
+      }
+      setPages(arr)
+    }).finally(() => setLoading(false))
+
+    ApiService.getCatalog(activePage - 1, currentCategory)
+    .then((resp) => {
+      setProducts(resp.data.products)
+    })
+
+    } 
+  }, [currentCategory])
+
 
   const nextPage = (page) => {
     setLoading(true)
     setActivePage(page)
-    ApiService.getCatalog(page-1)
+    ApiService.getCatalog(page-1, currentCategory)
     .then((resp) => {
       setProducts(resp.data.products)
     }).finally(() => setLoading(false))
@@ -73,10 +93,17 @@ const Home = observer(() => {
       navVisible 
       ?
       <div>
-      <div className={style.container}> <Navigation /><div style={{display: "flex", flexDirection:"column", width:"100%"}}><div>
-       {products.map((item) => <CatalogItem key={item.id} product={item}></CatalogItem>)}</div><div>
-
-
+    
+      <div className={style.container}> <Navigation setCurrentCategory={setCurrentCategory} />
+      
+      <div style={{display: "flex", flexDirection:"column", width:"100%"}}>
+      {
+        products.length > 0
+        ? <div>{products.map((item) => <CatalogItem key={item.id} product={item}></CatalogItem>)}</div>
+        :  <div style={{marginLeft: "50px", fontSize: "20px"}}>Товаров не найдено</div>
+      }
+      
+       <div>
 
        </div>
        
