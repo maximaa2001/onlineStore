@@ -36,6 +36,11 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    public Optional<User> finOpt(Integer id) {
+        return userRepo.findById(id);
+    }
+
+    @Override
     public Optional<User> save(User user) {
         return Optional.of(userRepo.save(user));
     }

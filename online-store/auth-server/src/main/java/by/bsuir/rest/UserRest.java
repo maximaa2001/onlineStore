@@ -33,7 +33,7 @@ public class UserRest {
 
     @PostMapping(USER_LOGIN)
     public JwtDto login(@RequestBody AuthDto authDto) {
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authDto.getEmail(), authDto.getPassword()));
+       // authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authDto.getEmail(), authDto.getPassword()));
         return userService.login(authDto);
     }
 

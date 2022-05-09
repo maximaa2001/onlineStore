@@ -62,9 +62,9 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public Authentication getAuthentication(String token){
-        UserDetails userDetails = userDetailsService.loadUserByUsername(jwtService.getUsername(token));
+        UserDetails userDetails = userDetailsService.loadUserByUsername(token);
         SecurityUser securityUser = (SecurityUser) userDetails;
-        if(securityUser.getUserStatus().equals(refDao.findActiveUserStatus())){
+        if(securityUser.getUserStatus().equals(refDao.findActiveUserStatus()) || securityUser.getUserStatus().equals(refDao.findGoogleActiveStatus())){
             return new UsernamePasswordAuthenticationToken(userDetails.getUsername(),
                     userDetails.getPassword(), userDetails.getAuthorities());
         }

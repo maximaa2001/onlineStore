@@ -1,5 +1,7 @@
 package by.bsuir.config;
 
+import by.bsuir.constant.ref.UserRoleRef;
+import by.bsuir.entity.domain.UserRole;
 import by.bsuir.security.JwtFilter;
 import by.bsuir.security.SecurityUserService;
 import org.springframework.context.annotation.Bean;
@@ -44,6 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(USER_LOGIN, USER_LOGIN_GOOGLE, USER_REGISTRATION,
                         EMAIL_ACTIVATION, GET_CATALOG, VIEW_PRODUCT_BY_ID, GET_CATALOG_PAGES,
                         GET_SEARCH_PRODUCTS, GET_SEARCH_PAGES).permitAll()
+                .antMatchers("/admin").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
