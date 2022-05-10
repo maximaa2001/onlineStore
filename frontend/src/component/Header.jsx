@@ -10,6 +10,7 @@ import {Context} from "../index"
 import Const from "../const/Const"
 import UserMenu from "./UI/Menu/UserMenu";
 import { Link } from "react-router-dom";
+import AdminMenu from "./UI/Menu/AdminMenu";
 
 const Header = (props) =>{
 
@@ -22,13 +23,12 @@ const Header = (props) =>{
  const [searchName, setSearchName] = useState('')
 
 
+
  useEffect(() => {
    if(regModal.isVisible || authModal.isVisible){
      if(props.setNavVisible){
       props.setNavVisible(false)
      }
- 
-    
    } else{
 
     if(props.setNavVisible){
@@ -76,7 +76,7 @@ const Header = (props) =>{
       </div>
     : user.role === Const.ADMIN_ROLE
     ?  <div className="mt-2 d-flex justify-content-end">
-      <button>ADMIN</button>
+    <AdminMenu/>
       </div>
     : <div className="mt-2 d-flex justify-content-end">
       <ModalButton onClick={() => regModal.show(true)}>Зарегистрироваться</ModalButton>

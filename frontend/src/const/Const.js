@@ -13,6 +13,7 @@ export default class Const {
     static PROFILE = "/profile"
     static PRODUCT = "/product"
     static USER = "/user"
+    static ADMIN = "/admin"
     static CTEATE_PRODUCT =  Const.MY_PRODUCTS + "/create"
     static ACTIVE_PRODUCTS =  Const.MY_PRODUCTS + "/active"
     static MODERATION_PRODUCTS =  Const.MY_PRODUCTS + "/moderation"
@@ -24,5 +25,8 @@ export default class Const {
     static EDIT_PROFILE = Const.PROFILE + "/edit"
     static VIEW_PRODUCT = Const.PRODUCT + "/:id"   //${id}
     static USER_INFO = Const.USER + "/:id"   //${id}
+
+
+    static ADMIN_WAITING = Const.ADMIN + "/waitingApprove"
     
 }

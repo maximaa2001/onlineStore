@@ -8,7 +8,7 @@ import { useContext } from "react";
 import ApiService from "./service/ApiService";
 import jwt_decode from "jwt-decode";
 import Loader from "./component/UI/Loader/Loader";
-import { publicRoutes, userRoutes } from "./utill/rightForRoutes";
+import { adminRoutes, publicRoutes, userRoutes } from "./utill/rightForRoutes";
 import Const from "./const/Const";
 
 const App = observer(() => {
@@ -46,6 +46,10 @@ const App = observer(() => {
 
     {
       user.role === Const.USER_ROLE && userRoutes.map(({path, Component}) => <Route exact path={path} element={Component}/>)
+    }
+
+    {
+      user.role === Const.ADMIN_ROLE && adminRoutes.map(({path, Component}) => <Route exact path={path} element={Component}/>)
     }
     {/* <Route exact path="/" element={<Home/>}/>
     <Route exact path="/myProducts" element={<MyProducts/>}/> */}

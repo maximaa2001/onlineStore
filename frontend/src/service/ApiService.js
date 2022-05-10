@@ -337,5 +337,43 @@ export default class ApiService{
         })
     }
 
+    static adminWaitingByPage = async (page) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+        return await axios.get(`http://localhost:8100/api/admin/waiting`,{
+            headers: {
+                "AUTHORIZATION" : jwt
+            },
+            params:{
+                page: page
+            }
+        })
+    }
+    return null;
+    }
+
+    static adminWaitingPageCount = async () => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+        return await axios.get(`http://localhost:8100/api/admin/waiting/page`,{
+            headers: {
+                "AUTHORIZATION" : jwt
+            }
+        })
+    }
+    return null;
+    }
+
+    static approveProduct = async (productId, statusId) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+        return await axios.post(`http://localhost:8100/api/admin/product/approve`, {
+            "productId": productId,
+            "productStatusId": statusId
+        }, configToken(jwt))
+    }
+    return null;
+    }
+
 
 }

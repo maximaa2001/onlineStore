@@ -10,12 +10,16 @@ import Const from "../../const/Const";
 import style from './RegForm.module.css'
 import jwt_decode from "jwt-decode";
 import {Context} from "../../index";
+import { useNavigate } from "react-router-dom"
 
 const LoginForm = ({setVisible}) =>{
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const {user} = useContext(Context)
+
+ const navigate = useNavigate()
+
 
 
     const tryLogin = useLoading(async () => {
@@ -39,11 +43,13 @@ const LoginForm = ({setVisible}) =>{
         .then(resp =>{
             const result = resp.data.jwt;
             if(result){
+                var decoded = jwt_decode(result);
                 localStorage.setItem(Const.TOKEN, result)
-
+                user.setRole(decoded.role)
             }
         }
         )
+        setVisible(false)
     }
 
     return(<div>

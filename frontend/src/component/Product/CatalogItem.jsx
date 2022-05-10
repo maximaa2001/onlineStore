@@ -6,14 +6,17 @@ import 'font-awesome/css/font-awesome.min.css';
 import {Context} from "../../index"
 import Const from "../../const/Const";
 import ApiService from "../../service/ApiService";
+import SendButton from "../UI/Button/SendButton";
+import {useParams, useNavigate  } from 'react-router-dom';
 
 
 
 const CatalogItem = ({product}) =>{
 
-    
-
     const [heartStyle, setHeartStyles] = useState([])
+
+    const navigate = useNavigate();
+    
 
      const {user} = useContext(Context)
 
@@ -24,6 +27,14 @@ const CatalogItem = ({product}) =>{
             setHeartStyles(["fa fa-heart-o", style.heart])
          }
      },[])
+
+     const approveProduct = (productId, statusId) => {
+         ApiService.approveProduct(productId, statusId)
+         .then((resp) => {
+            window.location.reload();
+         })
+
+     }
 
 
 
@@ -80,6 +91,10 @@ const CatalogItem = ({product}) =>{
         ? <div  style={{width:"100%", display: "flex", justifyContent: "end"}}><i  style={{fontSize: "30px"}}
             onClick={changeBasket}
             className={heartStyle.join(' ')}></i></div>
+        : 
+        user.role === Const.ADMIN_ROLE
+        ?<div> <SendButton style={{position: "absolute", left: "70%", width: "150px"}} sendDataCallback={e => approveProduct(product.id, 2)}>Подтвердить</SendButton>
+        <SendButton style={{position: "absolute", left: "90%", backgroundColor: "red",  width: "150px"}} sendDataCallback={e => approveProduct(product.id, 3)}>Отменить</SendButton></div>
         : null
     }
     

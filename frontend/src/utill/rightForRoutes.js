@@ -2,6 +2,7 @@ import React from "react"
 import Const from "../const/Const"
 import AboutCatalogProduct from "../page/AboutCatalogProduct"
 import AboutMyProduct from "../page/AboutMyProduct"
+import AdminWaiting from "../page/AdminWaiting"
 import CreateProduct from "../page/CreateProduct"
 import EditMyProduct from "../page/EditMyProduct"
 import EditProfile from "../page/EditProfile"
@@ -65,6 +66,14 @@ export const userRoutes = [
     {
         path: Const.USER_INFO,
         Component: <UserPage/>
+    }
+
+]
+
+export const adminRoutes = [
+    {
+        path: Const.ADMIN_WAITING,
+        Component: <AdminWaiting/>
     }
 
 ]
