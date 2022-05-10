@@ -27,6 +27,9 @@ public class ApiPath {
     public static final String INFO = "/info";
     public static final String RATING = "/rating";
     public static final String SEARCH = "/search";
+    public static final String ADMIN = "/admin";
+    public static final String WAITING = "/waiting";
+    public static final String APPROVE = "/approve";
 
 
 
@@ -58,4 +61,9 @@ public class ApiPath {
     public static final String CREATE_USER_RATING = API + USERS + RATING;
     public static final String GET_SEARCH_PRODUCTS = API + PRODUCT + SEARCH;
     public static final String GET_SEARCH_PAGES = API + PRODUCT + SEARCH + PAGE;
+
+
+    public static final String GET_WAITING_PRODUCTS = API + ADMIN + WAITING;
+    public static final String GET_WAITING_PAGE_COUNT = API + ADMIN + WAITING + PAGE;
+    public static final String APPROVE_PRODUCT = API + ADMIN + PRODUCT + APPROVE;
 }

@@ -91,4 +91,17 @@ public class ProductDaoImpl implements ProductDao {
         return PagesDto.of(productRepo.findByProductStatusAndProductNameStartingWith(refDao.findApprovedStatus(), name,
                 pageRequest).getTotalPages());
     }
+
+    @Override
+    public List<Product> findWaitingProductByPage(Integer page) {
+        Pageable pageRequest = PageRequest.of(page, pageSize);
+        return productRepo.findByProductStatus(refDao.findWaitingToApproveStatus(), pageRequest).getContent();
+    }
+
+    @Override
+    public PagesDto findWaitingProductPageCount() {
+        Pageable pageRequest = PageRequest.of(0, pageSize);
+        return PagesDto.of(productRepo.findByProductStatus(refDao.findWaitingToApproveStatus(),
+                pageRequest).getTotalPages());
+    }
 }

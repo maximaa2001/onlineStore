@@ -131,6 +131,12 @@ public class RefDaoImpl implements RefDao {
     }
 
     @Override
+    public ProductStatus findProductStatusById(Integer productId) {
+        return productStatusRepo.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Cannot find product status by id " + productId));
+    }
+
+    @Override
     public void synchronizeDefine() {
         List<UserStatus> userStatuses = UserStatusRef.getAll();
         List<UserRole> userRoles = UserRoleRef.getAll();
