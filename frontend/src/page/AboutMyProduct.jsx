@@ -1,5 +1,5 @@
 import React, {useEffect, useState,  } from "react";
-import {useParams, useNavigate  } from 'react-router-dom';
+import {useParams, useNavigate, Link  } from 'react-router-dom';
 import PhotoSlider from "../component/Slider/PhotoSlider";
 import useLoading from "../hook/useLoading";
 import ApiService from "../service/ApiService";
@@ -15,15 +15,21 @@ const AboutMyProduct = (props) =>{
 
     const [product, setProduct] = useState( {  "imageUris": [] })
     const pathVariable = useParams();
-    const navigate = useNavigate ()
+    const navigate = useNavigate()
 
     const [loading, setLoading] = useState(true)
+    const [auction, setAuction] = useState(false);
+    const [auctionId, setAuctionId] = useState();
 
 
     const trySendRequest = useLoading(async() => {
      await ApiService.getInfoAboutMyProduct(pathVariable.id)
            .then((res) => {
             setProduct(res.data)
+            if(res.data.auctionId){
+                setAuction(true)
+                setAuctionId(res.data.auctionId)
+            }
             }).catch((err) => {
                 if(err.response.status === 500 || err.response.status === 404){
             
@@ -38,6 +44,19 @@ const AboutMyProduct = (props) =>{
     useEffect(() => {
         trySendRequest.loadData()
     }, [])
+
+    const createAuction = () => {
+        ApiService.createAuction(product.id)
+        .then(resp => {
+            console.log(resp)
+            if(resp.data.auctionId){
+                setAuction(true)
+                setAuctionId(resp.data.auctionId)
+                console.log(resp.data.auctionId)
+            }
+        })
+    }
+
 
     useEffect(() => {
         switch(product.productStatus){
@@ -88,6 +107,13 @@ const AboutMyProduct = (props) =>{
           <div className={style.dateText}>Дата: {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(product.actualDate)}</div>
           <div className={style.nameText}>Статус: {product.productStatus}</div>
           <SendButton sendDataCallback={() => editProduct()}>Редактировать</SendButton>
+          {
+              product.productStatus === "Активный"
+              ? !auction 
+              ?  <SendButton sendDataCallback={() => createAuction()}>Создать аукцион</SendButton>
+            :   <Link to={"/myAuction/" + auctionId} style={{marginTop: "20px"}}>Состояние аукциона</Link>
+            : null
+   }
          
       </div>
         </div>
@@ -95,7 +121,9 @@ const AboutMyProduct = (props) =>{
         <div style={{textAlign:"center", fontSize:"40px"}}>Описание</div>
        <div style={{paddingLeft:"10px", fontSize:"30px"}}>{product.description}</div>
 
-            
+  
+
+          
         </div>
   
     </div>

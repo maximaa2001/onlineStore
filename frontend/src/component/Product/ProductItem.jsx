@@ -25,6 +25,15 @@ const ProductItem = ({product}) =>{
     }
     </div>
 
+    <div style={{color: "red"}} >
+    {
+        product.isAuction
+        ?<div>На аукционе</div>
+        : null
+
+    }
+    </div>
+
     </div>
 
     </Link>

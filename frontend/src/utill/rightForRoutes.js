@@ -10,6 +10,8 @@ import Favourites from "../page/Favorites"
 import Home from "../page/Home"
 import MyProducts from "../page/MyProducts"
 import UserPage from "../page/UserPage"
+import MyAuction from "../page/MyAuction"
+import Auction from "../page/Auction"
 
 export const publicRoutes = [
    {
@@ -66,6 +68,14 @@ export const userRoutes = [
     {
         path: Const.USER_INFO,
         Component: <UserPage/>
+    },
+    {
+        path: Const.VIEW_MY_AUCTION,
+        Component: <MyAuction/>
+    },
+    {
+        path: Const.VIEW_AUCTION,
+        Component: <Auction/>
     }
 
 ]

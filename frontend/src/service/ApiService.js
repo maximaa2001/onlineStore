@@ -268,7 +268,17 @@ export default class ApiService{
     }
 
     static getInfoAboutCatalogProduct = async (id) => {
-            return  await axios.get(`http://localhost:8100/api/catalog/product/${id}`)
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+            return  await axios.get(`http://localhost:8100/api/catalog/product/${id}`,
+            {
+                headers: {
+                    "AUTHORIZATION" : jwt
+                }
+            }
+            )
+        }
+        return  await axios.get(`http://localhost:8100/api/catalog/product/${id}`)
     }
 
     static getPagesCount = async (category) => {
@@ -370,6 +380,57 @@ export default class ApiService{
         return await axios.post(`http://localhost:8100/api/admin/product/approve`, {
             "productId": productId,
             "productStatusId": statusId
+        }, configToken(jwt))
+    }
+    return null;
+    }
+
+    static createAuction = async (productId) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+        return await axios.post(`http://localhost:8100/api/auction/create`, {
+            "productId": productId
+        }, configToken(jwt))
+    }
+    return null;
+    }
+
+    static getAuctionState = async (auctionId) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+        return await axios.get(`http://localhost:8100/api/auction/state`, {
+            headers:{
+                "AUTHORIZATION" : jwt
+            },
+            params:{
+                id: auctionId
+            }
+        })
+    }
+    return null;
+    }
+
+    static getAuction= async (auctionId) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+        return await axios.get(`http://localhost:8100/api/auction/part`, {
+            headers:{
+                "AUTHORIZATION" : jwt
+            },
+            params:{
+                id: auctionId
+            }
+        })
+    }
+    return null;
+    }
+
+    static sendToAuction= async (auctionId, price) => {
+        const jwt = localStorage.getItem(Const.TOKEN);
+        if(jwt){
+        return await axios.post(`http://localhost:8100/api/auction/send`, {
+            "auctionId": auctionId,
+            "price": price
         }, configToken(jwt))
     }
     return null;

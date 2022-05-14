@@ -24,7 +24,7 @@ const AdminMenu = () =>{
 return (
     <NavDropdown title="Меню" id="nav-dropdown" className={style.adminMenu}>
         <NavDropdown.Item eventKey="4.1"><Link to={Const.ADMIN_WAITING} style={{textDecoration:"none"}}>Объявления</Link></NavDropdown.Item>
-        <NavDropdown.Item eventKey="4.3"><Link to="/" style={{textDecoration: "none"}}>Все пользователи</Link></NavDropdown.Item>
+        {/* <NavDropdown.Item eventKey="4.3"><Link to="/" style={{textDecoration: "none"}}>Все пользователи</Link></NavDropdown.Item> */}
         <NavDropdown.Divider />
         <NavDropdown.Item eventKey="4.4" onClick={logout}>Выход</NavDropdown.Item>
       </NavDropdown>

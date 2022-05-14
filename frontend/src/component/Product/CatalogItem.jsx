@@ -82,9 +82,21 @@ const CatalogItem = ({product}) =>{
     <div className={style.city}>
     {product.city}
     </div>
+  
+    
     </div>
     {/* fa fa-heart */}
 
+    </div>
+    <div>
+    <div style={{marginTop: "20px"}}>
+    {
+           product.isAuction
+           ?<div>На аукционе</div>
+           : null
+       }
+
+    </div>
     </div>
     {
         user.role === Const.USER_ROLE

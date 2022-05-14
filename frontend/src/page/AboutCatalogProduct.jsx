@@ -1,5 +1,5 @@
 import React, {useEffect, useState,  } from "react";
-import {useParams, useNavigate  } from 'react-router-dom';
+import {useParams, useNavigate, Link  } from 'react-router-dom';
 import PhotoSlider from "../component/Slider/PhotoSlider";
 import useLoading from "../hook/useLoading";
 import ApiService from "../service/ApiService";
@@ -23,6 +23,7 @@ const AboutCatalogProduct = () =>{
          ApiService.getInfoAboutCatalogProduct(pathVariable.id)
            .then((res) => {
             setProduct(res.data)
+            console.log(res.data)
             }).catch((err) => {
                 if(err.response.status === 500 || err.response.status === 404 || err.response.status === 400){
             
@@ -47,14 +48,19 @@ const AboutCatalogProduct = () =>{
           <div className={style.nameText}>{product.name}</div>
           <div className={style.cityText}>Город: {product.city}</div>
           <div className={style.dateText}>Дата: {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(product.actualDate)}</div>
-          <div className={style.cityText}>Посмотреть профиль продавца: {product.email}</div>
-         
+          <Link to={Const.USER + "/" + product.userId} className={style.cityText}>Посмотреть профиль продавца: {product.email}</Link>
+          {
+            !product.isMyProduct
+            ? 
+          <Link to={Const.AUCTION + "/" + product.auctionId} className={style.cityText}>Участвовать в аукционе</Link>
+          : null
+          }
       </div>
         </div>
         <div>
         <div style={{textAlign:"center", fontSize:"40px"}}>Описание</div>
        <div style={{paddingLeft:"10px", fontSize:"30px"}}>{product.description}</div>
-
+     
             
         </div>
   

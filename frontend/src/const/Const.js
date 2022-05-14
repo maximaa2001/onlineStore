@@ -14,6 +14,8 @@ export default class Const {
     static PRODUCT = "/product"
     static USER = "/user"
     static ADMIN = "/admin"
+    static MY_AUCTION = "/myAuction"
+    static AUCTION = "/auction"
     static CTEATE_PRODUCT =  Const.MY_PRODUCTS + "/create"
     static ACTIVE_PRODUCTS =  Const.MY_PRODUCTS + "/active"
     static MODERATION_PRODUCTS =  Const.MY_PRODUCTS + "/moderation"
@@ -25,6 +27,8 @@ export default class Const {
     static EDIT_PROFILE = Const.PROFILE + "/edit"
     static VIEW_PRODUCT = Const.PRODUCT + "/:id"   //${id}
     static USER_INFO = Const.USER + "/:id"   //${id}
+    static VIEW_MY_AUCTION = Const.MY_AUCTION + "/:id"   //${id}
+    static VIEW_AUCTION = Const.AUCTION + "/:id"
 
 
     static ADMIN_WAITING = Const.ADMIN + "/waitingApprove"
