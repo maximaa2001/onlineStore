@@ -38,3 +38,6 @@ product:
   catalog:
     size: 10
 
+auction:
+  days: 3
+

@@ -77,8 +77,10 @@ public class ProductRest {
     }
 
     @GetMapping(VIEW_PRODUCT_BY_ID)
-    public AboutCatalogProductDto getCatalogItem(@PathVariable(name = "id") Integer id) {
-        return productService.getProductFromCatalog(id);
+    public AboutCatalogProductDto getCatalogItem(@RequestHeader(name = AUTHORIZATION, required = false) String token,
+                                                     @PathVariable(name = "id") Integer id) {
+        return (token == null) ? productService.getProductFromCatalog(null, id)
+                : productService.getProductFromCatalog(authService.getUserIdByToken(token), id);
     }
 
     @GetMapping(GET_CATALOG_PAGES)

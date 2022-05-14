@@ -1,6 +1,7 @@
 package by.bsuir.entity.dto.product.catalog;
 
 import by.bsuir.entity.domain.Product;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CatalogDto {
     private Integer id;
     private String name;
@@ -21,6 +23,7 @@ public class CatalogDto {
     private BigDecimal price;
     private String imageUri;
     private Boolean isAdded;
+    private Boolean isAuction;
 
     /**
      *     Catalog for unknow user

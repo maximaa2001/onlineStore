@@ -30,9 +30,10 @@ public class ApiPath {
     public static final String ADMIN = "/admin";
     public static final String WAITING = "/waiting";
     public static final String APPROVE = "/approve";
-
-
-
+    public static final String AUCTION = "/auction";
+    public static final String STATE = "/state";
+    public static final String PART = "/part";
+    public static final String SEND = "/send";
 
 
 
@@ -66,4 +67,10 @@ public class ApiPath {
     public static final String GET_WAITING_PRODUCTS = API + ADMIN + WAITING;
     public static final String GET_WAITING_PAGE_COUNT = API + ADMIN + WAITING + PAGE;
     public static final String APPROVE_PRODUCT = API + ADMIN + PRODUCT + APPROVE;
+
+    public static final String CREATE_AUCTION = API + AUCTION + CREATE;
+    public static final String GET_STATE_MY_AUCTION = API + AUCTION + STATE;
+    public static final String GET_STATE_AUCTION = API + AUCTION + PART;
+    public static final String TAKE_PART_AUCTION = API + AUCTION + SEND;
+
 }

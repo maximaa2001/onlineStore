@@ -26,8 +26,9 @@ public class AboutMyProductDto {
     private String city;
     private String productStatus;
     private List<String> imageUris;
+    private Integer auctionId;
 
-    public static AboutMyProductDto of(Product product){
+    public static AboutMyProductDto of(Product product, Integer auctionId){
         return AboutMyProductDto.builder()
                 .id(product.getProductId())
                 .name(product.getProductName())
@@ -38,6 +39,7 @@ public class AboutMyProductDto {
                 .city(product.getCity().getCityName())
                 .productStatus(product.getProductStatus().getProductStatusName())
                 .imageUris(product.getImages().stream().map(ProductImage::getImageUrl).collect(Collectors.toList()))
+                .auctionId(auctionId)
                 .build();
 
     }

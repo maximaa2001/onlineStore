@@ -2,6 +2,7 @@ package by.bsuir.entity.dto.product.catalog;
 
 import by.bsuir.entity.domain.Product;
 import by.bsuir.entity.domain.ProductImage;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AboutCatalogProductDto {
     private Integer id;
     private String name;
@@ -27,6 +29,8 @@ public class AboutCatalogProductDto {
     private List<String> imageUris;
     private Integer userId;
     private String email;
+    private Boolean isMyProduct;
+    private Integer auctionId;
 
     public static AboutCatalogProductDto of(Product product) {
         return AboutCatalogProductDto.builder()

@@ -1,6 +1,7 @@
 package by.bsuir.service.impl;
 
 import by.bsuir.constant.ref.ProductStatusRef;
+import by.bsuir.dao.AuctionDao;
 import by.bsuir.dao.ProductDao;
 import by.bsuir.dao.RefDao;
 import by.bsuir.dao.UserDao;
@@ -12,6 +13,7 @@ import by.bsuir.entity.dto.product.catalog.AboutCatalogProductDto;
 import by.bsuir.entity.dto.product.catalog.CatalogListDto;
 import by.bsuir.entity.dto.product.edit.EditProductDto;
 import by.bsuir.entity.dto.product.my.AboutMyProductDto;
+import by.bsuir.entity.dto.product.my.ProductDto;
 import by.bsuir.entity.dto.product.my.ProductListDto;
 import by.bsuir.exception.ProductIsNotExistException;
 import by.bsuir.exception.ProductIsNotLinkedException;
@@ -24,6 +26,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 @Service
@@ -31,12 +34,14 @@ import java.util.stream.Collectors;
 public class ProductServiceImpl implements ProductService {
     private ProductDao productDao;
     private UserDao userDao;
+    private AuctionDao auctionDao;
     private RefDao refDao;
 
     @Autowired
-    public ProductServiceImpl(ProductDao productDao, UserDao userDao, RefDao refDao){
+    public ProductServiceImpl(ProductDao productDao, UserDao userDao, AuctionDao auctionDao, RefDao refDao){
         this.productDao = productDao;
         this.userDao = userDao;
+        this.auctionDao = auctionDao;
         this.refDao = refDao;
     }
 
@@ -58,7 +63,15 @@ public class ProductServiceImpl implements ProductService {
         log.info("Request for getAllProductsByUser endpoint");
         User user = userDao.findById(userId);
         List<Product> products = productDao.findAllProductsByUser(user);
-        return ProductListDto.of(products);
+        ProductListDto productListDto = ProductListDto.of(products);
+        List<Integer> idsOnAuction = auctionDao.findByUserActual(user).stream().map(auction -> auction.getProduct().getProductId()).collect(Collectors.toList());
+        List<ProductDto> userProducts = productListDto.getProducts();
+        userProducts.forEach(productDto -> {
+            if(idsOnAuction.contains(productDto.getId())){
+                productDto.setIsAuction(true);
+            }
+        });
+        return productListDto;
     }
 
     @Override
@@ -67,7 +80,18 @@ public class ProductServiceImpl implements ProductService {
         ProductStatus productStatus = refDao.findProductStatusByName(statusName.toUpperCase());
         User user = userDao.findById(userId);
         List<Product> products = productDao.findProductsByUserAndStatus(user, productStatus);
-        return ProductListDto.of(products);
+        if(!productStatus.getProductStatusId().equals(ProductStatusRef.APPROVED.getId())){
+            return ProductListDto.of(products);
+        }
+        ProductListDto productListDto = ProductListDto.of(products);
+        List<ProductDto> productDtos = productListDto.getProducts();
+        List<Integer> idsOnAuction = auctionDao.findByUserActual(user).stream().map(auction -> auction.getProduct().getProductId()).collect(Collectors.toList());
+        productDtos.forEach(productDto -> {
+            if(idsOnAuction.contains(productDto.getId())){
+                productDto.setIsAuction(true);
+            }
+        });
+        return productListDto;
     }
 
     @Override
@@ -78,7 +102,8 @@ public class ProductServiceImpl implements ProductService {
         if(!product.getUser().getUserId().equals(userId)){
             throw new ProductIsNotLinkedException(HttpStatus.NOT_FOUND);
         }
-        return AboutMyProductDto.of(product);
+        Optional<Auction> auction = auctionDao.auctionIsExists(product);
+        return AboutMyProductDto.of(product, (auction.map(Auction::getAuctionId).orElse(null)));
     }
 
     @Override
@@ -104,7 +129,15 @@ public class ProductServiceImpl implements ProductService {
         if(userId != null){
             User user = userDao.findById(userId);
             List<Integer> userBasket = user.getFavourite().stream().map(Product::getProductId).collect(Collectors.toList());
-            return CatalogListDto.of(productsForPage, userBasket);
+            CatalogListDto catalogListDto = CatalogListDto.of(productsForPage, userBasket);
+            List<Auction> auctions = auctionDao.findAll();
+            catalogListDto.getProducts().forEach(catalogDto -> {
+                if(auctions.stream().map(auction -> auction.getProduct().getProductId()).collect(Collectors.toList())
+                        .contains(catalogDto.getId())){
+                    catalogDto.setIsAuction(true);
+                }
+            });
+            return catalogListDto;
         }
         return CatalogListDto.of(productsForPage);
     }
@@ -138,12 +171,20 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public AboutCatalogProductDto getProductFromCatalog(Integer productId) {
+    public AboutCatalogProductDto getProductFromCatalog(Integer userId, Integer productId) {
         Product product = productDao.findById(productId);
         if(!product.getProductStatus().equals(refDao.findProductStatusByName(ProductStatusRef.APPROVED.getName()))){
             throw new ProductIsNotExistException(HttpStatus.NOT_FOUND);
         }
-        return AboutCatalogProductDto.of(product);
+        AboutCatalogProductDto catalogProductDto = AboutCatalogProductDto.of(product);
+        if(userId.equals(product.getUser().getUserId())){
+            catalogProductDto.setIsMyProduct(true);
+        } else {
+            catalogProductDto.setIsMyProduct(false);
+            Optional<Auction> actualByProduct = auctionDao.findActualByProduct(product);
+            actualByProduct.ifPresent(auction -> catalogProductDto.setAuctionId(auction.getAuctionId()));
+        }
+        return catalogProductDto;
     }
 
     @Override

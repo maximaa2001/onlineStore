@@ -21,7 +21,7 @@ public interface ProductService {
     CatalogListDto getProductByPage(Integer userId, Integer page, String categoryName);
     BasketBooleanDto changeBasket(Integer userId, ProductIdDto productIdDto);
     ProductListDto getProductsInCart(Integer userId);
-    AboutCatalogProductDto getProductFromCatalog(Integer productId);
+    AboutCatalogProductDto getProductFromCatalog(Integer userId, Integer productId);
     PagesDto getPagesCount(String categoryName);
     CatalogListDto searchProductsByPage(Integer userId, Integer page, String name);
     PagesDto searchProductsPageCount(String name);
