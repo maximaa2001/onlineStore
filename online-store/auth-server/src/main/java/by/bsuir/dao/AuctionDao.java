@@ -9,9 +9,11 @@ import java.util.Optional;
 
 public interface AuctionDao {
     Auction save(Auction auction);
+    void saveAll(List<Auction> auctions);
     Optional<Auction> auctionIsExists(Product product);
     List<Auction> findByUserActual(User user);
     Auction findById(Integer id);
-    List<Auction> findAll();
+    List<Auction> findAllActive();
     Optional<Auction> findActualByProduct(Product product);
+    List<Auction> findExpiredAuction();
 }

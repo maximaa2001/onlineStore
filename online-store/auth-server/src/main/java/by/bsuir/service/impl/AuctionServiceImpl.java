@@ -62,7 +62,7 @@ public class AuctionServiceImpl implements AuctionService {
         Auction savedAuction = auctionDao.save(Auction.builder()
                 .product(product)
                 .user(user)
-                .currentPrice(BigDecimal.TEN)
+                .currentPrice(BigDecimal.ZERO)
                 .endDate(LocalDateTime.now().plusDays(daysForAuction))
                 .isActive(true)
                 .build());
@@ -72,7 +72,7 @@ public class AuctionServiceImpl implements AuctionService {
     @Override
     public AuctionStateDto getAuctionState(Integer userId, Integer auctionId) {
         Auction auction = auctionDao.findById(auctionId);
-        if(!auction.getUser().getUserId().equals(userId)){
+        if(!auction.getProduct().getUser().getUserId().equals(userId)){
             throw new AuctionIsNotLinkedException(HttpStatus.BAD_REQUEST);
         }
         return AuctionStateDto.of(auction);
@@ -81,7 +81,7 @@ public class AuctionServiceImpl implements AuctionService {
     @Override
     public AuctionStateDto getAuction(Integer userId, Integer auctionId) {
         Auction auction = auctionDao.findById(auctionId);
-        if(auction.getProduct().getUser().getUserId().equals(userId)){
+        if(auction.getProduct().getUser().getUserId().equals(userId) || !auction.getIsActive()){
             throw new AuctionIsNotLinkedException(HttpStatus.BAD_REQUEST);
         }
         return AuctionStateDto.of(auction);

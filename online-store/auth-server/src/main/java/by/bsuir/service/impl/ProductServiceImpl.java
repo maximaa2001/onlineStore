@@ -130,7 +130,7 @@ public class ProductServiceImpl implements ProductService {
             User user = userDao.findById(userId);
             List<Integer> userBasket = user.getFavourite().stream().map(Product::getProductId).collect(Collectors.toList());
             CatalogListDto catalogListDto = CatalogListDto.of(productsForPage, userBasket);
-            List<Auction> auctions = auctionDao.findAll();
+            List<Auction> auctions = auctionDao.findAllActive();
             catalogListDto.getProducts().forEach(catalogDto -> {
                 if(auctions.stream().map(auction -> auction.getProduct().getProductId()).collect(Collectors.toList())
                         .contains(catalogDto.getId())){

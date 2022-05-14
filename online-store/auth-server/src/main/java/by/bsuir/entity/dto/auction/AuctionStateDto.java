@@ -5,6 +5,7 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.time.LocalDate;
 
 @Data
 @Getter
@@ -18,6 +19,7 @@ public class AuctionStateDto {
     private String email;
     private Long endDate;
     private BigDecimal currentPrice;
+    private Boolean isActive;
 
     public static AuctionStateDto of(Auction auction){
         return AuctionStateDto.builder()
@@ -26,6 +28,7 @@ public class AuctionStateDto {
                 .email(auction.getUser().getUserEmail())
                 .endDate(Timestamp.valueOf(auction.getEndDate()).getTime())
                 .currentPrice(auction.getCurrentPrice())
+                .isActive(auction.getIsActive())
                 .build();
     }
 }

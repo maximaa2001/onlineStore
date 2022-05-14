@@ -27,6 +27,11 @@ public class AuctionDaoImpl implements AuctionDao {
     }
 
     @Override
+    public void saveAll(List<Auction> auctions) {
+        auctionRepo.saveAll(auctions);
+    }
+
+    @Override
     public Optional<Auction> auctionIsExists(Product product) {
         return auctionRepo.findByProductAndEndDateAfter(product, LocalDateTime.now());
     }
@@ -43,12 +48,17 @@ public class AuctionDaoImpl implements AuctionDao {
     }
 
     @Override
-    public List<Auction> findAll() {
-        return auctionRepo.findAll();
+    public List<Auction> findAllActive() {
+        return auctionRepo.findByIsActive(true);
     }
 
     @Override
     public Optional<Auction> findActualByProduct(Product product) {
         return auctionRepo.findByProductAndIsActive(product, true);
+    }
+
+    @Override
+    public List<Auction> findExpiredAuction() {
+        return auctionRepo.findByEndDateBefore(LocalDateTime.now());
     }
 }
