@@ -25,10 +25,10 @@ const AboutCatalogProduct = () =>{
             setProduct(res.data)
             console.log(res.data)
             }).catch((err) => {
-                if(err.response.status === 500 || err.response.status === 404 || err.response.status === 400){
+             
             
                     navigate("/404")
-                }
+               
             }).finally(() => {
                 setLoading(false)
             })
@@ -50,7 +50,7 @@ const AboutCatalogProduct = () =>{
           <div className={style.dateText}>Дата: {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(product.actualDate)}</div>
           <Link to={Const.USER + "/" + product.userId} className={style.cityText}>Посмотреть профиль продавца: {product.email}</Link>
           {
-            !product.isMyProduct
+            !product.isMyProduct && product.auctionId
             ? 
           <Link to={Const.AUCTION + "/" + product.auctionId} className={style.cityText}>Участвовать в аукционе</Link>
           : null
