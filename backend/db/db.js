@@ -7,12 +7,15 @@ const connection = mysql.createConnection({
     database: 'online_store_dev'
 })
 
+
 connection.connect((err) => {
     if(err){
        return console.log("error")
     }
     else{
+        connection.query("SET SESSION wait_timeout = 604800")
         return  console.log("success")
+       
     }
 })
 
