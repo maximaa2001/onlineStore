@@ -1,6 +1,7 @@
 create table category_ref
 (
     category_id   int auto_increment
+        constraint `PRIMARY`
         primary key,
     category_name varchar(256) not null
 );
@@ -8,6 +9,7 @@ create table category_ref
 create table chat
 (
     chat_id    int auto_increment
+        constraint `PRIMARY`
         primary key,
     start_date timestamp(6) not null
 );
@@ -15,6 +17,7 @@ create table chat
 create table city_ref
 (
     city_id   int auto_increment
+        constraint `PRIMARY`
         primary key,
     city_name varchar(256) not null
 );
@@ -22,6 +25,7 @@ create table city_ref
 create table message_status_ref
 (
     message_status_id   int auto_increment
+        constraint `PRIMARY`
         primary key,
     message_status_name varchar(45) not null
 );
@@ -29,6 +33,7 @@ create table message_status_ref
 create table product_level_ref
 (
     product_level_id   int auto_increment
+        constraint `PRIMARY`
         primary key,
     product_level_name varchar(45) not null
 );
@@ -36,6 +41,7 @@ create table product_level_ref
 create table product_status_ref
 (
     product_status_id   int auto_increment
+        constraint `PRIMARY`
         primary key,
     product_status_name varchar(45) not null
 );
@@ -43,6 +49,7 @@ create table product_status_ref
 create table rating_ref
 (
     rating_id     int auto_increment
+        constraint `PRIMARY`
         primary key,
     rating_number int not null
 );
@@ -50,6 +57,7 @@ create table rating_ref
 create table role_ref
 (
     role_id   int auto_increment
+        constraint `PRIMARY`
         primary key,
     role_name varchar(45) not null
 );
@@ -57,6 +65,7 @@ create table role_ref
 create table user_status_ref
 (
     user_status_id   int auto_increment
+        constraint `PRIMARY`
         primary key,
     user_status_name varchar(45) not null
 );
@@ -64,6 +73,7 @@ create table user_status_ref
 create table user
 (
     user_id        int auto_increment
+        constraint `PRIMARY`
         primary key,
     user_email     varchar(256) not null,
     user_hash_pass varchar(255) null,
@@ -82,7 +92,8 @@ create table chat_user
 (
     chat_id int not null,
     user_id int not null,
-    primary key (chat_id, user_id),
+    constraint `PRIMARY`
+        primary key (chat_id, user_id),
     constraint fk_chat_has_user_chat1
         foreign key (chat_id) references chat (chat_id),
     constraint fk_chat_has_user_user1
@@ -98,6 +109,7 @@ create index fk_chat_has_user_user1_idx
 create table message
 (
     message_id        int auto_increment
+        constraint `PRIMARY`
         primary key,
     text              text         not null,
     actual_date       timestamp(6) not null,
@@ -124,9 +136,10 @@ create index fk_message_user1_idx
 create table product
 (
     product_id        int auto_increment
+        constraint `PRIMARY`
         primary key,
     product_name      varchar(256)   not null,
-    description       varchar(45)    null,
+    description       text           null,
     product_price     decimal(10, 2) null,
     actual_date       timestamp(6)   not null,
     product_status_id int            not null,
@@ -146,11 +159,28 @@ create table product
         foreign key (user_id) references user (user_id)
 );
 
+create table auction
+(
+    auction_id    int auto_increment
+        constraint `PRIMARY`
+        primary key,
+    product_id    int            not null,
+    user_id       int            null,
+    end_date      timestamp      null,
+    is_active     tinyint(1)     null,
+    current_price decimal(10, 2) null,
+    constraint FK_auction_product
+        foreign key (product_id) references product (product_id),
+    constraint FK_auction_user
+        foreign key (user_id) references user (user_id)
+);
+
 create table basket
 (
     user_id    int not null,
     product_id int not null,
-    primary key (user_id, product_id),
+    constraint `PRIMARY`
+        primary key (user_id, product_id),
     constraint fk_users_has_product_product1
         foreign key (product_id) references product (product_id),
     constraint fk_users_has_product_users1
@@ -181,6 +211,7 @@ create index fk_product_users1_idx
 create table product_images
 (
     product_image_id int auto_increment
+        constraint `PRIMARY`
         primary key,
     image_url        varchar(256) not null,
     product_id       int          not null,
@@ -194,6 +225,7 @@ create index fk_product_images_product1_idx
 create table token
 (
     token    varchar(255) not null
+        constraint `PRIMARY`
         primary key,
     end_date timestamp(6) not null,
     user_id  int          not null,
@@ -213,9 +245,10 @@ create index fk_users_user_status_ref_idx
 create table user_rating
 (
     set_user_id      int not null,
-    get_user_id     int not null,
+    get_user_id      int not null,
     rating_number_id int not null,
-    primary key (set_user_id, get_user_id),
+    constraint `PRIMARY`
+        primary key (set_user_id, get_user_id),
     constraint fk_user_rating_rating_ref1
         foreign key (rating_number_id) references rating_ref (rating_id),
     constraint fk_user_rating_user1
@@ -223,13 +256,4 @@ create table user_rating
     constraint fk_user_rating_user2
         foreign key (get_user_id) references user (user_id)
 );
-
-create index fk_user_rating_rating_ref1_idx
-    on user_rating (rating_number_id);
-
-create index fk_user_rating_user1_idx
-    on user_rating (set_user_id);
-
-create index fk_user_rating_user2_idx
-    on user_rating (get_user_id1);
 
